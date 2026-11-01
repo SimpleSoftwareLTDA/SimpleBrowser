@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
 body {
-    color:#343a3c;
-    background-color:#EDF6FF;
+    color:#F4F4F6;
+    background-color:#000000;
 }
 @media (prefers-color-scheme: dark) {
     body {
-        color:#f8f9fa;
-        background-color:#343a3c;
+        color:#F4F4F6;
+        background-color:#000000;
     }    
 }
 
@@ -39,35 +39,35 @@ td {
     white-space: nowrap;
     word-wrap: break-word;
     transition: .5s;
-    color: #4F4F4F;
-    background: #FFFFFF;
-    box-shadow: 0px 1px 12px rgb(134 192 255 / 16%);
-    border: 2px solid #FFFFFF;
+    color: #F4F4F6;
+    background: #0E0E12;
+    box-shadow: 0px 1px 12px rgba(223, 177, 91, 0.16);
+    border: 2px solid #0E0E12;
     border-radius: 0.5vw;
 }
 @media (prefers-color-scheme: dark) {
     .sugg {
-        color: #f8f9fa;
-        background: #1e2122;
+        color: #F4F4F6;
+        background: #0E0E12;
         box-shadow: 0px 1px 12px rgb(0 0 0 / 16%);
-        border: 2px solid #343a3c;
+        border: 2px solid #16161C;
     }
 }
 .sugg:hover {
     transition:.5s;
-    background: #F3F6FA;
-    border: 2px solid #A5D0FF;
+    background: #0E0E12;
+    border: 2px solid #DFB15B;
     border-radius: 12px;
 }
 @media (prefers-color-scheme: dark) {
     .sugg:hover {
-        background: #343a3c;
-        border: 2px solid #A5D0FF;
+        background: #16161C;
+        border: 2px solid #DFB15B;
         border-radius: 12px;
     }
 }
 .sugg:hover > div:nth-child(2) {
-    color: #6666aa;
+    color: #DFB15B;
 }
 .sugg-ico {
     width: 4vw;
@@ -86,11 +86,11 @@ td {
     background-color: transparent;
 }
 .sugg-title.empty {
-    background-color: #fcfcfc;
+    background-color: #0E0E12;
 }
 @media (prefers-color-scheme: dark) {
     .sugg-title.empty {
-        background-color: #1f2425;
+        background-color: #16161C;
         border-radius: 12px;
     }
 }
@@ -100,7 +100,7 @@ td {
 }
 .sugg-desk {
     display: block;
-    color: #BDBDBD;
+    color: #9E9EA8;
     margin-left: 5vw;
     font-family: 'Roboto';
     font-style: normal;
@@ -111,16 +111,16 @@ td {
 }
 @media (prefers-color-scheme: dark) {
     .sugg-desk {
-        color: #f8f9fa;
+        color: #F4F4F6;
     }
 }
 .sugg-desk.empty {
-    background-color: #fafafa;
+    background-color: #0E0E12;
     border-radius: 12px;
 }
 @media (prefers-color-scheme: dark) {
     .sugg-desk.empty {
-        background-color: #1f2425;
+        background-color: #16161C;
     }
 }
 .more {
@@ -150,31 +150,31 @@ td {
 }
 
 .search_box{
-    background: #fff;
+    background: #0E0E12;
     border-radius: 0.5vw;
     height: 3vw;
     display: flex;
     padding: 0.5vw;
-    box-shadow: 0 8px 6px -10px #b3c6ff;
+    box-shadow: 0 8px 6px -10px #DFB15B;
 }
 @media (prefers-color-scheme: dark) {
     .search_box{
-        background: #1e2122;
+        background: #0E0E12;
         box-shadow: 0 8px 6px -10px #000000;
     }
 }
 
 .wrapper .search_box .dropdown{
   width: 7vw;
-  border-right: 2px solid #dde2f1;
+  border-right: 2px solid #16161C;
   color: #9fa3b1;
   position: relative;
   cursor: pointer;
 }
 @media (prefers-color-scheme: dark) {
     .wrapper .search_box .dropdown{
-        border-right: 2px solid #343a3c;
-        color: #f8f9fa;
+        border-right: 2px solid #F4F4F6;
+        color: #F4F4F6;
     }
 }
 
@@ -193,16 +193,16 @@ td {
     position: absolute;
     font-size: 2vw;
     list-style-type: none;
-    background: #fff;
+    background: #0E0E12;
     width: 16vw;
     border-radius: 0.5vw;
     padding: 1vw;
     display: none;
-    box-shadow: 0.5vw 0.5vw 2vw -0.5vw #b3c6ff;
+    box-shadow: 0.5vw 0.5vw 2vw -0.5vw #DFB15B;
 }
 @media (prefers-color-scheme: dark) {
     .wrapper .search_box .dropdown ul{
-        background: #1e2122;
+        background: #0E0E12;
         box-shadow: 0.5vw 0.5vw 2vw -0.5vw #000000;
     }
 }
@@ -238,7 +238,7 @@ td {
     top: 1.2vw;
     right: 1vw;
     border: 0.45vw solid;
-    border-color: #5078ef transparent transparent transparent;
+    border-color: #DFB15B transparent transparent transparent;
 }
 
 .wrapper .search_box .search_field{
@@ -260,8 +260,8 @@ td {
 }
 @media (prefers-color-scheme: dark) {
     .wrapper .search_box .search_field .input{
-        color: #f8f9fa;
-        background-color: #1e2122;
+        color: #F4F4F6;
+        background-color: #0E0E12;
     }
 }
 
@@ -270,24 +270,24 @@ td {
   top: 10px;
   right: 10px;
   font-size: 22px;
-  color: #5078ef;
+  color: #DFB15B;
   cursor: pointer;
 }
 @media (prefers-color-scheme: dark) {
     .wrapper .search_box .search_field .fas{
-        color: #f8f9fa;
+        color: #F4F4F6;
     }
 }
 
 .wrapper .search_box .search_action_container{
-    border-left: 2px solid #dde2f1;
+    border-left: 2px solid #16161C;
     width: 4vw;
     cursor: pointer;
     margin-left: 2px;
 }
 @media (prefers-color-scheme: dark) {
     .wrapper .search_box .search_action_container{
-        border-left: 2px solid #343a3c;
+        border-left: 2px solid #F4F4F6;
     }
 }
 
@@ -400,7 +400,7 @@ the logo and the search bar in the flow, the speed dial in two columns of 56px t
         width: 180px;
         padding: 12px;
         border-radius: 8px;
-        box-shadow: 4px 4px 16px -4px #b3c6ff;
+        box-shadow: 4px 4px 16px -4px #DFB15B;
     }
     .wrapper .search_box .dropdown ul li img {
         width: 20px;
