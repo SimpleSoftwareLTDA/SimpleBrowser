@@ -8,7 +8,7 @@ import com.simplesoftware.browser.webengine.DownloadRequest
  * The download to start for the request.
  */
 fun DownloadRequest.toDownload(): Download {
-    val fileName = fileName ?: DownloadUtils.guessFileName(url, contentDisposition, mimeType)
+    val fileName = DownloadUtils.safeFileName(fileName ?: DownloadUtils.guessFileName(url, contentDisposition, mimeType))
     return Download(url, fileName, null, operationAfterDownload,
         mimeType, referer, userAgent, base64BlobData, stream, size).also {
         it.cookies = cookies

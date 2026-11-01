@@ -181,4 +181,43 @@ object DownloadUtils {
         return stream.toString(encoding)
     }
 
+    private const val MAX_FILE_NAME_BYTES = 120
+    private const val DEFAULT_FILE_NAME = "file"
+
+    /**
+     * A name safe to be a file name written by the app: no folders (`../`), no control characters,
+     * no characters FAT drives refuse, not hidden and not too long (its extension kept). Names come
+     * from the page (the `download` attribute of a link, a `Content-Disposition` header), so they are
+     * never trusted.
+     */
+    fun safeFileName(name: String?): String {
+        val base = (name ?: "").substringAfterLast('/').substringAfterLast('\\')
+        val clean = base.filter { it >= ' ' && it != '\u007f' && it !in "<>:\"|?*" }.trim().trimStart('.').trim()
+        if (clean.toByteArray(Charsets.UTF_8).size <= MAX_FILE_NAME_BYTES) return clean.ifEmpty { DEFAULT_FILE_NAME }
+        val ext = clean.substringAfterLast('.', "").takeIf { it.isNotEmpty() && it.length <= 16 }
+        val suffix = if (ext != null) ".$ext" else ""
+        val stem = if (ext != null) clean.substring(0, clean.length - suffix.length) else clean
+        val head = takeUtf8Bytes(stem, MAX_FILE_NAME_BYTES - suffix.toByteArray(Charsets.UTF_8).size).trim()
+        return (head + suffix).ifEmpty { DEFAULT_FILE_NAME }
+    }
+
+    /** The beginning of [text] that has at most [max] bytes of UTF-8, whole code points only */
+    private fun takeUtf8Bytes(text: String, max: Int): String {
+        var bytes = 0
+        var end = 0
+        while (end < text.length) {
+            val codePoint = text.codePointAt(end)
+            val size = when {
+                codePoint < 0x80 -> 1
+                codePoint < 0x800 -> 2
+                codePoint < 0x10000 -> 3
+                else -> 4
+            }
+            if (bytes + size > max) break
+            bytes += size
+            end += Character.charCount(codePoint)
+        }
+        return text.substring(0, end)
+    }
+
 }

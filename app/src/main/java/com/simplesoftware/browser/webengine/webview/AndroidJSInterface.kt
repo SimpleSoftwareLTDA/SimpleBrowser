@@ -7,9 +7,14 @@ import com.simplesoftware.browser.SimpleBrowser
 import com.simplesoftware.browser.utils.DownloadUtils
 import com.simplesoftware.browser.webengine.DownloadRequest
 import org.json.JSONArray
+import org.json.JSONObject
 
 
 class AndroidJSInterface(private val webEngine: WebViewWebEngine) {
+    companion object {
+        /** A page's blob data is held in memory by the page already: keep the bridge from doubling it without limit */
+        private const val MAX_BLOB_BASE64_LENGTH = 256 * 1024 * 1024
+    }
     @JavascriptInterface
     fun reloadWithSslTrust() {
         val callback = webEngine.callback ?: return
@@ -64,14 +69,19 @@ class AndroidJSInterface(private val webEngine: WebViewWebEngine) {
             links = links.replace("'", "\\'")
             webEngine.evaluateJavascript("renderLinks('${cfg.homePageLinksMode.name}', $links)")
             webEngine.evaluateJavascript(
-                "applySearchEngine(\"${cfg.guessSearchEngineName()}\", \"${cfg.searchEngineURL.value}\")")
+                "applySearchEngine(${JSONObject.quote(cfg.guessSearchEngineName())}, ${JSONObject.quote(cfg.searchEngineURL.value)})")
         }
     }
 
     @JavascriptInterface
     fun takeBlobDownloadData(base64BlobData: String, fileName: String?, url: String, mimetype: String) {
+        //the interface is bound to every frame of every page: only a page of a site may start a download
+        //(a file:, content: or about: page must not), and the data is bounded so a page cannot exhaust memory
+        val pageUrl = webEngine.tab.url
+        if (!pageUrl.startsWith("http://") && !pageUrl.startsWith("https://")) return
+        if (base64BlobData.length > MAX_BLOB_BASE64_LENGTH) return
         val callback = webEngine.callback ?: return
-        val finalFileName = fileName ?: DownloadUtils.guessFileName(url, null, mimetype)
+        val finalFileName = DownloadUtils.safeFileName(fileName ?: DownloadUtils.guessFileName(url, null, mimetype))
         callback.onDownloadRequested(DownloadRequest(url = url, referer = webEngine.tab.url, userAgent = "Simple Browser",
             fileName = finalFileName, mimeType = mimetype, base64BlobData = base64BlobData))
     }

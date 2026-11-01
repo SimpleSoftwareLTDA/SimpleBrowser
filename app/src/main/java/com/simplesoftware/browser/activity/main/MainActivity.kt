@@ -47,6 +47,7 @@ import com.simplesoftware.browser.model.BrowserTab
 import com.simplesoftware.browser.singleton.shortcuts.ShortcutMgr
 import com.simplesoftware.browser.sync.SyncLink
 import com.simplesoftware.browser.utils.BackNavigationEventsAdapter
+import com.simplesoftware.browser.utils.InternalIntentToken
 import com.simplesoftware.browser.utils.Utils
 import com.simplesoftware.browser.utils.VoiceSearchHelper
 import com.simplesoftware.browser.utils.launchForResult
@@ -71,6 +72,9 @@ open class MainActivity : AppCompatActivity(), BrowserShell.Host {
     companion object {
         private val TAG = MainActivity::class.java.simpleName
         const val KEY_PROCESS_ID_TO_KILL = "proc_id_to_kill"
+        /** The signature of [KEY_PROCESS_ID_TO_KILL], see [InternalIntentToken] */
+        private const val KEY_PROCESS_KILL_TOKEN = "proc_id_to_kill_token"
+        private const val PURPOSE_KILL_PROCESS = "kill_process"
         /** Open the downloads (the notification of the download service) */
         const val KEY_SHOW_DOWNLOADS = "show_downloads"
         /** With [KEY_SHOW_DOWNLOADS]: the download to focus */
@@ -112,6 +116,7 @@ open class MainActivity : AppCompatActivity(), BrowserShell.Host {
             }
             //after the extras: an intent restored from the history may hold the pid of a process gone
             intent.putExtra(KEY_PROCESS_ID_TO_KILL, pidToKill)
+            intent.putExtra(KEY_PROCESS_KILL_TOKEN, InternalIntentToken.token(context, PURPOSE_KILL_PROCESS, pidToKill.toLong()))
             return intent
         }
     }
@@ -150,7 +155,9 @@ open class MainActivity : AppCompatActivity(), BrowserShell.Host {
             return
         }
         val pidToKill = intent?.getIntExtra(KEY_PROCESS_ID_TO_KILL, -1) ?: -1
-        if (pidToKill != -1) {
+        if (pidToKill != -1 &&
+            InternalIntentToken.isValid(this, PURPOSE_KILL_PROCESS, pidToKill.toLong(),
+                intent?.getStringExtra(KEY_PROCESS_KILL_TOKEN))) {
             Process.killProcess(pidToKill)
         }
 

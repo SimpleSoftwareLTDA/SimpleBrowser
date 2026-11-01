@@ -148,7 +148,7 @@ object HttpDownloads {
         val contentType = connection.getHeaderField("Content-Type")
         if (whole) {
             connection.getHeaderField("Content-Disposition")?.let {
-                download.filename = DownloadUtils.guessFileName(download.url, it, contentType)
+                download.filename = DownloadUtils.safeFileName(DownloadUtils.guessFileName(download.url, it, contentType))
             }
         }
         if (download.mimeType == null && contentType != null) {

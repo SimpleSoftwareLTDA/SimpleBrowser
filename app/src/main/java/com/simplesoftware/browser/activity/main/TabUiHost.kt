@@ -58,6 +58,10 @@ class TabUiHost(
         /** Opens an "intent:" url in the app it names */
         fun openInExternalApp(activity: Activity, url: String) {
             val intent = Intent.parseUri(url, Intent.URI_INTENT_SCHEME)
+            //an intent: url comes from a page: it must not name a component or a selector, or it would start
+            //the component of another app without the CATEGORY_BROWSABLE rule of its filter
+            intent.component = null
+            intent.selector = null
             intent.addCategory(Intent.CATEGORY_BROWSABLE)
             val activityComponent = intent.resolveActivity(activity.packageManager)
             if (activityComponent != null && activityComponent.packageName == activity.packageName) {
