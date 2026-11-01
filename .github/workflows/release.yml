@@ -20,11 +20,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-java@v4
         with:
           java-version: '21'
           distribution: 'temurin'
+      - name: Setup Android SDK
+        shell: bash
+        run: |
+          export ANDROID_HOME="${RUNNER_TEMP}/android-sdk"
+          mkdir -p "${ANDROID_HOME}/cmdline-tools/latest"
+          curl -fsSL -o clt.zip https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip
+          unzip -q -o clt.zip -d "${ANDROID_HOME}/cmdline-tools"
+          mv "${ANDROID_HOME}/cmdline-tools/cmdline-tools/"* "${ANDROID_HOME}/cmdline-tools/latest/"
+          yes | "${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
+          "${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager" "platforms;android-37.0" "build-tools;37.0.0" >/dev/null
+          echo "ANDROID_HOME=${ANDROID_HOME}" >> "$GITHUB_ENV"
+
 
       - name: Decode keystore
         run: echo "${{ secrets.KEYSTORE_GI_BASE64 }}" | base64 -d > keystore_gi.jks
@@ -103,4 +114,5 @@ jobs:
           git config user.email "dev@simplesoftware.br"
           git add latest_version.json
           git -c user.name="Simple Software" -c user.email="dev@simplesoftware.br" commit -q -m "Update latest_version.json for v${{ inputs.version }}"
+          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
           git push -q
