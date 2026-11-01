@@ -8,8 +8,8 @@ android {
 
     defaultConfig {
         applicationId = "com.simplesoftware.browser"
-        versionCode = 80
-        versionName = "3.0.2"
+        versionCode = 1
+        versionName = "1.0.0"
     }
 
     signingConfigs {

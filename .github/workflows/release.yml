@@ -52,7 +52,7 @@ jobs:
         run: |
           for dir in genericGeckoIncluded genericGeckoExcluded; do
             for f in app/build/outputs/apk/${dir}/release/app-*.apk; do
-              new="${f/app-/tvbro-${{ inputs.version }}-}"
+              new="${f/app-/simple-browser-${{ inputs.version }}-}"
               mv "$f" "${new/-release.apk/.apk}"
             done
           done
@@ -67,3 +67,40 @@ jobs:
           files: |
             app/build/outputs/apk/genericGeckoIncluded/release/*.apk
             app/build/outputs/apk/genericGeckoExcluded/release/*.apk
+
+      - name: Sync latest_version.json
+        run: |
+          VERSION_CODE=$(grep -oP 'versionCode = \K[0-9]+' app/build.gradle.kts)
+          VERSION_NAME=$(grep -oP 'versionName = "\K[^"]+' app/build.gradle.kts)
+          python3 - "$VERSION_CODE" "$VERSION_NAME" "${{ inputs.version }}" <<'EOF'
+          import json, sys
+          code, name, ver = sys.argv[1], sys.argv[2], sys.argv[3]
+          base = f"https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v{ver}"
+          urls = [f"{base}/simple-browser-{ver}-{abi}.apk"
+                  for abi in ("arm64-v8a", "armeabi-v7a", "x86_64")]
+          variant = lambda minapi: {"minAPI": minapi, "url": urls[0], "urls": urls}
+          data = {
+              "channels": [{
+                  "name": "release",
+                  "latestVersionCode": int(code),
+                  "latestVersionName": name,
+                  "variants": {
+                      "geckoExcluded": variant(24),
+                      "geckoIncluded": variant(26),
+                  },
+              }],
+              "changelog": [{
+                  "versionCode": int(code),
+                  "versionName": name,
+                  "changes": f"Simple Browser {name}.",
+              }],
+          }
+          with open("latest_version.json", "w") as f:
+              json.dump(data, f, indent=2, ensure_ascii=False)
+              f.write("\n")
+          EOF
+          git config user.name "Simple Software"
+          git config user.email "dev@simplesoftware.br"
+          git add latest_version.json
+          git -c user.name="Simple Software" -c user.email="dev@simplesoftware.br" commit -q -m "Update latest_version.json for v${{ inputs.version }}"
+          git push -q
