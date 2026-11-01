@@ -70,8 +70,10 @@ class Config(val prefs: SharedPreferences, private val credentialsPrefs: SharedP
         val SearchEnginesURLs = listOf("https://www.google.com/search?q=[query]", "https://www.bing.com/search?q=[query]",
             "https://search.yahoo.com/search?p=[query]", "https://duckduckgo.com/?q=[query]",
             "https://yandex.com/search/?text=[query]", "https://www.startpage.com/sp/search?query=[query]", "")
-        const val HOME_PAGE_URL = "https://tvbro.phlox.dev/appcontent/home/"
-        //const val HOME_PAGE_URL = "http://10.0.2.2:5000/appcontent/home/"
+        const val HOME_PAGE_URL = "https://sb.robsoncassiano.software/appcontent/home/"
+        /** Serve the home from the network (Cloudflare) instead of the bundled assets.
+         *  Lets you edit recommendations and icons without rebuilding the app. */
+        const val HOME_REMOTE_SERVE = true
     }
 
     enum class Theme {

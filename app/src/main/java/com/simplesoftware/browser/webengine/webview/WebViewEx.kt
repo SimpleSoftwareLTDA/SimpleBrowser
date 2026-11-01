@@ -398,12 +398,15 @@ open class WebViewEx(context: Context, val callback: Callback, val jsInterface: 
                         val assetsPath = "pages/home/$relativePath"
                         val response = HomePageHelper.getWebResourceResponseFromAssets(view.context, assetsPath)
                         if (response != null) {
-                            Log.d(TAG, "shouldInterceptRequest url: ${request.url} -> $assetsPath")
-                            return response
+                            if (!Config.HOME_REMOTE_SERVE) {
+                                Log.d(TAG, "shouldInterceptRequest url: ${request.url} -> $assetsPath")
+                                return response
+                            }
+                            Log.d(TAG, "shouldInterceptRequest url: ${request.url} remote-first, skipping local $assetsPath")
                         } else {
                             Log.w(TAG, "shouldInterceptRequest url: ${request.url} -> not found in assets")
                         }
-                        return response ?: super.shouldInterceptRequest(view, request)
+                        return super.shouldInterceptRequest(view, request)
                     }
                 }
 
