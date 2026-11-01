@@ -27,7 +27,7 @@ class DialogThemeTest {
         val dialog = AlertDialog.Builder(activity).setMessage("Message").create()
         assertEquals(R.drawable.ds_dialog_bg, resourceOf(dialog.context, android.R.attr.windowBackground))
         assertEquals(R.drawable.ds_menu_row_bg, resourceOf(dialog.context, androidx.appcompat.R.attr.listChoiceBackgroundIndicator))
-        assertEquals(R.style.Widget_TVBro_DialogButton,
+        assertEquals(R.style.Widget_SimpleBrowser_DialogButton,
             resourceOf(dialog.context, androidx.appcompat.R.attr.buttonBarPositiveButtonStyle))
     }
 

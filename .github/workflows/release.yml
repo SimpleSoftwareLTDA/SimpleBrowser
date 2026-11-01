@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version (e.g. 1.2.3)'
+        description: 'Version (e.g. 1.1.0)'
         required: true
       prerelease:
         description: 'Release type'
@@ -22,10 +22,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-java@v4
         with:
           java-version: '21'
           distribution: 'temurin'
+
       - name: Setup Android SDK
         shell: bash
         run: |
@@ -40,22 +42,10 @@ jobs:
           echo "ANDROID_HOME=${ANDROID_HOME}" >> "$GITHUB_ENV"
           echo "ANDROID_SDK_ROOT=${ANDROID_HOME}" >> "$GITHUB_ENV"
 
-
       - name: Decode keystore
-        run: echo "${{ secrets.KEYSTORE_GI_BASE64 }}" | base64 -d > keystore_gi.jks
-
-      - name: Build GeckoIncluded
-        run: ./gradlew assembleGenericGeckoIncludedRelease -PenableAbiSplits
-        env:
-          KEYSTORE_PATH: ${{ github.workspace }}/keystore_gi.jks
-          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-
-      - name: Decode keystore2
         run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > keystore_ge.jks
 
-      - name: Build GeckoExcluded
+      - name: Build (WebView only)
         run: ./gradlew assembleGenericGeckoExcludedRelease
         env:
           KEYSTORE_PATH: ${{ github.workspace }}/keystore_ge.jks
@@ -63,13 +53,11 @@ jobs:
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
 
-      - name: Rename artifacts
+      - name: Rename artifact
         run: |
-          for dir in genericGeckoIncluded genericGeckoExcluded; do
-            for f in app/build/outputs/apk/${dir}/release/app-*.apk; do
-              new="${f/app-/simple-browser-${{ inputs.version }}-}"
-              mv "$f" "${new/-release.apk/.apk}"
-            done
+          for f in app/build/outputs/apk/generic/release/app-*.apk; do
+            new="${f/app-/simple-browser-${{ inputs.version }}-}"
+            mv "$f" "${new/-release.apk/.apk}"
           done
 
       - name: Create release
@@ -80,29 +68,23 @@ jobs:
           body_path: RELEASE_NOTES.md
           prerelease: ${{ inputs.prerelease == 'pre-release' }}
           files: |
-            app/build/outputs/apk/genericGeckoIncluded/release/*.apk
-            app/build/outputs/apk/genericGeckoExcluded/release/*.apk
+            app/build/outputs/apk/generic/release/*.apk
 
       - name: Sync latest_version.json
+        shell: bash
         run: |
           VERSION_CODE=$(grep -oP 'versionCode = \K[0-9]+' app/build.gradle.kts)
           VERSION_NAME=$(grep -oP 'versionName = "\K[^"]+' app/build.gradle.kts)
           python3 - "$VERSION_CODE" "$VERSION_NAME" "${{ inputs.version }}" <<'EOF'
           import json, sys
           code, name, ver = sys.argv[1], sys.argv[2], sys.argv[3]
-          base = f"https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v{ver}"
-          urls = [f"{base}/simple-browser-{ver}-{abi}.apk"
-                  for abi in ("arm64-v8a", "armeabi-v7a", "x86_64")]
-          variant = lambda minapi: {"minAPI": minapi, "url": urls[0], "urls": urls}
           data = {
               "channels": [{
                   "name": "release",
                   "latestVersionCode": int(code),
                   "latestVersionName": name,
-                  "variants": {
-                      "geckoExcluded": variant(24),
-                      "geckoIncluded": variant(26),
-                  },
+                  "minAPI": 24,
+                  "url": f"https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v{ver}/simple-browser-{ver}-generic.apk",
               }],
               "changelog": [{
                   "versionCode": int(code),
@@ -114,8 +96,6 @@ jobs:
               json.dump(data, f, indent=2, ensure_ascii=False)
               f.write("\n")
           EOF
-          git config user.name "Simple Software"
-          git config user.email "dev@simplesoftware.br"
           git add latest_version.json
           if ! git diff --cached --quiet; then
             git -c user.name="Simple Software" -c user.email="dev@simplesoftware.br" commit -q -m "Update latest_version.json for v${{ inputs.version }}"

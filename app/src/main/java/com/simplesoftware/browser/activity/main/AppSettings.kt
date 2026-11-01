@@ -286,7 +286,7 @@ class AppSettingsStore(
     }
 
     override val versionName: String get() = BuildConfig.VERSION_NAME
-    override val buildName: String get() = BuildConfig.FLAVOR_appstore
+    override val buildName: String get() = BuildConfig.FLAVOR
     override val engineVersion: String get() = WebEngineFactory.getWebEngineVersionString()
     override val builtInUpdates: Boolean get() = BuildConfig.BUILT_IN_AUTO_UPDATE
     override var autoCheckUpdates: Boolean

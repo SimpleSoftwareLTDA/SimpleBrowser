@@ -22,7 +22,7 @@ import java.util.*
 class AutoUpdateModel: ActiveModel() {
     val config = AppContext.provideConfig()
     var needToShowUpdateDlgAgain: Boolean = false
-    val updateChecker = UpdateChecker(BuildConfig.VERSION_CODE, BuildConfig.FLAVOR_webengine)
+    val updateChecker = UpdateChecker(BuildConfig.VERSION_CODE, "geckoExcluded")
     var lastUpdateNotificationTime: Calendar
     var needAutoCheckUpdates: Boolean
         get() = config.autoCheckUpdates && BuildConfig.BUILT_IN_AUTO_UPDATE

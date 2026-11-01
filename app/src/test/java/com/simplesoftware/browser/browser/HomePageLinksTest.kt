@@ -54,10 +54,10 @@ class HomePageLinksTest {
     @Test
     fun firstStartSuggestsBookmarks() = runBlocking {
         links.load()
-        assertEquals(8, links.links.value.size)
+        assertEquals(6, links.links.value.size)
         assertTrue(config.initialBookmarksSuggestionsLoaded)
-        assertEquals(8, db.favoritesDao().getHomePageBookmarks().size)
-        assertEquals((0 until 8).toList(), links.links.value.map { it.order })
+        assertEquals(6, db.favoritesDao().getHomePageBookmarks().size)
+        assertEquals((0 until 6).toList(), links.links.value.map { it.order })
     }
 
     @Test

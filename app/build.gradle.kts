@@ -8,9 +8,12 @@ android {
 
     defaultConfig {
         applicationId = "com.simplesoftware.browser"
-        versionCode = 2
-        versionName = "1.0.1"
+        versionCode = 3
+        versionName = "1.1.0"
+        buildConfigField("String", "WEB_ENGINE_CLASS",
+            "\"com.simplesoftware.browser.webengine.webview.WebViewWebEngine\"")
     }
+
 
     signingConfigs {
         create("release") {
@@ -49,7 +52,7 @@ android {
         }
     }
 
-    flavorDimensions += listOf("appstore", "webengine")
+    flavorDimensions += listOf("appstore")
     productFlavors {
         create("generic") {
             dimension = "appstore"
@@ -65,22 +68,6 @@ android {
             dimension = "appstore"
             applicationIdSuffix = ".foss"
             buildConfigField("Boolean", "BUILT_IN_AUTO_UPDATE", "false")
-        }
-
-        // each variant has one web engine, registered by SimpleBrowser.initWebEngineStuff()
-        create("geckoIncluded") {
-            dimension = "webengine"
-            // a separate app: it can be installed next to the WebView one
-            applicationIdSuffix = ".gecko"
-            minSdk = 26 // geckoview requires minSdk 26
-            buildConfigField("String", "WEB_ENGINE_CLASS",
-                "\"com.simplesoftware.browser.webengine.gecko.GeckoWebEngine\"")
-        }
-        create("geckoExcluded") {
-            dimension = "webengine"
-            isDefault = true
-            buildConfigField("String", "WEB_ENGINE_CLASS",
-                "\"com.simplesoftware.browser.webengine.webview.WebViewWebEngine\"")
         }
     }
 
@@ -112,7 +99,6 @@ ksp {
 dependencies {
     implementation(project(":app:common"))
     implementation(project(":adblock"))
-    "geckoIncludedImplementation"(project(":app:gecko"))
 
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 

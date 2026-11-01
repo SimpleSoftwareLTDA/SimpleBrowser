@@ -2,35 +2,17 @@
   "channels": [
     {
       "name": "release",
-      "latestVersionCode": 2,
-      "latestVersionName": "1.0.1",
-      "variants": {
-        "geckoExcluded": {
-          "minAPI": 24,
-          "url": "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.1/simple-browser-1.0.1-arm64-v8a.apk",
-          "urls": [
-            "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.1/simple-browser-1.0.1-arm64-v8a.apk",
-            "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.1/simple-browser-1.0.1-armeabi-v7a.apk",
-            "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.1/simple-browser-1.0.1-x86_64.apk"
-          ]
-        },
-        "geckoIncluded": {
-          "minAPI": 26,
-          "url": "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.1/simple-browser-1.0.1-arm64-v8a.apk",
-          "urls": [
-            "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.1/simple-browser-1.0.1-arm64-v8a.apk",
-            "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.1/simple-browser-1.0.1-armeabi-v7a.apk",
-            "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.1/simple-browser-1.0.1-x86_64.apk"
-          ]
-        }
-      }
+      "latestVersionCode": 3,
+      "latestVersionName": "1.1.0",
+      "minAPI": 24,
+      "url": "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.1.0/simple-browser-1.1.0-generic.apk"
     }
   ],
   "changelog": [
     {
-      "versionCode": 2,
-      "versionName": "1.0.1",
-      "changes": "Simple Browser 1.0.1."
+      "versionCode": 3,
+      "versionName": "1.1.0",
+      "changes": "Foco em WebView: remoção da variante GeckoView; distribuição via WebView do sistema."
     }
   ]
 }
