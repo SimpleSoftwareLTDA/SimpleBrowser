@@ -133,7 +133,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data android:scheme="https" />
-                <data android:host="tvbro.phlox.dev" />
+                <data android:host="simplebrowser.simplesoftware.br" />
                 <data android:pathPrefix="/sync" />
             </intent-filter>
             <!-- the same link from the page of the site, for phones where the link was not verified -->
@@ -143,7 +143,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="tvbro" android:host="sync" />
+                <data android:scheme="simplebrowser" android:host="sync" />
             </intent-filter>
         </activity>
         <activity android:name=".activity.IncognitoModeMainActivity"
