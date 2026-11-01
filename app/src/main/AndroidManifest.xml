@@ -133,7 +133,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data android:scheme="https" />
-                <data android:host="simplebrowser.simplesoftware.br" />
+                <data android:host="sb.robsoncassiano.software" />
                 <data android:pathPrefix="/sync" />
             </intent-filter>
             <!-- the same link from the page of the site, for phones where the link was not verified -->
