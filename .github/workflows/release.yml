@@ -117,6 +117,8 @@ jobs:
           git config user.name "Simple Software"
           git config user.email "dev@simplesoftware.br"
           git add latest_version.json
-          git -c user.name="Simple Software" -c user.email="dev@simplesoftware.br" commit -q -m "Update latest_version.json for v${{ inputs.version }}"
-          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
-          git push -q
+          if ! git diff --cached --quiet; then
+            git -c user.name="Simple Software" -c user.email="dev@simplesoftware.br" commit -q -m "Update latest_version.json for v${{ inputs.version }}"
+            git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
+            git push -q
+          fi
