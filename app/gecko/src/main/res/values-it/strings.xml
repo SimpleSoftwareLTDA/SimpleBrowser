@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <string name="clear">Cancella</string>
-  <string name="repost_confirm_message">Per visualizzare questa pagina, TV Bro deve inviare di nuovo informazioni che ripeteranno qualsiasi azione eseguita in precedenza (come una ricerca o una conferma d\'ordine).</string>
+  <string name="repost_confirm_message">Per visualizzare questa pagina, Simple Browser deve inviare di nuovo informazioni che ripeteranno qualsiasi azione eseguita in precedenza (come una ricerca o una conferma d\'ordine).</string>
   <string name="repost_confirm_title">Sei sicuro?</string>
   <string name="repost_confirm_resend">Invia di nuovo</string>
   <string name="before_unload_message">Questa pagina ti chiede di confermare che vuoi uscire: i dati inseriti potrebbero non essere salvati</string>

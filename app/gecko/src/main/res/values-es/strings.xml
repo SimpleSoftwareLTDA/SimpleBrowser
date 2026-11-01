@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="clear">Borrar</string>
-    <string name="repost_confirm_message">Para mostrar esta página, TV Bro debe enviar información que repetirá cualquier acción realizada anteriormente (como una búsqueda o la confirmación de un pedido).</string>
+    <string name="repost_confirm_message">Para mostrar esta página, Simple Browser debe enviar información que repetirá cualquier acción realizada anteriormente (como una búsqueda o la confirmación de un pedido).</string>
     <string name="repost_confirm_title">¿Estás seguro?</string>
     <string name="repost_confirm_resend">Reenviar</string>
     <string name="before_unload_message">Esta página te pide que confirmes que quieres salir; es posible que no se guarden los datos que hayas introducido</string>

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <string name="clear">清除</string>
-  <string name="repost_confirm_message">为了显示此页面，TV Bro 必须重新发送信息，这将重复之前执行的操作（如搜索或确认订单）。</string>
+  <string name="repost_confirm_message">为了显示此页面，Simple Browser 必须重新发送信息，这将重复之前执行的操作（如搜索或确认订单）。</string>
   <string name="repost_confirm_title">您确定吗？</string>
   <string name="repost_confirm_resend">重新发送</string>
   <string name="before_unload_message">此页面要求您确认是否离开——您输入的信息可能不会被保存。</string>

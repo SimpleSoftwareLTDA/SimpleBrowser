@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TV Bro：電視網頁瀏覽器</string>
+    <string name="app_name">Simple Browser：電視網頁瀏覽器</string>
     <string name="error">錯誤</string>
     <string name="ok">OK</string>
     <string name="url_prompt">輸入關鍵字或網址</string>
@@ -44,7 +44,7 @@
     <string name="clear">清除</string>
     <string name="install">安裝</string>
     <string name="turn_on_unknown_sources">請在系統設定中啟用「未知來源」</string>
-    <string name="turn_on_unknown_sources_for_app">請在系統設定中允許 TV Bro 安裝來自「未知來源」的應用程式</string>
+    <string name="turn_on_unknown_sources_for_app">請在系統設定中允許 Simple Browser 安裝來自「未知來源」的應用程式</string>
     <string name="voice_search_not_found">找不到語音搜尋</string>
     <string name="new_version_dialog_title">有可用的新版本</string>
     <string name="later">稍後</string>
@@ -73,7 +73,7 @@
     <string name="direct_navigation_mode_message">直接導覽會隱藏螢幕游標，並將遙控器或遊戲手把的按鍵直接傳給網頁，讓支援電視或鍵盤焦點的網站能突顯連結與控制項。\n\n若要離開此模式：在電視遙控器上按「返回」，或在遊戲手把上長按 B 鍵。\n\n此模式以 WebView 引擎效果最佳：WebView 支援用方向鍵在頁面內移動焦點。</string>
     <string name="theme">主題</string>
     <string name="incognito_mode">無痕模式</string>
-    <string name="incognito_mode_hint">您現在可以私密瀏覽，其他使用此裝置的人無法看到您的活動。TV Bro 不會儲存您的歷史紀錄、Cookies、網站資料，以及輸入表單的資訊。\n\n然而，下載和書籤仍會被儲存。您的活動仍可能會被您造訪的網站、您的組織，或是網路服務供應商看到。</string>
+    <string name="incognito_mode_hint">您現在可以私密瀏覽，其他使用此裝置的人無法看到您的活動。Simple Browser 不會儲存您的歷史紀錄、Cookies、網站資料，以及輸入表單的資訊。\n\n然而，下載和書籤仍會被儲存。您的活動仍可能會被您造訪的網站、您的組織，或是網路服務供應商看到。</string>
     <string name="don_t_show_again">不再顯示</string>
     <string name="why_icon_changed">為什麼圖示變了？</string>
     <string name="block_popups">阻擋彈出式視窗</string>
@@ -98,7 +98,7 @@
         <item>最常造訪</item>
     </string-array>
     <string-array name="home_page_modes">
-        <item>TV Bro 首頁</item>
+        <item>Simple Browser 首頁</item>
         <item>搜尋引擎</item>
         <item>自訂</item>
         <item>空白</item>
@@ -349,7 +349,7 @@
     <string name="sync_connect_phone">連接手機</string>
     <string name="sync_phone_sync">手機同步</string>
     <string name="sync_scan_title">用手機掃描</string>
-    <string name="sync_scan_steps">將手機相機對準 QR 圖碼，然後在 TV Bro 中開啟連結。之後您就能從手機將分頁、書籤和檔案傳送到這台電視。</string>
+    <string name="sync_scan_steps">將手機相機對準 QR 圖碼，然後在 Simple Browser 中開啟連結。之後您就能從手機將分頁、書籤和檔案傳送到這台電視。</string>
     <string name="sync_same_network">手機必須與電視連上同一個網路（%s）。</string>
     <string name="sync_no_network">電視未連上網路。</string>
     <string name="sync_starting">正在啟動…</string>
@@ -374,7 +374,7 @@
     <string name="sync_send_to_tv">傳送到電視</string>
     <string name="sync_tvs">電視</string>
     <string name="sync_no_tvs">尚無電視</string>
-    <string name="sync_how_to_pair">在電視上開啟 TV Bro，選擇工具列中的手機按鈕，然後用這支手機的相機掃描 QR 圖碼。</string>
+    <string name="sync_how_to_pair">在電視上開啟 Simple Browser，選擇工具列中的手機按鈕，然後用這支手機的相機掃描 QR 圖碼。</string>
     <string name="sync_pairing">正在連線至 %s…</string>
     <string name="sync_paired">已新增 %s</string>
     <string name="sync_pairing_failed">無法連線至電視</string>
@@ -393,7 +393,7 @@
     <string name="sync_bookmarks_preview_title_phone">要更新這支手機上的書籤嗎？</string>
     <string name="sync_bookmarks_same_phone">這支手機的書籤相同</string>
     <string name="sync_bookmarks_received">這支手機上的書籤已更新</string>
-    <string name="sync_tv_too_old">%s 需要較新版本的 TV Bro</string>
+    <string name="sync_tv_too_old">%s 需要較新版本的 Simple Browser</string>
     <string name="sync_send">傳送</string>
     <string name="sync_next">下一步</string>
     <string name="sync_select_all">全選</string>
@@ -413,7 +413,7 @@
     <string name="sync_forget_tv_confirm">要忘記 %s 嗎？</string>
     <string name="sync_status_checking">正在尋找…</string>
     <string name="sync_status_found">已就緒</string>
-    <string name="sync_status_not_found">找不到：請在電視上開啟 TV Bro</string>
+    <string name="sync_status_not_found">找不到：請在電視上開啟 Simple Browser</string>
     <string name="sync_status_forgot">已不再認得這支手機</string>
     <string name="sync_send_count">傳送（%d）</string>
     <string name="sync_local_network_needed">請允許存取區域網路</string>
@@ -428,7 +428,7 @@
     <string name="sync_files_cancelled">已取消傳送</string>
     <string name="sync_file_unreadable">無法讀取 %s</string>
     <string name="sync_file_interrupted">%2$s 已停止接收 %1$s</string>
-    <string name="sync_file_need_permission">請允許 %s 上的 TV Bro 儲存檔案，然後重新傳送</string>
+    <string name="sync_file_need_permission">請允許 %s 上的 Simple Browser 儲存檔案，然後重新傳送</string>
     <string name="sync_file_storage">%s 無法儲存檔案</string>
     <string name="sync_file_cancelled_on_tv">檔案已在 %s 上取消</string>
     <string name="sync_file_receiving">正在從 %2$s 接收 %1$s</string>
@@ -452,7 +452,7 @@
     <string name="settings_summary_advanced">網頁快取、引擎偵錯、Proxy</string>
     <string name="settings_summary_proxy_s">Proxy %s</string>
     <string name="settings_after_restart">重新啟動後生效</string>
-    <string name="settings_restart_message">重新啟動 TV Bro 以套用變更</string>
+    <string name="settings_restart_message">重新啟動 Simple Browser 以套用變更</string>
     <string name="settings_restart_now">立即重新啟動</string>
     <string name="settings_turn_on">開啟</string>
     <string name="settings_on">已開啟</string>

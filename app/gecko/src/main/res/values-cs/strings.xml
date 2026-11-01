@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="clear">Vymazat</string>
-    <string name="repost_confirm_message">Aby bylo možné tuto stránku zobrazit, musí TV Bro odeslat informace, které zopakují jakoukoli dříve provedenou akci (například vyhledávání nebo potvrzení objednávky).</string>
+    <string name="repost_confirm_message">Aby bylo možné tuto stránku zobrazit, musí Simple Browser odeslat informace, které zopakují jakoukoli dříve provedenou akci (například vyhledávání nebo potvrzení objednávky).</string>
     <string name="repost_confirm_title">Opravdu?</string>
     <string name="repost_confirm_resend">Odeslat znovu</string>
     <string name="before_unload_message">Tato stránka vás žádá o potvrzení, že ji chcete opustit. Zadané údaje nemusí být uloženy</string>

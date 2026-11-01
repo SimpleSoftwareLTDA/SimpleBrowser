@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <string name="clear">پاک کردن</string>
-  <string name="repost_confirm_message">برای نمایش این صفحه، TV Bro باید اطلاعاتی را دوباره ارسال کند که هر اقدام انجام‌شده قبلی (مانند جستجو یا تأیید سفارش) را تکرار می‌کند.</string>
+  <string name="repost_confirm_message">برای نمایش این صفحه، Simple Browser باید اطلاعاتی را دوباره ارسال کند که هر اقدام انجام‌شده قبلی (مانند جستجو یا تأیید سفارش) را تکرار می‌کند.</string>
   <string name="repost_confirm_title">مطمئن هستید؟</string>
   <string name="repost_confirm_resend">ارسال مجدد</string>
   <string name="before_unload_message">این صفحه از شما می‌خواهد تأیید کنید که قصد خروج دارید — ممکن است داده‌هایی که وارد کرده‌اید ذخیره نشوند</string>

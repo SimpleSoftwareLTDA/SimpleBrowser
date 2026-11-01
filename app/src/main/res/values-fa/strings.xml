@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="app_name">TV Bro: مرورگر وب تلویزیون</string>
+  <string name="app_name">Simple Browser: مرورگر وب تلویزیون</string>
   <string name="error">خطا</string>
   <string name="ok">تأیید</string>
   <string name="url_prompt">جستجو یا URL را تایپ کنید</string>
@@ -42,7 +42,7 @@
   <string name="clear">پاک کردن</string>
   <string name="install">نصب</string>
   <string name="turn_on_unknown_sources">لطفاً تنظیم سیستمی «منابع ناشناخته» را فعال کنید</string>
-  <string name="turn_on_unknown_sources_for_app">لطفاً در تنظیمات سیستم به TV Bro اجازه دهید برنامه‌ها را از «منابع ناشناخته» نصب کند</string>
+  <string name="turn_on_unknown_sources_for_app">لطفاً در تنظیمات سیستم به Simple Browser اجازه دهید برنامه‌ها را از «منابع ناشناخته» نصب کند</string>
   <string name="voice_search_not_found">جستجوی صوتی یافت نشد</string>
   <string name="new_version_dialog_title">نسخه جدید در دسترس است</string>
   <string name="later">بعداً</string>
@@ -76,7 +76,7 @@
   <string name="direct_navigation_mode_title">حالت پیمایش مستقیم</string>
   <string name="direct_navigation_mode_message">پیمایش مستقیم مکان‌نما را پنهان می‌کند و فشردن کلیدهای ریموت یا دسته بازی را مستقیماً به صفحه وب می‌فرستد تا سایت‌هایی که فوکوس تلویزیونی یا صفحه‌کلید را پشتیبانی می‌کنند بتوانند پیوندها و کنترل‌ها را برجسته کنند.\n\nبرای خروج از این حالت: «برگشت» را روی ریموت تلویزیون بزنید یا دکمه B دسته را نگه دارید.\n\nاین حالت با موتور WebView بهتر کار می‌کند: WebView جابه‌جایی فوکوس در صفحه با D-pad را پشتیبانی می‌کند.</string>
   <string name="incognito_mode">حالت ناشناس</string>
-  <string name="incognito_mode_hint">اکنون می‌توانید به‌صورت خصوصی مرور کنید و سایر افرادی که از این دستگاه استفاده می‌کنند فعالیت شما را نخواهند دید. TV Bro تاریخچه مرور، کوکی‌ها، داده‌های سایت‌ها و اطلاعات واردشده در فرم‌ها را ذخیره نمی‌کند.\n\nبا این حال، بارگیری‌ها و نشانک‌ها ذخیره خواهند شد. ممکن است فعالیت شما همچنان برای وب‌سایت‌هایی که بازدید می‌کنید، سازمان شما یا ارائه‌دهنده خدمات اینترنت قابل مشاهده باشد.</string>
+  <string name="incognito_mode_hint">اکنون می‌توانید به‌صورت خصوصی مرور کنید و سایر افرادی که از این دستگاه استفاده می‌کنند فعالیت شما را نخواهند دید. Simple Browser تاریخچه مرور، کوکی‌ها، داده‌های سایت‌ها و اطلاعات واردشده در فرم‌ها را ذخیره نمی‌کند.\n\nبا این حال، بارگیری‌ها و نشانک‌ها ذخیره خواهند شد. ممکن است فعالیت شما همچنان برای وب‌سایت‌هایی که بازدید می‌کنید، سازمان شما یا ارائه‌دهنده خدمات اینترنت قابل مشاهده باشد.</string>
   <string name="don_t_show_again">دیگر نشان نده</string>
   <string name="why_icon_changed">چرا نماد تغییر کرد؟</string>
   <string name="no_bookmarks_yet">هنوز هیچ نشانکی وجود ندارد</string>
@@ -98,7 +98,7 @@
   </string-array>
   <string name="home_page">صفحه اصلی</string>
   <string-array name="home_page_modes">
-    <item>صفحه اصلی TV Bro</item>
+    <item>صفحه اصلی Simple Browser</item>
     <item>موتور جستجو</item>
     <item>سفارشی</item>
     <item>خالی</item>
@@ -362,7 +362,7 @@
   <string name="sync_connect_phone">اتصال تلفن</string>
   <string name="sync_phone_sync">همگام‌سازی با تلفن</string>
   <string name="sync_scan_title">با تلفن خود اسکن کنید</string>
-  <string name="sync_scan_steps">دوربین تلفن را به سمت کد بگیرید و پیوند را در TV Bro باز کنید. پس از آن می‌توانید برگه‌ها، نشانک‌ها و پرونده‌ها را از تلفن به این تلویزیون بفرستید.</string>
+  <string name="sync_scan_steps">دوربین تلفن را به سمت کد بگیرید و پیوند را در Simple Browser باز کنید. پس از آن می‌توانید برگه‌ها، نشانک‌ها و پرونده‌ها را از تلفن به این تلویزیون بفرستید.</string>
   <string name="sync_same_network">تلفن باید در همان شبکه تلویزیون باشد (%s).</string>
   <string name="sync_no_network">تلویزیون به هیچ شبکه‌ای متصل نیست.</string>
   <string name="sync_starting">در حال شروع…</string>
@@ -388,7 +388,7 @@
   <string name="sync_send_to_tv">ارسال به تلویزیون</string>
   <string name="sync_tvs">تلویزیون‌ها</string>
   <string name="sync_no_tvs">هنوز تلویزیونی وجود ندارد</string>
-  <string name="sync_how_to_pair">در تلویزیون، TV Bro را باز کنید، دکمه تلفن را در نوار آن انتخاب کنید و کد را با دوربین این تلفن اسکن کنید.</string>
+  <string name="sync_how_to_pair">در تلویزیون، Simple Browser را باز کنید، دکمه تلفن را در نوار آن انتخاب کنید و کد را با دوربین این تلفن اسکن کنید.</string>
   <string name="sync_pairing">در حال اتصال به %s…</string>
   <string name="sync_paired">%s افزوده شد</string>
   <string name="sync_pairing_failed">اتصال به تلویزیون ممکن نیست</string>
@@ -407,7 +407,7 @@
   <string name="sync_bookmarks_preview_title_phone">نشانک‌های این تلفن به‌روز شوند؟</string>
   <string name="sync_bookmarks_same_phone">این تلفن همین نشانک‌ها را دارد</string>
   <string name="sync_bookmarks_received">نشانک‌های این تلفن به‌روز شدند</string>
-  <string name="sync_tv_too_old">%s به نسخه جدیدتر TV Bro نیاز دارد</string>
+  <string name="sync_tv_too_old">%s به نسخه جدیدتر Simple Browser نیاز دارد</string>
   <string name="sync_send">ارسال</string>
   <string name="sync_next">بعدی</string>
   <string name="sync_select_all">انتخاب همه</string>
@@ -428,7 +428,7 @@
   <string name="sync_forget_tv_confirm">%s فراموش شود؟</string>
   <string name="sync_status_checking">در حال جستجو…</string>
   <string name="sync_status_found">آماده</string>
-  <string name="sync_status_not_found">یافت نشد: TV Bro را روی آن باز کنید</string>
+  <string name="sync_status_not_found">یافت نشد: Simple Browser را روی آن باز کنید</string>
   <string name="sync_status_forgot">دیگر این تلفن را نمی‌شناسد</string>
   <string name="sync_send_count">ارسال (%d)</string>
   <string name="sync_local_network_needed">اجازه دسترسی به شبکه محلی را بدهید</string>
@@ -444,7 +444,7 @@
   <string name="sync_files_cancelled">ارسال لغو شد</string>
   <string name="sync_file_unreadable">خواندن %s ممکن نیست</string>
   <string name="sync_file_interrupted">%2$s دریافت %1$s را متوقف کرد</string>
-  <string name="sync_file_need_permission">به TV Bro در %s اجازه ذخیره پرونده بدهید و دوباره بفرستید</string>
+  <string name="sync_file_need_permission">به Simple Browser در %s اجازه ذخیره پرونده بدهید و دوباره بفرستید</string>
   <string name="sync_file_storage">%s نمی‌تواند پرونده را ذخیره کند</string>
   <string name="sync_file_cancelled_on_tv">پرونده در %s لغو شد</string>
   <string name="sync_file_receiving">در حال دریافت %1$s از %2$s</string>
@@ -468,7 +468,7 @@
   <string name="settings_summary_advanced">حافظه پنهان وب، اشکال‌زدایی موتور، پروکسی</string>
   <string name="settings_summary_proxy_s">پروکسی %s</string>
   <string name="settings_after_restart">پس از راه‌اندازی مجدد</string>
-  <string name="settings_restart_message">برای اعمال تغییرات، TV Bro را دوباره راه‌اندازی کنید</string>
+  <string name="settings_restart_message">برای اعمال تغییرات، Simple Browser را دوباره راه‌اندازی کنید</string>
   <string name="settings_restart_now">اکنون راه‌اندازی مجدد</string>
   <string name="settings_turn_on">روشن کردن</string>
   <string name="settings_on">روشن</string>

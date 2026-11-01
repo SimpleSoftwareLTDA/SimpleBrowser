@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="app_name">TV Bro: Trình duyệt web TV</string>
+  <string name="app_name">Simple Browser: Trình duyệt web TV</string>
   <string name="error">Lỗi</string>
   <string name="ok">OK</string>
   <string name="url_prompt">Nhập từ khóa tìm kiếm hoặc URL</string>
@@ -42,7 +42,7 @@
   <string name="clear">Xóa</string>
   <string name="install">Cài đặt</string>
   <string name="turn_on_unknown_sources">Vui lòng bật cài đặt hệ thống \"Nguồn không xác định\"</string>
-  <string name="turn_on_unknown_sources_for_app">Vui lòng cho phép TV Bro cài đặt ứng dụng từ \"Nguồn không xác định\" trong cài đặt hệ thống</string>
+  <string name="turn_on_unknown_sources_for_app">Vui lòng cho phép Simple Browser cài đặt ứng dụng từ \"Nguồn không xác định\" trong cài đặt hệ thống</string>
   <string name="voice_search_not_found">Không tìm thấy tìm kiếm bằng giọng nói</string>
   <string name="new_version_dialog_title">Có phiên bản mới</string>
   <string name="later">Để sau</string>
@@ -76,7 +76,7 @@
   <string name="direct_navigation_mode_title">Chế độ điều hướng trực tiếp</string>
   <string name="direct_navigation_mode_message">Điều hướng trực tiếp ẩn con trỏ trên màn hình và gửi phím từ điều khiển từ xa hoặc tay cầm chơi game thẳng tới trang web, để các trang hỗ trợ tiêu điểm TV hoặc bàn phím có thể làm nổi bật liên kết và điều khiển.\n\nĐể thoát: nhấn Quay lại trên điều khiển TV hoặc giữ nút B trên tay cầm.\n\nChế độ này hoạt động tốt nhất với công cụ WebView: WebView hỗ trợ di chuyển tiêu điểm trong trang bằng D-pad.</string>
   <string name="incognito_mode">Chế độ ẩn danh</string>
-  <string name="incognito_mode_hint">Giờ đây, bạn có thể duyệt web một cách riêng tư và những người khác sử dụng thiết bị này sẽ không thấy hoạt động của bạn. TV Bro sẽ không lưu lịch sử duyệt web, cookie, dữ liệu trang web và thông tin bạn đã nhập vào biểu mẫu.\n\nTuy nhiên, các tệp tải xuống và dấu trang vẫn sẽ được lưu. Hoạt động của bạn có thể vẫn hiển thị với các trang web bạn truy cập, tổ chức của bạn hoặc nhà cung cấp dịch vụ internet.</string>
+  <string name="incognito_mode_hint">Giờ đây, bạn có thể duyệt web một cách riêng tư và những người khác sử dụng thiết bị này sẽ không thấy hoạt động của bạn. Simple Browser sẽ không lưu lịch sử duyệt web, cookie, dữ liệu trang web và thông tin bạn đã nhập vào biểu mẫu.\n\nTuy nhiên, các tệp tải xuống và dấu trang vẫn sẽ được lưu. Hoạt động của bạn có thể vẫn hiển thị với các trang web bạn truy cập, tổ chức của bạn hoặc nhà cung cấp dịch vụ internet.</string>
   <string name="don_t_show_again">Không hiển thị lại</string>
   <string name="why_icon_changed">Tại sao biểu tượng thay đổi?</string>
   <string name="no_bookmarks_yet">Chưa có dấu trang nào</string>
@@ -98,7 +98,7 @@
   </string-array>
   <string name="home_page">Trang chủ</string>
   <string-array name="home_page_modes">
-    <item>Trang chủ TV Bro</item>
+    <item>Trang chủ Simple Browser</item>
     <item>Công cụ tìm kiếm</item>
     <item>Tùy chỉnh</item>
     <item>Trống</item>
@@ -349,7 +349,7 @@
   <string name="sync_connect_phone">Kết nối điện thoại</string>
   <string name="sync_phone_sync">Đồng bộ với điện thoại</string>
   <string name="sync_scan_title">Quét bằng điện thoại</string>
-  <string name="sync_scan_steps">Hướng máy ảnh của điện thoại vào mã và mở liên kết trong TV Bro. Sau đó bạn có thể gửi tab, dấu trang và tệp từ điện thoại tới TV này.</string>
+  <string name="sync_scan_steps">Hướng máy ảnh của điện thoại vào mã và mở liên kết trong Simple Browser. Sau đó bạn có thể gửi tab, dấu trang và tệp từ điện thoại tới TV này.</string>
   <string name="sync_same_network">Điện thoại phải dùng cùng mạng với TV (%s).</string>
   <string name="sync_no_network">TV chưa kết nối với mạng nào.</string>
   <string name="sync_starting">Đang khởi động…</string>
@@ -374,7 +374,7 @@
   <string name="sync_send_to_tv">Gửi tới TV</string>
   <string name="sync_tvs">TV</string>
   <string name="sync_no_tvs">Chưa có TV nào</string>
-  <string name="sync_how_to_pair">Trên TV, mở TV Bro, chọn nút điện thoại trên thanh công cụ và quét mã bằng máy ảnh của điện thoại này.</string>
+  <string name="sync_how_to_pair">Trên TV, mở Simple Browser, chọn nút điện thoại trên thanh công cụ và quét mã bằng máy ảnh của điện thoại này.</string>
   <string name="sync_pairing">Đang kết nối tới %s…</string>
   <string name="sync_paired">Đã thêm %s</string>
   <string name="sync_pairing_failed">Không thể kết nối tới TV</string>
@@ -393,7 +393,7 @@
   <string name="sync_bookmarks_preview_title_phone">Cập nhật dấu trang trên điện thoại này?</string>
   <string name="sync_bookmarks_same_phone">Điện thoại này có cùng dấu trang</string>
   <string name="sync_bookmarks_received">Đã cập nhật dấu trang trên điện thoại này</string>
-  <string name="sync_tv_too_old">%s cần phiên bản TV Bro mới hơn</string>
+  <string name="sync_tv_too_old">%s cần phiên bản Simple Browser mới hơn</string>
   <string name="sync_send">Gửi</string>
   <string name="sync_next">Tiếp</string>
   <string name="sync_select_all">Chọn tất cả</string>
@@ -413,7 +413,7 @@
   <string name="sync_forget_tv_confirm">Quên %s?</string>
   <string name="sync_status_checking">Đang tìm…</string>
   <string name="sync_status_found">Sẵn sàng</string>
-  <string name="sync_status_not_found">Không tìm thấy: hãy mở TV Bro trên TV đó</string>
+  <string name="sync_status_not_found">Không tìm thấy: hãy mở Simple Browser trên TV đó</string>
   <string name="sync_status_forgot">Không còn nhận ra điện thoại này</string>
   <string name="sync_send_count">Gửi (%d)</string>
   <string name="sync_local_network_needed">Cho phép truy cập mạng cục bộ</string>
@@ -428,7 +428,7 @@
   <string name="sync_files_cancelled">Đã hủy gửi</string>
   <string name="sync_file_unreadable">Không thể đọc %s</string>
   <string name="sync_file_interrupted">%2$s đã ngừng nhận %1$s</string>
-  <string name="sync_file_need_permission">Hãy cho phép TV Bro trên %s lưu tệp, rồi gửi lại</string>
+  <string name="sync_file_need_permission">Hãy cho phép Simple Browser trên %s lưu tệp, rồi gửi lại</string>
   <string name="sync_file_storage">%s không thể lưu tệp</string>
   <string name="sync_file_cancelled_on_tv">Tệp đã bị hủy trên %s</string>
   <string name="sync_file_receiving">Đang nhận %1$s từ %2$s</string>
@@ -452,7 +452,7 @@
   <string name="settings_summary_advanced">Bộ nhớ đệm web, gỡ lỗi công cụ, proxy</string>
   <string name="settings_summary_proxy_s">Proxy %s</string>
   <string name="settings_after_restart">Sau khi khởi động lại</string>
-  <string name="settings_restart_message">Khởi động lại TV Bro để áp dụng thay đổi</string>
+  <string name="settings_restart_message">Khởi động lại Simple Browser để áp dụng thay đổi</string>
   <string name="settings_restart_now">Khởi động lại ngay</string>
   <string name="settings_turn_on">Bật</string>
   <string name="settings_on">Đang bật</string>

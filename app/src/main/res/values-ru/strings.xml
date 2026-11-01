@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="app_name">TV Bro: браузер для ТВ</string>
+  <string name="app_name">Simple Browser: браузер для ТВ</string>
   <string name="add">Добавить</string>
   <string name="allow">Разрешить</string>
   <string name="bookmarks">Закладки</string>
@@ -41,7 +41,7 @@
   <string name="voice_search">Голосовой поиск</string>
   <string name="install">Установить</string>
   <string name="turn_on_unknown_sources">Пожалуйста, включите системную настройку «Неизвестные источники»</string>
-  <string name="turn_on_unknown_sources_for_app">Пожалуйста, разрешите TV Bro устанавливать приложения из «Неизвестных источников» в настройках системы</string>
+  <string name="turn_on_unknown_sources_for_app">Пожалуйста, разрешите Simple Browser устанавливать приложения из «Неизвестных источников» в настройках системы</string>
   <string name="voice_search_not_found">Приложение голосового поиска не найдено</string>
   <string name="msg_delete_history_all">Удалить всю историю?</string>
   <string name="downloads">Загрузки</string>
@@ -76,7 +76,7 @@
   <string name="direct_navigation_mode_title">Режим прямой навигации</string>
   <string name="direct_navigation_mode_message">Прямая навигация скрывает курсор на экране и передаёт нажатия с пульта или геймпада прямо на веб-страницу, чтобы сайты с поддержкой фокуса для ТВ или клавиатуры могли выделять ссылки и элементы управления.\n\nЧтобы выйти из этого режима: нажмите «Назад» на пульте телевизора или удерживайте кнопку B на геймпаде.\n\nЭтот режим лучше всего работает с движком WebView: WebView поддерживает перемещение фокуса по странице с помощью D-pad.</string>
   <string name="incognito_mode">Режим инкогнито</string>
-  <string name="incognito_mode_hint">Теперь вы можете просматривать сайты конфиденциально, и другие люди, использующие это устройство, не увидят ваших действий. TV Bro не будет сохранять историю посещений, файлы cookie, данные сайтов и информацию, введённую в формы.\n\nОднако загрузки и закладки будут сохранены. Ваши действия по-прежнему могут быть видны сайтам, которые вы посещаете, вашей организации или интернет-провайдеру.</string>
+  <string name="incognito_mode_hint">Теперь вы можете просматривать сайты конфиденциально, и другие люди, использующие это устройство, не увидят ваших действий. Simple Browser не будет сохранять историю посещений, файлы cookie, данные сайтов и информацию, введённую в формы.\n\nОднако загрузки и закладки будут сохранены. Ваши действия по-прежнему могут быть видны сайтам, которые вы посещаете, вашей организации или интернет-провайдеру.</string>
   <string name="don_t_show_again">Больше не показывать</string>
   <string name="why_icon_changed">Почему изменился значок?</string>
   <string name="no_bookmarks_yet">Закладок пока нет</string>
@@ -98,7 +98,7 @@
   </string-array>
   <string name="home_page">Домашняя страница</string>
   <string-array name="home_page_modes">
-    <item>Домашняя страница TV Bro</item>
+    <item>Домашняя страница Simple Browser</item>
     <item>Поисковая система</item>
     <item>Пользовательская</item>
     <item>Пустая</item>
@@ -388,7 +388,7 @@
   <string name="sync_connect_phone">Подключить телефон</string>
   <string name="sync_phone_sync">Синхронизация с телефоном</string>
   <string name="sync_scan_title">Отсканируйте телефоном</string>
-  <string name="sync_scan_steps">Наведите камеру телефона на код и откройте ссылку в TV Bro. После этого вы сможете отправлять с телефона на этот телевизор вкладки, закладки и файлы.</string>
+  <string name="sync_scan_steps">Наведите камеру телефона на код и откройте ссылку в Simple Browser. После этого вы сможете отправлять с телефона на этот телевизор вкладки, закладки и файлы.</string>
   <string name="sync_same_network">Телефон должен быть в той же сети, что и телевизор (%s).</string>
   <string name="sync_no_network">Телевизор не подключён к сети.</string>
   <string name="sync_starting">Запуск…</string>
@@ -416,7 +416,7 @@
   <string name="sync_send_to_tv">Отправить на ТВ</string>
   <string name="sync_tvs">Телевизоры</string>
   <string name="sync_no_tvs">Телевизоров пока нет</string>
-  <string name="sync_how_to_pair">На телевизоре откройте TV Bro, выберите кнопку телефона на его панели и отсканируйте код камерой этого телефона.</string>
+  <string name="sync_how_to_pair">На телевизоре откройте Simple Browser, выберите кнопку телефона на его панели и отсканируйте код камерой этого телефона.</string>
   <string name="sync_pairing">Подключение к %s…</string>
   <string name="sync_paired">%s добавлен</string>
   <string name="sync_pairing_failed">Не удаётся подключиться к телевизору</string>
@@ -435,7 +435,7 @@
   <string name="sync_bookmarks_preview_title_phone">Обновить закладки на этом телефоне?</string>
   <string name="sync_bookmarks_same_phone">На этом телефоне такие же закладки</string>
   <string name="sync_bookmarks_received">Закладки на этом телефоне обновлены</string>
-  <string name="sync_tv_too_old">Для %s нужна более новая версия TV Bro</string>
+  <string name="sync_tv_too_old">Для %s нужна более новая версия Simple Browser</string>
   <string name="sync_send">Отправить</string>
   <string name="sync_next">Далее</string>
   <string name="sync_select_all">Выбрать все</string>
@@ -458,7 +458,7 @@
   <string name="sync_forget_tv_confirm">Забыть %s?</string>
   <string name="sync_status_checking">Поиск…</string>
   <string name="sync_status_found">Готово</string>
-  <string name="sync_status_not_found">Не найден: откройте на нём TV Bro</string>
+  <string name="sync_status_not_found">Не найден: откройте на нём Simple Browser</string>
   <string name="sync_status_forgot">Больше не знает этот телефон</string>
   <string name="sync_send_count">Отправить (%d)</string>
   <string name="sync_local_network_needed">Разрешите доступ к локальной сети</string>
@@ -476,7 +476,7 @@
   <string name="sync_files_cancelled">Отправка отменена</string>
   <string name="sync_file_unreadable">Не удаётся прочитать %s</string>
   <string name="sync_file_interrupted">%2$s: получение %1$s прервано</string>
-  <string name="sync_file_need_permission">Разрешите TV Bro на %s сохранять файлы и отправьте снова</string>
+  <string name="sync_file_need_permission">Разрешите Simple Browser на %s сохранять файлы и отправьте снова</string>
   <string name="sync_file_storage">%s не может сохранить файл</string>
   <string name="sync_file_cancelled_on_tv">Файл отменён на %s</string>
   <string name="sync_file_receiving">Получение %1$s с %2$s</string>
@@ -500,7 +500,7 @@
   <string name="settings_summary_advanced">Веб-кеш, отладка движка, прокси</string>
   <string name="settings_summary_proxy_s">Прокси %s</string>
   <string name="settings_after_restart">После перезапуска</string>
-  <string name="settings_restart_message">Перезапустите TV Bro, чтобы применить изменения</string>
+  <string name="settings_restart_message">Перезапустите Simple Browser, чтобы применить изменения</string>
   <string name="settings_restart_now">Перезапустить</string>
   <string name="settings_turn_on">Включить</string>
   <string name="settings_on">Включено</string>

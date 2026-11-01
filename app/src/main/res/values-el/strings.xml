@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TV Bro: Πρόγραμμα περιήγησης για τηλεόραση</string>
+    <string name="app_name">Simple Browser: Πρόγραμμα περιήγησης για τηλεόραση</string>
     <string name="error">Σφάλμα</string>
     <string name="ok">OK</string>
     <string name="url_prompt">Εισαγάγετε κείμενο αναζήτησης ή URL</string>
@@ -44,7 +44,7 @@
     <string name="clear">Εκκαθάριση</string>
     <string name="install">Εγκατάσταση</string>
     <string name="turn_on_unknown_sources">Ενεργοποιήστε τη ρύθμιση συστήματος «Άγνωστες πηγές»</string>
-    <string name="turn_on_unknown_sources_for_app">Επιτρέψτε στο TV Bro να εγκαθιστά εφαρμογές από «Άγνωστες πηγές» στις ρυθμίσεις συστήματος</string>
+    <string name="turn_on_unknown_sources_for_app">Επιτρέψτε στο Simple Browser να εγκαθιστά εφαρμογές από «Άγνωστες πηγές» στις ρυθμίσεις συστήματος</string>
     <string name="voice_search_not_found">Η φωνητική αναζήτηση δεν βρέθηκε</string>
     <string name="new_version_dialog_title">Υπάρχει διαθέσιμη νέα έκδοση</string>
     <string name="later">Αργότερα</string>
@@ -79,7 +79,7 @@
         <item>Σκούρο</item>
     </array>
     <string name="incognito_mode">Λειτουργία ανώνυμης περιήγησης</string>
-    <string name="incognito_mode_hint">Τώρα μπορείτε να περιηγείστε ιδιωτικά και τα άλλα άτομα που χρησιμοποιούν αυτή τη συσκευή δεν θα βλέπουν τη δραστηριότητά σας. Το TV Bro δεν θα αποθηκεύει το ιστορικό περιήγησης, τα cookies και τα δεδομένα ιστοτόπων ή τις πληροφορίες που εισάγετε σε φόρμες.\n\nΩστόσο, οι λήψεις και οι σελιδοδείκτες θα αποθηκεύονται. Η δραστηριότητά σας μπορεί να εξακολουθεί να είναι ορατή στους ιστοτόπους που επισκέπτεστε, στον οργανισμό σας ή στον πάροχο υπηρεσιών διαδικτύου.</string>
+    <string name="incognito_mode_hint">Τώρα μπορείτε να περιηγείστε ιδιωτικά και τα άλλα άτομα που χρησιμοποιούν αυτή τη συσκευή δεν θα βλέπουν τη δραστηριότητά σας. Το Simple Browser δεν θα αποθηκεύει το ιστορικό περιήγησης, τα cookies και τα δεδομένα ιστοτόπων ή τις πληροφορίες που εισάγετε σε φόρμες.\n\nΩστόσο, οι λήψεις και οι σελιδοδείκτες θα αποθηκεύονται. Η δραστηριότητά σας μπορεί να εξακολουθεί να είναι ορατή στους ιστοτόπους που επισκέπτεστε, στον οργανισμό σας ή στον πάροχο υπηρεσιών διαδικτύου.</string>
     <string name="don_t_show_again">Να μην εμφανιστεί ξανά</string>
     <string name="why_icon_changed">Γιατί άλλαξε το εικονίδιο;</string>
     <string name="block_popups">Αποκλεισμός αναδυόμενων παραθύρων</string>
@@ -99,7 +99,7 @@
     <string name="external_app_open_error">Δεν βρέθηκε κατάλληλη εφαρμογή</string>
     <string name="home_page">Αρχική σελίδα</string>
     <array name="home_page_modes">
-        <item>Αρχική TV Bro</item>
+        <item>Αρχική Simple Browser</item>
         <item>Μηχανή αναζήτησης</item>
         <item>Προσαρμοσμένη</item>
         <item>Κενή</item>
@@ -363,7 +363,7 @@
     <string name="sync_connect_phone">Σύνδεση τηλεφώνου</string>
     <string name="sync_phone_sync">Συγχρονισμός τηλεφώνου</string>
     <string name="sync_scan_title">Σάρωση με το τηλέφωνό σας</string>
-    <string name="sync_scan_steps">Στρέψτε την κάμερα του τηλεφώνου σας στον κωδικό και ανοίξτε τον σύνδεσμο στο TV Bro. Μετά θα μπορείτε να στέλνετε καρτέλες, σελιδοδείκτες και αρχεία από το τηλέφωνο σε αυτή την τηλεόραση.</string>
+    <string name="sync_scan_steps">Στρέψτε την κάμερα του τηλεφώνου σας στον κωδικό και ανοίξτε τον σύνδεσμο στο Simple Browser. Μετά θα μπορείτε να στέλνετε καρτέλες, σελιδοδείκτες και αρχεία από το τηλέφωνο σε αυτή την τηλεόραση.</string>
     <string name="sync_same_network">Το τηλέφωνο πρέπει να είναι στο ίδιο δίκτυο με την τηλεόραση (%s).</string>
     <string name="sync_no_network">Η τηλεόραση δεν είναι συνδεδεμένη σε δίκτυο.</string>
     <string name="sync_starting">Εκκίνηση…</string>
@@ -389,7 +389,7 @@
     <string name="sync_send_to_tv">Αποστολή στην τηλεόραση</string>
     <string name="sync_tvs">Τηλεοράσεις</string>
     <string name="sync_no_tvs">Δεν υπάρχουν ακόμη τηλεοράσεις</string>
-    <string name="sync_how_to_pair">Στην τηλεόραση, ανοίξτε το TV Bro, επιλέξτε το κουμπί τηλεφώνου στη γραμμή του και σαρώστε τον κωδικό με την κάμερα αυτού του τηλεφώνου.</string>
+    <string name="sync_how_to_pair">Στην τηλεόραση, ανοίξτε το Simple Browser, επιλέξτε το κουμπί τηλεφώνου στη γραμμή του και σαρώστε τον κωδικό με την κάμερα αυτού του τηλεφώνου.</string>
     <string name="sync_pairing">Σύνδεση με %s…</string>
     <string name="sync_paired">Προστέθηκε: %s</string>
     <string name="sync_pairing_failed">Δεν είναι δυνατή η σύνδεση με την τηλεόραση</string>
@@ -408,7 +408,7 @@
     <string name="sync_bookmarks_preview_title_phone">Ενημέρωση σελιδοδεικτών σε αυτό το τηλέφωνο;</string>
     <string name="sync_bookmarks_same_phone">Αυτό το τηλέφωνο έχει τους ίδιους σελιδοδείκτες</string>
     <string name="sync_bookmarks_received">Οι σελιδοδείκτες σε αυτό το τηλέφωνο ενημερώθηκαν</string>
-    <string name="sync_tv_too_old">%s: χρειάζεται νεότερη έκδοση του TV Bro</string>
+    <string name="sync_tv_too_old">%s: χρειάζεται νεότερη έκδοση του Simple Browser</string>
     <string name="sync_send">Αποστολή</string>
     <string name="sync_next">Επόμενο</string>
     <string name="sync_select_all">Επιλογή όλων</string>
@@ -429,7 +429,7 @@
     <string name="sync_forget_tv_confirm">Διαγραφή του %s;</string>
     <string name="sync_status_checking">Αναζήτηση…</string>
     <string name="sync_status_found">Έτοιμο</string>
-    <string name="sync_status_not_found">Δεν βρέθηκε: ανοίξτε το TV Bro σε αυτή</string>
+    <string name="sync_status_not_found">Δεν βρέθηκε: ανοίξτε το Simple Browser σε αυτή</string>
     <string name="sync_status_forgot">Δεν αναγνωρίζει πλέον αυτό το τηλέφωνο</string>
     <string name="sync_send_count">Αποστολή (%d)</string>
     <string name="sync_local_network_needed">Επιτρέψτε την πρόσβαση στο τοπικό δίκτυο</string>
@@ -445,7 +445,7 @@
     <string name="sync_files_cancelled">Η αποστολή ακυρώθηκε</string>
     <string name="sync_file_unreadable">Δεν είναι δυνατή η ανάγνωση του %s</string>
     <string name="sync_file_interrupted">%2$s: η λήψη του %1$s διακόπηκε</string>
-    <string name="sync_file_need_permission">Επιτρέψτε στο TV Bro στο %s να αποθηκεύει αρχεία και στείλτε ξανά</string>
+    <string name="sync_file_need_permission">Επιτρέψτε στο Simple Browser στο %s να αποθηκεύει αρχεία και στείλτε ξανά</string>
     <string name="sync_file_storage">%s: δεν είναι δυνατή η αποθήκευση του αρχείου</string>
     <string name="sync_file_cancelled_on_tv">Το αρχείο ακυρώθηκε στο %s</string>
     <string name="sync_file_receiving">Λήψη %1$s από %2$s</string>
@@ -469,7 +469,7 @@
     <string name="settings_summary_advanced">Κρυφή μνήμη, εντοπισμός σφαλμάτων μηχανής, διακομιστής μεσολάβησης</string>
     <string name="settings_summary_proxy_s">Διακομιστής μεσολάβησης %s</string>
     <string name="settings_after_restart">Μετά την επανεκκίνηση</string>
-    <string name="settings_restart_message">Επανεκκινήστε το TV Bro για να εφαρμοστούν οι αλλαγές</string>
+    <string name="settings_restart_message">Επανεκκινήστε το Simple Browser για να εφαρμοστούν οι αλλαγές</string>
     <string name="settings_restart_now">Επανεκκίνηση τώρα</string>
     <string name="settings_turn_on">Ενεργοποίηση</string>
     <string name="settings_on">Ενεργό</string>

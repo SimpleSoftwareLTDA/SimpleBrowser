@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <string name="clear">Очистить</string>
-  <string name="repost_confirm_message">Чтобы отобразить эту страницу, TV Bro должен повторно отправить данные, что приведёт к повтору ранее выполненного действия (например, поиска или подтверждения заказа).</string>
+  <string name="repost_confirm_message">Чтобы отобразить эту страницу, Simple Browser должен повторно отправить данные, что приведёт к повтору ранее выполненного действия (например, поиска или подтверждения заказа).</string>
   <string name="repost_confirm_title">Вы уверены?</string>
   <string name="repost_confirm_resend">Отправить повторно</string>
   <string name="before_unload_message">Эта страница просит подтвердить, что вы хотите её покинуть, — введённые данные могут не сохраниться</string>

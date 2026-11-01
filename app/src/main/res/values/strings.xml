@@ -208,7 +208,7 @@
     <string name="clear">Clear</string>
     <string name="install">Install</string>
     <string name="turn_on_unknown_sources">Please turn on \"Unknown sources\" system setting</string>
-    <string name="turn_on_unknown_sources_for_app">Please allow TV Bro to install apps from \"Unknown sources\" in system settings</string>
+    <string name="turn_on_unknown_sources_for_app">Please allow Simple Browser to install apps from \"Unknown sources\" in system settings</string>
     <string name="voice_search_not_found">Voice search not found</string>
     <string name="new_version_dialog_title">New version available</string>
     <string name="later">Later</string>
@@ -349,7 +349,7 @@
         <item>Dark</item>
     </array>
     <string name="incognito_mode">Incognito mode</string>
-    <string name="incognito_mode_hint">Now you can browse privately, and other people who use this device won’t see your activity. TV Bro won’t save your browsing history, cookies and site data, or information entered in forms.\n\nHowever, downloads and bookmarks will be saved. Your activity might still be visible to websites you visit, your organization or internet service provider.</string>
+    <string name="incognito_mode_hint">Now you can browse privately, and other people who use this device won’t see your activity. Simple Browser won’t save your browsing history, cookies and site data, or information entered in forms.\n\nHowever, downloads and bookmarks will be saved. Your activity might still be visible to websites you visit, your organization or internet service provider.</string>
     <string name="don_t_show_again">Don\'t show again</string>
     <string name="why_icon_changed">Why did the icon change?</string>
     <string name="block_popups">Popup blocking</string>
@@ -369,7 +369,7 @@
     <string name="external_app_open_error">Cannot find a suitable app</string>
     <string name="home_page">Home page</string>
     <array name="home_page_modes">
-        <item>TV Bro Home</item>
+        <item>Simple Browser Home</item>
         <item>Search engine</item>
         <item>Custom</item>
         <item>Blank</item>
@@ -399,7 +399,7 @@
     <!-- the row of the ⋮ menu of the TV bar that opens the pairing of phones -->
     <string name="sync_phone_sync">Phone sync</string>
     <string name="sync_scan_title">Scan with your phone</string>
-    <string name="sync_scan_steps">Point the camera of your phone at the code and open the link in TV Bro. You can then send tabs, bookmarks and files from the phone to this TV.</string>
+    <string name="sync_scan_steps">Point the camera of your phone at the code and open the link in Simple Browser. You can then send tabs, bookmarks and files from the phone to this TV.</string>
     <!-- %s: the addresses of the TV -->
     <string name="sync_same_network">The phone must be on the same network as the TV (%s).</string>
     <string name="sync_no_network">The TV is not connected to a network.</string>
@@ -431,7 +431,7 @@
     <string name="sync_send_to_tv">Send to TV</string>
     <string name="sync_tvs">TVs</string>
     <string name="sync_no_tvs">No TVs yet</string>
-    <string name="sync_how_to_pair">On the TV, open TV Bro, choose the phone button of its bar and scan the code with the camera of this phone.</string>
+    <string name="sync_how_to_pair">On the TV, open Simple Browser, choose the phone button of its bar and scan the code with the camera of this phone.</string>
     <!-- %s: the name of the TV -->
     <string name="sync_pairing">Connecting to %s…</string>
     <string name="sync_paired">%s added</string>
@@ -452,7 +452,7 @@
     <string name="sync_bookmarks_same_phone">This phone has the same bookmarks</string>
     <string name="sync_bookmarks_received">Bookmarks updated on this phone</string>
     <!-- %s: the name of the TV -->
-    <string name="sync_tv_too_old">%s needs a newer TV Bro</string>
+    <string name="sync_tv_too_old">%s needs a newer Simple Browser</string>
     <string name="sync_send">Send</string>
     <string name="sync_next">Next</string>
     <string name="sync_select_all">Select all</string>
@@ -474,7 +474,7 @@
     <string name="sync_forget_tv_confirm">Forget %s?</string>
     <string name="sync_status_checking">Looking for it…</string>
     <string name="sync_status_found">Ready</string>
-    <string name="sync_status_not_found">Not found: open TV Bro on it</string>
+    <string name="sync_status_not_found">Not found: open Simple Browser on it</string>
     <string name="sync_status_forgot">Does not know this phone any more</string>
     <!-- %d: the number of chosen tabs -->
     <string name="sync_send_count">Send (%d)</string>
@@ -495,7 +495,7 @@
     <string name="sync_file_unreadable">Cannot read %s</string>
     <!-- %1$s: the file, %2$s: the TV -->
     <string name="sync_file_interrupted">%2$s stopped receiving %1$s</string>
-    <string name="sync_file_need_permission">Allow TV Bro on %s to save files, then send again</string>
+    <string name="sync_file_need_permission">Allow Simple Browser on %s to save files, then send again</string>
     <string name="sync_file_storage">%s cannot save the file</string>
     <string name="sync_file_cancelled_on_tv">The file was cancelled on %s</string>
     <!-- on the TV; %1$s: the file, %2$s: the phone -->
@@ -525,7 +525,7 @@
     <string name="settings_summary_proxy_s">Proxy %s</string>
     <!-- marks a setting that applies after a restart of the app -->
     <string name="settings_after_restart">After restart</string>
-    <string name="settings_restart_message">Restart TV Bro to apply the changes</string>
+    <string name="settings_restart_message">Restart Simple Browser to apply the changes</string>
     <string name="settings_restart_now">Restart now</string>
     <string name="settings_turn_on">Turn on</string>
     <!-- the state of a switch, for accessibility -->

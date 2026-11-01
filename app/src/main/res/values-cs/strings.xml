@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TV Bro: webový prohlížeč pro TV</string>
+    <string name="app_name">Simple Browser: webový prohlížeč pro TV</string>
     <string name="error">Chyba</string>
     <string name="ok">OK</string>
     <string name="url_prompt">Zadejte hledaný text nebo URL</string>
@@ -44,7 +44,7 @@
     <string name="clear">Vymazat</string>
     <string name="install">Instalovat</string>
     <string name="turn_on_unknown_sources">Zapněte prosím systémové nastavení „Neznámé zdroje“</string>
-    <string name="turn_on_unknown_sources_for_app">Povolte prosím v nastavení systému aplikaci TV Bro instalovat aplikace z „Neznámých zdrojů“</string>
+    <string name="turn_on_unknown_sources_for_app">Povolte prosím v nastavení systému aplikaci Simple Browser instalovat aplikace z „Neznámých zdrojů“</string>
     <string name="voice_search_not_found">Hlasové vyhledávání nebylo nalezeno</string>
     <string name="new_version_dialog_title">Je k dispozici nová verze</string>
     <string name="later">Později</string>
@@ -79,7 +79,7 @@
         <item>Tmavý</item>
     </array>
     <string name="incognito_mode">Anonymní režim</string>
-    <string name="incognito_mode_hint">Nyní můžete prohlížet soukromě a ostatní lidé, kteří toto zařízení používají, neuvidí vaši aktivitu. TV Bro nebude ukládat historii prohlížení, soubory cookie a data webů ani informace zadané do formulářů.\n\nStažené soubory a záložky se však uloží. Vaše aktivita může být stále viditelná pro navštěvované weby, vaši organizaci nebo poskytovatele internetových služeb.</string>
+    <string name="incognito_mode_hint">Nyní můžete prohlížet soukromě a ostatní lidé, kteří toto zařízení používají, neuvidí vaši aktivitu. Simple Browser nebude ukládat historii prohlížení, soubory cookie a data webů ani informace zadané do formulářů.\n\nStažené soubory a záložky se však uloží. Vaše aktivita může být stále viditelná pro navštěvované weby, vaši organizaci nebo poskytovatele internetových služeb.</string>
     <string name="don_t_show_again">Znovu nezobrazovat</string>
     <string name="why_icon_changed">Proč se změnila ikona?</string>
     <string name="block_popups">Blokování vyskakovacích oken</string>
@@ -99,7 +99,7 @@
     <string name="external_app_open_error">Nelze najít vhodnou aplikaci</string>
     <string name="home_page">Domovská stránka</string>
     <array name="home_page_modes">
-        <item>Domovská stránka TV Bro</item>
+        <item>Domovská stránka Simple Browser</item>
         <item>Vyhledávač</item>
         <item>Vlastní</item>
         <item>Prázdná</item>
@@ -389,7 +389,7 @@
     <string name="sync_connect_phone">Připojit telefon</string>
     <string name="sync_phone_sync">Synchronizace s telefonem</string>
     <string name="sync_scan_title">Naskenujte telefonem</string>
-    <string name="sync_scan_steps">Namiřte fotoaparát telefonu na kód a otevřete odkaz v TV Bro. Potom můžete z telefonu posílat do tohoto televizoru karty, záložky a soubory.</string>
+    <string name="sync_scan_steps">Namiřte fotoaparát telefonu na kód a otevřete odkaz v Simple Browser. Potom můžete z telefonu posílat do tohoto televizoru karty, záložky a soubory.</string>
     <string name="sync_same_network">Telefon musí být ve stejné síti jako televizor (%s).</string>
     <string name="sync_no_network">Televizor není připojen k síti.</string>
     <string name="sync_starting">Spouštění…</string>
@@ -417,7 +417,7 @@
     <string name="sync_send_to_tv">Poslat do TV</string>
     <string name="sync_tvs">Televizory</string>
     <string name="sync_no_tvs">Zatím žádné televizory</string>
-    <string name="sync_how_to_pair">Na televizoru otevřete TV Bro, vyberte na liště tlačítko telefonu a naskenujte kód fotoaparátem tohoto telefonu.</string>
+    <string name="sync_how_to_pair">Na televizoru otevřete Simple Browser, vyberte na liště tlačítko telefonu a naskenujte kód fotoaparátem tohoto telefonu.</string>
     <string name="sync_pairing">Připojování k %s…</string>
     <string name="sync_paired">Přidáno: %s</string>
     <string name="sync_pairing_failed">K televizoru se nelze připojit</string>
@@ -436,7 +436,7 @@
     <string name="sync_bookmarks_preview_title_phone">Aktualizovat záložky v tomto telefonu?</string>
     <string name="sync_bookmarks_same_phone">Tento telefon má stejné záložky</string>
     <string name="sync_bookmarks_received">Záložky v tomto telefonu aktualizovány</string>
-    <string name="sync_tv_too_old">%s potřebuje novější verzi TV Bro</string>
+    <string name="sync_tv_too_old">%s potřebuje novější verzi Simple Browser</string>
     <string name="sync_send">Poslat</string>
     <string name="sync_next">Další</string>
     <string name="sync_select_all">Vybrat vše</string>
@@ -459,7 +459,7 @@
     <string name="sync_forget_tv_confirm">Zapomenout %s?</string>
     <string name="sync_status_checking">Hledání…</string>
     <string name="sync_status_found">Připraveno</string>
-    <string name="sync_status_not_found">Nenalezeno: otevřete na něm TV Bro</string>
+    <string name="sync_status_not_found">Nenalezeno: otevřete na něm Simple Browser</string>
     <string name="sync_status_forgot">Tento telefon už nezná</string>
     <string name="sync_send_count">Poslat (%d)</string>
     <string name="sync_local_network_needed">Povolte přístup k místní síti</string>
@@ -477,7 +477,7 @@
     <string name="sync_files_cancelled">Odesílání zrušeno</string>
     <string name="sync_file_unreadable">%s nelze přečíst</string>
     <string name="sync_file_interrupted">%2$s: příjem %1$s přerušen</string>
-    <string name="sync_file_need_permission">Povolte TV Bro na %s ukládat soubory a pošlete znovu</string>
+    <string name="sync_file_need_permission">Povolte Simple Browser na %s ukládat soubory a pošlete znovu</string>
     <string name="sync_file_storage">%s nemůže soubor uložit</string>
     <string name="sync_file_cancelled_on_tv">Soubor byl zrušen na %s</string>
     <string name="sync_file_receiving">Příjem %1$s z %2$s</string>
@@ -501,7 +501,7 @@
     <string name="settings_summary_advanced">Webová mezipaměť, ladění jádra, proxy</string>
     <string name="settings_summary_proxy_s">Proxy %s</string>
     <string name="settings_after_restart">Po restartu</string>
-    <string name="settings_restart_message">Restartujte TV Bro, aby se změny projevily</string>
+    <string name="settings_restart_message">Restartujte Simple Browser, aby se změny projevily</string>
     <string name="settings_restart_now">Restartovat</string>
     <string name="settings_turn_on">Zapnout</string>
     <string name="settings_on">Zapnuto</string>

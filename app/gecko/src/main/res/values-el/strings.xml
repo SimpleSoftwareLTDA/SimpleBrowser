@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="clear">Εκκαθάριση</string>
-    <string name="repost_confirm_message">Για να εμφανιστεί αυτή η σελίδα, το TV Bro πρέπει να στείλει πληροφορίες που θα επαναλάβουν οποιαδήποτε ενέργεια έγινε προηγουμένως (όπως μια αναζήτηση ή επιβεβαίωση παραγγελίας).</string>
+    <string name="repost_confirm_message">Για να εμφανιστεί αυτή η σελίδα, το Simple Browser πρέπει να στείλει πληροφορίες που θα επαναλάβουν οποιαδήποτε ενέργεια έγινε προηγουμένως (όπως μια αναζήτηση ή επιβεβαίωση παραγγελίας).</string>
     <string name="repost_confirm_title">Είστε βέβαιοι;</string>
     <string name="repost_confirm_resend">Επαναποστολή</string>
     <string name="before_unload_message">Αυτή η σελίδα σάς ζητά να επιβεβαιώσετε ότι θέλετε να φύγετε· τα δεδομένα που έχετε εισαγάγει ενδέχεται να μην αποθηκευτούν</string>

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <string name="clear">נקה</string>
-  <string name="repost_confirm_message">כדי להציג דף זה, TV Bro חייב לשלוח מחדש מידע שיחזור על פעולה שבוצעה קודם לכן (כגון חיפוש או אישור הזמנה).</string>
+  <string name="repost_confirm_message">כדי להציג דף זה, Simple Browser חייב לשלוח מחדש מידע שיחזור על פעולה שבוצעה קודם לכן (כגון חיפוש או אישור הזמנה).</string>
   <string name="repost_confirm_title">האם אתה בטוח?</string>
   <string name="repost_confirm_resend">שלח שוב</string>
   <string name="before_unload_message">דף זה מבקש ממך לאשר שברצונך לעזוב — ייתכן שהנתונים שהזנת לא יישמרו</string>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="app_name">TV Bro: Webbrowser für TVs</string>
+  <string name="app_name">Simple Browser: Webbrowser für TVs</string>
   <string name="error">Fehler</string>
   <string name="ok">OK</string>
   <string name="url_prompt">Suchbegriff oder URL eingeben</string>
@@ -42,7 +42,7 @@
   <string name="clear">Löschen</string>
   <string name="install">Installieren</string>
   <string name="turn_on_unknown_sources">Bitte aktivieren Sie die Systemeinstellung „Unbekannte Quellen“</string>
-  <string name="turn_on_unknown_sources_for_app">Bitte erlauben Sie TV Bro in den Systemeinstellungen, Apps aus „Unbekannten Quellen“ zu installieren</string>
+  <string name="turn_on_unknown_sources_for_app">Bitte erlauben Sie Simple Browser in den Systemeinstellungen, Apps aus „Unbekannten Quellen“ zu installieren</string>
   <string name="voice_search_not_found">Sprachsuche nicht gefunden</string>
   <string name="new_version_dialog_title">Neue Version verfügbar</string>
   <string name="later">Später</string>
@@ -76,7 +76,7 @@
   <string name="direct_navigation_mode_title">Direkter Navigationsmodus</string>
   <string name="direct_navigation_mode_message">Direkte Navigation blendet den Bildschirm-Cursor aus und leitet Tasten von Ihrer Fernbedienung oder Ihrem Gamecontroller direkt an die Webseite weiter, sodass Seiten mit TV- oder Tastaturfokus Links und Steuerelemente hervorheben können.\n\nUm diesen Modus zu beenden: Drücken Sie Zurück auf der TV-Fernbedienung oder halten Sie die B-Taste am Gamecontroller gedrückt.\n\nDieser Modus funktioniert am besten mit der WebView-Engine: WebView unterstützt das Verschieben des Fokus durch die Seite mit dem Steuerkreuz.</string>
   <string name="incognito_mode">Inkognito-Modus</string>
-  <string name="incognito_mode_hint">Jetzt können Sie privat surfen und andere Personen, die dieses Gerät verwenden, können Ihre Aktivitäten nicht sehen. TV Bro speichert Ihren Browserverlauf, Cookies und Websitedaten sowie in Formulare eingegebene Informationen nicht.\n\nDownloads und Lesezeichen werden jedoch gespeichert. Ihre Aktivitäten sind möglicherweise weiterhin für von Ihnen besuchte Websites, Ihre Organisation oder Ihren Internetdienstanbieter sichtbar.</string>
+  <string name="incognito_mode_hint">Jetzt können Sie privat surfen und andere Personen, die dieses Gerät verwenden, können Ihre Aktivitäten nicht sehen. Simple Browser speichert Ihren Browserverlauf, Cookies und Websitedaten sowie in Formulare eingegebene Informationen nicht.\n\nDownloads und Lesezeichen werden jedoch gespeichert. Ihre Aktivitäten sind möglicherweise weiterhin für von Ihnen besuchte Websites, Ihre Organisation oder Ihren Internetdienstanbieter sichtbar.</string>
   <string name="don_t_show_again">Nicht mehr anzeigen</string>
   <string name="why_icon_changed">Warum wurde das Symbol geändert?</string>
   <string name="no_bookmarks_yet">Noch keine Lesezeichen</string>
@@ -98,7 +98,7 @@
   </string-array>
   <string name="home_page">Startseite</string>
   <string-array name="home_page_modes">
-    <item>TV Bro-Startseite</item>
+    <item>Simple Browser-Startseite</item>
     <item>Suchmaschine</item>
     <item>Benutzerdefiniert</item>
     <item>Leer</item>
@@ -361,7 +361,7 @@
   <string name="sync_connect_phone">Smartphone verbinden</string>
   <string name="sync_phone_sync">Smartphone-Sync</string>
   <string name="sync_scan_title">Mit dem Smartphone scannen</string>
-  <string name="sync_scan_steps">Richten Sie die Kamera Ihres Smartphones auf den Code und öffnen Sie den Link in TV Bro. Danach können Sie Tabs, Lesezeichen und Dateien vom Smartphone an diesen Fernseher senden.</string>
+  <string name="sync_scan_steps">Richten Sie die Kamera Ihres Smartphones auf den Code und öffnen Sie den Link in Simple Browser. Danach können Sie Tabs, Lesezeichen und Dateien vom Smartphone an diesen Fernseher senden.</string>
   <string name="sync_same_network">Das Smartphone muss im selben Netzwerk wie der Fernseher sein (%s).</string>
   <string name="sync_no_network">Der Fernseher ist mit keinem Netzwerk verbunden.</string>
   <string name="sync_starting">Wird gestartet…</string>
@@ -387,7 +387,7 @@
   <string name="sync_send_to_tv">An TV senden</string>
   <string name="sync_tvs">Fernseher</string>
   <string name="sync_no_tvs">Noch keine Fernseher</string>
-  <string name="sync_how_to_pair">Öffnen Sie auf dem Fernseher TV Bro, wählen Sie die Smartphone-Taste in der Leiste und scannen Sie den Code mit der Kamera dieses Smartphones.</string>
+  <string name="sync_how_to_pair">Öffnen Sie auf dem Fernseher Simple Browser, wählen Sie die Smartphone-Taste in der Leiste und scannen Sie den Code mit der Kamera dieses Smartphones.</string>
   <string name="sync_pairing">Verbindung mit %s…</string>
   <string name="sync_paired">%s hinzugefügt</string>
   <string name="sync_pairing_failed">Verbindung mit dem Fernseher nicht möglich</string>
@@ -406,7 +406,7 @@
   <string name="sync_bookmarks_preview_title_phone">Lesezeichen auf diesem Smartphone aktualisieren?</string>
   <string name="sync_bookmarks_same_phone">Dieses Smartphone hat dieselben Lesezeichen</string>
   <string name="sync_bookmarks_received">Lesezeichen auf diesem Smartphone aktualisiert</string>
-  <string name="sync_tv_too_old">%s braucht eine neuere Version von TV Bro</string>
+  <string name="sync_tv_too_old">%s braucht eine neuere Version von Simple Browser</string>
   <string name="sync_send">Senden</string>
   <string name="sync_next">Weiter</string>
   <string name="sync_select_all">Alle auswählen</string>
@@ -427,7 +427,7 @@
   <string name="sync_forget_tv_confirm">%s entfernen?</string>
   <string name="sync_status_checking">Wird gesucht…</string>
   <string name="sync_status_found">Bereit</string>
-  <string name="sync_status_not_found">Nicht gefunden: Öffnen Sie dort TV Bro</string>
+  <string name="sync_status_not_found">Nicht gefunden: Öffnen Sie dort Simple Browser</string>
   <string name="sync_status_forgot">Kennt dieses Smartphone nicht mehr</string>
   <string name="sync_send_count">Senden (%d)</string>
   <string name="sync_local_network_needed">Zugriff auf das lokale Netzwerk erlauben</string>
@@ -443,7 +443,7 @@
   <string name="sync_files_cancelled">Senden abgebrochen</string>
   <string name="sync_file_unreadable">%s kann nicht gelesen werden</string>
   <string name="sync_file_interrupted">%2$s hat den Empfang von %1$s abgebrochen</string>
-  <string name="sync_file_need_permission">Erlauben Sie TV Bro auf %s, Dateien zu speichern, und senden Sie erneut</string>
+  <string name="sync_file_need_permission">Erlauben Sie Simple Browser auf %s, Dateien zu speichern, und senden Sie erneut</string>
   <string name="sync_file_storage">%s kann die Datei nicht speichern</string>
   <string name="sync_file_cancelled_on_tv">Die Datei wurde auf %s abgebrochen</string>
   <string name="sync_file_receiving">%1$s wird von %2$s empfangen</string>
@@ -467,7 +467,7 @@
   <string name="settings_summary_advanced">Web-Cache, Engine-Debugging, Proxy</string>
   <string name="settings_summary_proxy_s">Proxy %s</string>
   <string name="settings_after_restart">Nach Neustart</string>
-  <string name="settings_restart_message">Starten Sie TV Bro neu, um die Änderungen zu übernehmen</string>
+  <string name="settings_restart_message">Starten Sie Simple Browser neu, um die Änderungen zu übernehmen</string>
   <string name="settings_restart_now">Jetzt neu starten</string>
   <string name="settings_turn_on">Einschalten</string>
   <string name="settings_on">An</string>

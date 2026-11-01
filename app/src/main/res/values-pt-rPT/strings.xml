@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TV Bro: navegador web para TV</string>
+    <string name="app_name">Simple Browser: navegador web para TV</string>
     <string name="error">Erro</string>
     <string name="ok">OK</string>
     <string name="url_prompt">Introduza o texto de pesquisa ou o URL</string>
@@ -44,7 +44,7 @@
     <string name="clear">Limpar</string>
     <string name="install">Instalar</string>
     <string name="turn_on_unknown_sources">Ative a definição do sistema \"Fontes desconhecidas\"</string>
-    <string name="turn_on_unknown_sources_for_app">Permita que o TV Bro instale aplicações de \"Fontes desconhecidas\" nas definições do sistema</string>
+    <string name="turn_on_unknown_sources_for_app">Permita que o Simple Browser instale aplicações de \"Fontes desconhecidas\" nas definições do sistema</string>
     <string name="voice_search_not_found">Pesquisa por voz não encontrada</string>
     <string name="new_version_dialog_title">Nova versão disponível</string>
     <string name="later">Mais tarde</string>
@@ -79,7 +79,7 @@
         <item>Escuro</item>
     </array>
     <string name="incognito_mode">Modo de navegação anónima</string>
-    <string name="incognito_mode_hint">Agora pode navegar de forma privada e as outras pessoas que utilizam este dispositivo não verão a sua atividade. O TV Bro não guardará o seu histórico de navegação, os cookies e dados de sites, nem as informações introduzidas em formulários.\n\nNo entanto, as transferências e os marcadores serão guardados. A sua atividade pode continuar visível para os sites que visita, para a sua organização ou para o seu fornecedor de serviços de internet.</string>
+    <string name="incognito_mode_hint">Agora pode navegar de forma privada e as outras pessoas que utilizam este dispositivo não verão a sua atividade. O Simple Browser não guardará o seu histórico de navegação, os cookies e dados de sites, nem as informações introduzidas em formulários.\n\nNo entanto, as transferências e os marcadores serão guardados. A sua atividade pode continuar visível para os sites que visita, para a sua organização ou para o seu fornecedor de serviços de internet.</string>
     <string name="don_t_show_again">Não mostrar novamente</string>
     <string name="why_icon_changed">Porque é que o ícone mudou?</string>
     <string name="block_popups">Bloqueio de pop-ups</string>
@@ -99,7 +99,7 @@
     <string name="external_app_open_error">Não foi encontrada nenhuma aplicação adequada</string>
     <string name="home_page">Página inicial</string>
     <array name="home_page_modes">
-        <item>Início do TV Bro</item>
+        <item>Início do Simple Browser</item>
         <item>Motor de pesquisa</item>
         <item>Personalizada</item>
         <item>Em branco</item>
@@ -376,7 +376,7 @@
     <string name="sync_connect_phone">Ligar um telemóvel</string>
     <string name="sync_phone_sync">Sincronização com o telemóvel</string>
     <string name="sync_scan_title">Leia com o seu telemóvel</string>
-    <string name="sync_scan_steps">Aponte a câmara do telemóvel para o código e abra a ligação no TV Bro. Depois poderá enviar separadores, marcadores e ficheiros do telemóvel para esta TV.</string>
+    <string name="sync_scan_steps">Aponte a câmara do telemóvel para o código e abra a ligação no Simple Browser. Depois poderá enviar separadores, marcadores e ficheiros do telemóvel para esta TV.</string>
     <string name="sync_same_network">O telemóvel tem de estar na mesma rede que a TV (%s).</string>
     <string name="sync_no_network">A TV não está ligada a nenhuma rede.</string>
     <string name="sync_starting">A iniciar…</string>
@@ -403,7 +403,7 @@
     <string name="sync_send_to_tv">Enviar para a TV</string>
     <string name="sync_tvs">TVs</string>
     <string name="sync_no_tvs">Ainda não existem TVs</string>
-    <string name="sync_how_to_pair">Na TV, abra o TV Bro, escolha o botão do telemóvel na barra e leia o código com a câmara deste telemóvel.</string>
+    <string name="sync_how_to_pair">Na TV, abra o Simple Browser, escolha o botão do telemóvel na barra e leia o código com a câmara deste telemóvel.</string>
     <string name="sync_pairing">A ligar a %s…</string>
     <string name="sync_paired">%s adicionada</string>
     <string name="sync_pairing_failed">Não é possível ligar à TV</string>
@@ -422,7 +422,7 @@
     <string name="sync_bookmarks_preview_title_phone">Atualizar os marcadores deste telemóvel?</string>
     <string name="sync_bookmarks_same_phone">Este telemóvel tem os mesmos marcadores</string>
     <string name="sync_bookmarks_received">Marcadores atualizados neste telemóvel</string>
-    <string name="sync_tv_too_old">%s precisa de uma versão mais recente do TV Bro</string>
+    <string name="sync_tv_too_old">%s precisa de uma versão mais recente do Simple Browser</string>
     <string name="sync_send">Enviar</string>
     <string name="sync_next">Seguinte</string>
     <string name="sync_select_all">Selecionar tudo</string>
@@ -444,7 +444,7 @@
     <string name="sync_forget_tv_confirm">Esquecer %s?</string>
     <string name="sync_status_checking">A procurar…</string>
     <string name="sync_status_found">Pronta</string>
-    <string name="sync_status_not_found">Não encontrada: abra o TV Bro nela</string>
+    <string name="sync_status_not_found">Não encontrada: abra o Simple Browser nela</string>
     <string name="sync_status_forgot">Já não reconhece este telemóvel</string>
     <string name="sync_send_count">Enviar (%d)</string>
     <string name="sync_local_network_needed">Permita o acesso à rede local</string>
@@ -461,7 +461,7 @@
     <string name="sync_files_cancelled">Envio cancelado</string>
     <string name="sync_file_unreadable">Não é possível ler %s</string>
     <string name="sync_file_interrupted">%2$s deixou de receber %1$s</string>
-    <string name="sync_file_need_permission">Permita que o TV Bro em %s guarde ficheiros e envie novamente</string>
+    <string name="sync_file_need_permission">Permita que o Simple Browser em %s guarde ficheiros e envie novamente</string>
     <string name="sync_file_storage">%s não consegue guardar o ficheiro</string>
     <string name="sync_file_cancelled_on_tv">O ficheiro foi cancelado em %s</string>
     <string name="sync_file_receiving">A receber %1$s de %2$s</string>
@@ -485,7 +485,7 @@
     <string name="settings_summary_advanced">Cache web, depuração do motor, proxy</string>
     <string name="settings_summary_proxy_s">Proxy %s</string>
     <string name="settings_after_restart">Após reiniciar</string>
-    <string name="settings_restart_message">Reinicie o TV Bro para aplicar as alterações</string>
+    <string name="settings_restart_message">Reinicie o Simple Browser para aplicar as alterações</string>
     <string name="settings_restart_now">Reiniciar agora</string>
     <string name="settings_turn_on">Ativar</string>
     <string name="settings_on">Ativado</string>
