@@ -1,23 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="108dp"
-    android:height="108dp"
-    android:viewportWidth="108"
-    android:viewportHeight="108">
-    <!-- planet ring -->
-    <path
-        android:pathData="M54,14 a40,40 0 1,0 0.001,0 z"
-        android:strokeColor="#FFFFFFFF"
-        android:strokeWidth="6"
-        android:fillColor="#00000000" />
-    <!-- equator -->
-    <path
-        android:pathData="M14,54 L94,54"
-        android:strokeColor="#FFFFFFFF"
-        android:strokeWidth="3.5" />
-    <!-- vertical meridian -->
-    <path
-        android:pathData="M54,14 C36,30 36,78 54,94 M54,14 C72,30 72,78 54,94"
-        android:strokeColor="#FFFFFFFF"
-        android:strokeWidth="3" />
-</vector>
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/ic_launcher_fg"
+    android:gravity="center" />
