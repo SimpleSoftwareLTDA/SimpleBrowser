@@ -32,7 +32,7 @@
         android:layout_marginBottom="@dimen/ds_phone_sheet_section_gap"
         android:background="@drawable/ds_sheet_handle_bg" />
 
-    <com.phlox.tvwebbrowser.activity.main.view.SiteSettingsView
+    <com.simplesoftware.browser.activity.main.view.SiteSettingsView
         android:id="@+id/vSiteSettings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

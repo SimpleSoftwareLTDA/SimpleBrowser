@@ -1,6 +1,6 @@
-package com.phlox.tvwebbrowser.webengine.gecko.delegates
+package com.simplesoftware.browser.webengine.gecko.delegates
 
-import com.phlox.tvwebbrowser.webengine.LoadErrorKind
+import com.simplesoftware.browser.webengine.LoadErrorKind
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.mozilla.geckoview.WebRequestError

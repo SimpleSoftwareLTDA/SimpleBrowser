@@ -1,4 +1,4 @@
-package com.phlox.tvwebbrowser.utils
+package com.simplesoftware.browser.utils
 
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue

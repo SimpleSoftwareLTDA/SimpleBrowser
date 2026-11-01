@@ -19,7 +19,7 @@ the card of the focused one on the right (its title, its rows, the strip that of
       android:paddingBottom="@dimen/ds_downloads_screen_header_padding_bottom">
 
     <ImageButton
-        style="@style/Widget.TVBro.ImageButton.Ds.Standalone"
+        style="@style/Widget.SimpleBrowser.ImageButton.Ds.Standalone"
         android:id="@+id/ibBack"
         android:src="@drawable/ic_back"
         android:contentDescription="@string/back_to_browser" />
@@ -90,7 +90,7 @@ the card of the focused one on the right (its title, its rows, the strip that of
           android:scrollbars="none"
           android:overScrollMode="never">
 
-        <com.phlox.tvwebbrowser.activity.main.view.SettingsRowsView
+        <com.simplesoftware.browser.activity.main.view.SettingsRowsView
             android:id="@+id/vRows"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -112,11 +112,11 @@ the card of the focused one on the right (its title, its rows, the strip that of
           tools:visibility="visible">
 
         <ImageView
-            style="@style/Widget.TVBro.MenuIcon"
+            style="@style/Widget.SimpleBrowser.MenuIcon"
             android:src="@drawable/ic_refresh" />
 
         <TextView
-            style="@style/Widget.TVBro.Text.SettingsTitle"
+            style="@style/Widget.SimpleBrowser.Text.SettingsTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -125,7 +125,7 @@ the card of the focused one on the right (its title, its rows, the strip that of
             android:text="@string/settings_restart_message" />
 
         <TextView
-            style="@style/Widget.TVBro.SettingsButton"
+            style="@style/Widget.SimpleBrowser.SettingsButton"
             android:id="@+id/btnRestart"
             android:layout_marginStart="@dimen/ds_space_icon_text"
             android:text="@string/settings_restart_now" />

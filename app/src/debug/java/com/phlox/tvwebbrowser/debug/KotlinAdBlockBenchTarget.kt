@@ -1,12 +1,12 @@
-package com.phlox.tvwebbrowser.debug
+package com.simplesoftware.browser.debug
 
 import android.content.res.AssetManager
 import android.net.Uri
-import com.phlox.tvwebbrowser.adblock.FilterCompiler
-import com.phlox.tvwebbrowser.adblock.FilterEngine
-import com.phlox.tvwebbrowser.adblock.MatchResult
-import com.phlox.tvwebbrowser.adblock.ResourceType
-import com.phlox.tvwebbrowser.adblock.psl.PublicSuffixList
+import com.simplesoftware.browser.adblock.FilterCompiler
+import com.simplesoftware.browser.adblock.FilterEngine
+import com.simplesoftware.browser.adblock.MatchResult
+import com.simplesoftware.browser.adblock.ResourceType
+import com.simplesoftware.browser.adblock.psl.PublicSuffixList
 import java.io.File
 
 /** The ad blocker of the :adblock module; the requests carry types of WebExtensions (requests.tsv) */

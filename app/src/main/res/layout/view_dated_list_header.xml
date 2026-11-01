@@ -7,7 +7,7 @@
     android:background="?attr/tbColorSurfaceHeader">
 
     <TextView
-        style="@style/Widget.TVBro.Text.Headline"
+        style="@style/Widget.SimpleBrowser.Text.Headline"
         tools:text="TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

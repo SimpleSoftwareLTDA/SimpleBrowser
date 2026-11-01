@@ -45,36 +45,36 @@ the settings of the current site, then History, Bookmarks, Downloads and Setting
           android:layout_height="wrap_content"
           android:orientation="horizontal">
         <LinearLayout
-            style="@style/Widget.TVBro.QuickButton"
+            style="@style/Widget.SimpleBrowser.QuickButton"
             android:id="@+id/llForward">
-          <ImageView style="@style/Widget.TVBro.QuickButtonIcon" android:src="@drawable/ic_forward" />
-          <TextView style="@style/Widget.TVBro.Text.QuickButton" android:text="@string/forward" />
+          <ImageView style="@style/Widget.SimpleBrowser.QuickButtonIcon" android:src="@drawable/ic_forward" />
+          <TextView style="@style/Widget.SimpleBrowser.Text.QuickButton" android:text="@string/forward" />
         </LinearLayout>
         <LinearLayout
-            style="@style/Widget.TVBro.QuickButton"
+            style="@style/Widget.SimpleBrowser.QuickButton"
             android:id="@+id/llNewTab"
             android:layout_marginStart="@dimen/ds_phone_quick_button_gap">
-          <ImageView style="@style/Widget.TVBro.QuickButtonIcon" android:src="@drawable/ic_add" />
-          <TextView style="@style/Widget.TVBro.Text.QuickButton" android:text="@string/new_tab" />
+          <ImageView style="@style/Widget.SimpleBrowser.QuickButtonIcon" android:src="@drawable/ic_add" />
+          <TextView style="@style/Widget.SimpleBrowser.Text.QuickButton" android:text="@string/new_tab" />
         </LinearLayout>
         <LinearLayout
-            style="@style/Widget.TVBro.QuickButton"
+            style="@style/Widget.SimpleBrowser.QuickButton"
             android:id="@+id/llIncognito"
             android:layout_marginStart="@dimen/ds_phone_quick_button_gap">
-          <ImageView style="@style/Widget.TVBro.QuickButtonIcon" android:src="@drawable/ic_incognito" />
-          <TextView style="@style/Widget.TVBro.Text.QuickButton" android:text="@string/incognito" />
+          <ImageView style="@style/Widget.SimpleBrowser.QuickButtonIcon" android:src="@drawable/ic_incognito" />
+          <TextView style="@style/Widget.SimpleBrowser.Text.QuickButton" android:text="@string/incognito" />
         </LinearLayout>
         <LinearLayout
-            style="@style/Widget.TVBro.QuickButton"
+            style="@style/Widget.SimpleBrowser.QuickButton"
             android:id="@+id/llBookmark"
             android:layout_marginStart="@dimen/ds_phone_quick_button_gap">
           <!-- selected (activated) on a page that is bookmarked -->
-          <ImageView style="@style/Widget.TVBro.QuickButtonIcon" android:id="@+id/ivBookmark" android:src="@drawable/ic_favorites" />
-          <TextView style="@style/Widget.TVBro.Text.QuickButton" android:id="@+id/tvBookmark" android:text="@string/add_bookmark" />
+          <ImageView style="@style/Widget.SimpleBrowser.QuickButtonIcon" android:id="@+id/ivBookmark" android:src="@drawable/ic_favorites" />
+          <TextView style="@style/Widget.SimpleBrowser.Text.QuickButton" android:id="@+id/tvBookmark" android:text="@string/add_bookmark" />
         </LinearLayout>
       </LinearLayout>
 
-      <com.phlox.tvwebbrowser.activity.main.view.SiteSettingsView
+      <com.simplesoftware.browser.activity.main.view.SiteSettingsView
           android:id="@+id/vSiteSettings"
           app:siteSettingsVariant="menu"
           android:layout_width="match_parent"
@@ -88,38 +88,38 @@ the settings of the current site, then History, Bookmarks, Downloads and Setting
           android:layout_marginTop="@dimen/ds_phone_sheet_section_gap"
           android:orientation="vertical">
         <LinearLayout
-            style="@style/Widget.TVBro.PhoneMenuRow"
+            style="@style/Widget.SimpleBrowser.PhoneMenuRow"
             android:id="@+id/llHistory">
-          <ImageView style="@style/Widget.TVBro.PhoneMenuIcon" android:src="@drawable/ic_history" />
-          <TextView style="@style/Widget.TVBro.Text.PhoneMenuItem" android:text="@string/history" />
+          <ImageView style="@style/Widget.SimpleBrowser.PhoneMenuIcon" android:src="@drawable/ic_history" />
+          <TextView style="@style/Widget.SimpleBrowser.Text.PhoneMenuItem" android:text="@string/history" />
         </LinearLayout>
-        <View style="@style/Widget.TVBro.MenuSeparator" />
+        <View style="@style/Widget.SimpleBrowser.MenuSeparator" />
         <LinearLayout
-            style="@style/Widget.TVBro.PhoneMenuRow"
+            style="@style/Widget.SimpleBrowser.PhoneMenuRow"
             android:id="@+id/llBookmarks">
-          <ImageView style="@style/Widget.TVBro.PhoneMenuIcon" android:src="@drawable/ic_favorites" />
-          <TextView style="@style/Widget.TVBro.Text.PhoneMenuItem" android:text="@string/bookmarks" />
+          <ImageView style="@style/Widget.SimpleBrowser.PhoneMenuIcon" android:src="@drawable/ic_favorites" />
+          <TextView style="@style/Widget.SimpleBrowser.Text.PhoneMenuItem" android:text="@string/bookmarks" />
         </LinearLayout>
-        <View style="@style/Widget.TVBro.MenuSeparator" />
+        <View style="@style/Widget.SimpleBrowser.MenuSeparator" />
         <LinearLayout
-            style="@style/Widget.TVBro.PhoneMenuRow"
+            style="@style/Widget.SimpleBrowser.PhoneMenuRow"
             android:id="@+id/llDownloads">
-          <ImageView style="@style/Widget.TVBro.PhoneMenuIcon" android:src="@drawable/ic_downloads" />
-          <TextView style="@style/Widget.TVBro.Text.PhoneMenuItem" android:text="@string/downloads" />
+          <ImageView style="@style/Widget.SimpleBrowser.PhoneMenuIcon" android:src="@drawable/ic_downloads" />
+          <TextView style="@style/Widget.SimpleBrowser.Text.PhoneMenuItem" android:text="@string/downloads" />
         </LinearLayout>
-        <View style="@style/Widget.TVBro.MenuSeparator" />
+        <View style="@style/Widget.SimpleBrowser.MenuSeparator" />
         <LinearLayout
-            style="@style/Widget.TVBro.PhoneMenuRow"
+            style="@style/Widget.SimpleBrowser.PhoneMenuRow"
             android:id="@+id/llSendToTv">
-          <ImageView style="@style/Widget.TVBro.PhoneMenuIcon" android:src="@drawable/ic_tv" />
-          <TextView style="@style/Widget.TVBro.Text.PhoneMenuItem" android:text="@string/sync_send_to_tv" />
+          <ImageView style="@style/Widget.SimpleBrowser.PhoneMenuIcon" android:src="@drawable/ic_tv" />
+          <TextView style="@style/Widget.SimpleBrowser.Text.PhoneMenuItem" android:text="@string/sync_send_to_tv" />
         </LinearLayout>
-        <View style="@style/Widget.TVBro.MenuSeparator" />
+        <View style="@style/Widget.SimpleBrowser.MenuSeparator" />
         <LinearLayout
-            style="@style/Widget.TVBro.PhoneMenuRow"
+            style="@style/Widget.SimpleBrowser.PhoneMenuRow"
             android:id="@+id/llSettings">
-          <ImageView style="@style/Widget.TVBro.PhoneMenuIcon" android:src="@drawable/ic_settings" />
-          <TextView style="@style/Widget.TVBro.Text.PhoneMenuItem" android:text="@string/settings" />
+          <ImageView style="@style/Widget.SimpleBrowser.PhoneMenuIcon" android:src="@drawable/ic_settings" />
+          <TextView style="@style/Widget.SimpleBrowser.Text.PhoneMenuItem" android:text="@string/settings" />
         </LinearLayout>
       </LinearLayout>
     </LinearLayout>

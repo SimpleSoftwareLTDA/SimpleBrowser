@@ -23,7 +23,7 @@ folder, its check toggles it, a tap on a folder opens or closes it).
       android:layout_height="0dp" />
 
   <ImageButton
-      style="@style/Widget.TVBro.ImageButton.Ds.Phone"
+      style="@style/Widget.SimpleBrowser.ImageButton.Ds.Phone"
       android:id="@+id/ibCheck"
       android:src="@drawable/ic_check_box_blank"
       android:visibility="gone"
@@ -70,7 +70,7 @@ folder, its check toggles it, a tap on a folder opens or closes it).
   </LinearLayout>
 
   <ImageView
-      style="@style/Widget.TVBro.MenuIcon"
+      style="@style/Widget.SimpleBrowser.MenuIcon"
       android:id="@+id/ivEnd"
       android:layout_marginStart="@dimen/ds_phone_menu_row_padding"
       tools:src="@drawable/ic_chevron_right" />

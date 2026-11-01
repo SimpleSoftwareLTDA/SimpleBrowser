@@ -23,7 +23,7 @@ progress and the others by days.
         android:background="?attr/tbColorDsBgChrome">
 
       <ImageButton
-          style="@style/Widget.TVBro.ImageButton.Ds.Phone"
+          style="@style/Widget.SimpleBrowser.ImageButton.Ds.Phone"
           android:id="@+id/ibBack"
           android:src="@drawable/ic_back"
           android:contentDescription="@string/back" />
@@ -40,13 +40,13 @@ progress and the others by days.
           android:text="@string/downloads" />
 
       <ImageButton
-          style="@style/Widget.TVBro.ImageButton.Ds.Phone"
+          style="@style/Widget.SimpleBrowser.ImageButton.Ds.Phone"
           android:id="@+id/ibFolder"
           android:src="@drawable/ic_folder"
           android:contentDescription="@string/open_downloads_folder" />
 
       <ImageButton
-          style="@style/Widget.TVBro.ImageButton.Ds.Phone"
+          style="@style/Widget.SimpleBrowser.ImageButton.Ds.Phone"
           android:id="@+id/ibMenu"
           android:src="@drawable/ic_more_vert"
           android:contentDescription="@string/more_actions" />
@@ -69,7 +69,7 @@ progress and the others by days.
           android:paddingBottom="@dimen/ds_phone_chips_padding_bottom" />
     </HorizontalScrollView>
 
-    <View style="@style/Widget.TVBro.MenuSeparator" />
+    <View style="@style/Widget.SimpleBrowser.MenuSeparator" />
 
     <FrameLayout
         android:layout_width="match_parent"

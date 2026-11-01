@@ -21,7 +21,7 @@ visible when the tabs scroll (the tabs shrink to the room left by the button).
       app:layout_constraintBottom_toBottomOf="parent" />
 
   <ImageButton
-      style="@style/Widget.TVBro.ImageButton.Ds"
+      style="@style/Widget.SimpleBrowser.ImageButton.Ds"
       android:id="@+id/btnAdd"
       android:layout_width="@dimen/ds_size_tab_height"
       android:layout_height="@dimen/ds_size_tab_height"

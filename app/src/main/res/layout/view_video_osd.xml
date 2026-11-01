@@ -26,7 +26,7 @@ something
 
         <TextView
             android:id="@+id/tvDelta"
-            style="@style/Widget.TVBro.Text.Toast"
+            style="@style/Widget.SimpleBrowser.Text.Toast"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/ds_space_icon_text"
@@ -38,7 +38,7 @@ something
 
         <TextView
             android:id="@+id/tvPosition"
-            style="@style/Widget.TVBro.Text.Toast"
+            style="@style/Widget.SimpleBrowser.Text.Toast"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/ds_space_icon_text"
@@ -46,7 +46,7 @@ something
             android:textColor="?attr/tbColorDsOnToast"
             tools:text="12:34" />
 
-        <com.phlox.tvwebbrowser.activity.main.view.VideoProgressView
+        <com.simplesoftware.browser.activity.main.view.VideoProgressView
             android:id="@+id/vProgress"
             android:layout_width="0dp"
             android:layout_height="@dimen/video_osd_icon_size"
@@ -56,7 +56,7 @@ something
 
         <TextView
             android:id="@+id/tvDuration"
-            style="@style/Widget.TVBro.Text.Toast"
+            style="@style/Widget.SimpleBrowser.Text.Toast"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFeatureSettings="tnum"
@@ -77,7 +77,7 @@ something
         tools:visibility="visible">
 
         <TextView
-            style="@style/Widget.TVBro.KeyCap"
+            style="@style/Widget.SimpleBrowser.KeyCap"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/ds_key_cap_height"
             android:importantForAccessibility="no"

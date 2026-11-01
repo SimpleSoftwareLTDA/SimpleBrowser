@@ -20,6 +20,6 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keepclassmembers class * extends com.phlox.tvwebbrowser.utils.activemodel.ActiveModel {
+-keepclassmembers class * extends com.simplesoftware.browser.utils.activemodel.ActiveModel {
    <init>(...);
 }

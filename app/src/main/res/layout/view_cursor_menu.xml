@@ -7,7 +7,7 @@
     android:elevation="@dimen/ds_cursor_menu_elevation">
 
     <ImageButton
-        style="@style/Widget.TVBro.ImageButton.Ds.CursorMenu.Center"
+        style="@style/Widget.SimpleBrowser.ImageButton.Ds.CursorMenu.Center"
         android:id="@+id/btnGrabMode"
         android:src="@drawable/ic_grab_mode"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        style="@style/Widget.TVBro.ImageButton.Ds.CursorMenu"
+        style="@style/Widget.SimpleBrowser.ImageButton.Ds.CursorMenu"
         android:id="@+id/btnZoomIn"
         android:layout_marginEnd="@dimen/ds_cursor_menu_inset"
         android:src="@drawable/ic_zoom_in"
@@ -24,7 +24,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <ImageButton
-        style="@style/Widget.TVBro.ImageButton.Ds.CursorMenu"
+        style="@style/Widget.SimpleBrowser.ImageButton.Ds.CursorMenu"
         android:id="@+id/btnZoomOut"
         android:layout_marginStart="@dimen/ds_cursor_menu_inset"
         android:src="@drawable/ic_zoom_out"
@@ -32,7 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <ImageButton
-        style="@style/Widget.TVBro.ImageButton.Ds.CursorMenu"
+        style="@style/Widget.SimpleBrowser.ImageButton.Ds.CursorMenu"
         android:id="@+id/btnContextMenu"
         android:layout_marginTop="@dimen/ds_cursor_menu_inset"
         android:src="@drawable/ic_menu"
@@ -40,7 +40,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <ImageButton
-        style="@style/Widget.TVBro.ImageButton.Ds.CursorMenu"
+        style="@style/Widget.SimpleBrowser.ImageButton.Ds.CursorMenu"
         android:id="@+id/btnDPADMode"
         android:layout_marginBottom="@dimen/ds_cursor_menu_inset"
         android:src="@drawable/ic_dpad_mode"

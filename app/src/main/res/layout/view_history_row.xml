@@ -28,7 +28,7 @@ button of its options (not in the selection mode).
       android:longClickable="true">
 
     <ImageView
-        style="@style/Widget.TVBro.MenuIcon"
+        style="@style/Widget.SimpleBrowser.MenuIcon"
         android:id="@+id/ivCheck"
         android:layout_width="@dimen/ds_size_icon_toolbar"
         android:layout_height="@dimen/ds_size_icon_toolbar"
@@ -38,7 +38,7 @@ button of its options (not in the selection mode).
         tools:visibility="visible" />
 
     <TextView
-        style="@style/Widget.TVBro.Text.MenuItem"
+        style="@style/Widget.SimpleBrowser.Text.MenuItem"
         android:id="@+id/tvTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,7 +67,7 @@ button of its options (not in the selection mode).
         android:orientation="vertical">
 
       <TextView
-          style="@style/Widget.TVBro.Text.MenuItem"
+          style="@style/Widget.SimpleBrowser.Text.MenuItem"
           android:id="@+id/tvTitle"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -78,7 +78,7 @@ button of its options (not in the selection mode).
           tools:text="Wikipedia, the free encyclopedia" />
 
       <TextView
-          style="@style/Widget.TVBro.Text.MenuCaption"
+          style="@style/Widget.SimpleBrowser.Text.MenuCaption"
           android:id="@+id/tvCaption"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -90,7 +90,7 @@ button of its options (not in the selection mode).
 
     <!-- what OK does, on the focused row -->
     <TextView
-        style="@style/Widget.TVBro.Text.MenuItem"
+        style="@style/Widget.SimpleBrowser.Text.MenuItem"
         android:id="@+id/tvHint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -102,7 +102,7 @@ button of its options (not in the selection mode).
   </LinearLayout>
 
   <ImageButton
-      style="@style/Widget.TVBro.ImageButton.Ds.Panel"
+      style="@style/Widget.SimpleBrowser.ImageButton.Ds.Panel"
       android:id="@+id/ibOptions"
       android:layout_marginStart="@dimen/ds_bookmark_options_margin"
       android:layout_marginEnd="@dimen/ds_bookmark_options_margin"

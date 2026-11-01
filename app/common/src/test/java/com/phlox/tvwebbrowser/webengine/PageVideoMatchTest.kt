@@ -1,6 +1,6 @@
-package com.phlox.tvwebbrowser.webengine
+package com.simplesoftware.browser.webengine
 
-import com.phlox.tvwebbrowser.webengine.PageVideo.Kind
+import com.simplesoftware.browser.webengine.PageVideo.Kind
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test

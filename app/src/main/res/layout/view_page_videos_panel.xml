@@ -17,7 +17,7 @@ other apps can play. The focus does not leave the panel while it is open.
       android:clickable="true">
 
     <TextView
-        style="@style/Widget.TVBro.Text.MenuItem"
+        style="@style/Widget.SimpleBrowser.Text.MenuItem"
         android:layout_width="match_parent"
         android:layout_height="@dimen/ds_bookmarks_header_height"
         android:paddingStart="@dimen/ds_space_menu_inset"
@@ -29,11 +29,11 @@ other apps can play. The focus does not leave the panel while it is open.
         android:ellipsize="end"
         android:text="@string/videos_on_page" />
 
-    <View style="@style/Widget.TVBro.MenuSeparator" />
+    <View style="@style/Widget.SimpleBrowser.MenuSeparator" />
 
     <!-- focusable: with no videos it holds the focus of the panel -->
     <TextView
-        style="@style/Widget.TVBro.Text.MenuItem"
+        style="@style/Widget.SimpleBrowser.Text.MenuItem"
         android:id="@+id/tvEmpty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

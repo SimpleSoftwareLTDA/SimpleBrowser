@@ -274,7 +274,7 @@ details.addEventListener("click", function () {
     details.setAttribute("aria-expanded", String(expand));
 });
 document.getElementById("continue").addEventListener("click", function () {
-    TVBro.reloadWithSslTrust();
+    SimpleBrowser.reloadWithSslTrust();
 });
 if (!matchMedia("(max-width: 600px)").matches) {
     back.focus();

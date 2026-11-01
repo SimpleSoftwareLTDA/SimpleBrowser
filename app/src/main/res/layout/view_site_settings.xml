@@ -23,7 +23,7 @@ In the TV site panel the focus does not leave its rows.
       android:paddingBottom="@dimen/ds_panel_padding_vertical">
 
     <TextView
-        style="@style/Widget.TVBro.Text.MenuItem"
+        style="@style/Widget.SimpleBrowser.Text.MenuItem"
         android:id="@+id/tvHost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -56,7 +56,7 @@ In the TV site panel the focus does not leave its rows.
           android:orientation="vertical">
 
         <TextView
-            style="@style/Widget.TVBro.Text.MenuCaption"
+            style="@style/Widget.SimpleBrowser.Text.MenuCaption"
             android:id="@+id/tvConnection"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -65,7 +65,7 @@ In the TV site panel the focus does not leave its rows.
 
         <!-- why it is not secure -->
         <TextView
-            style="@style/Widget.TVBro.Text.MenuCaption"
+            style="@style/Widget.SimpleBrowser.Text.MenuCaption"
             android:id="@+id/tvConnectionReason"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -121,7 +121,7 @@ In the TV site panel the focus does not leave its rows.
   </LinearLayout>
 
   <View
-      style="@style/Widget.TVBro.MenuSeparator"
+      style="@style/Widget.SimpleBrowser.MenuSeparator"
       android:id="@+id/vHeaderSeparator" />
 
   <!-- a section of its own in the site sheet -->
@@ -132,7 +132,7 @@ In the TV site panel the focus does not leave its rows.
       android:orientation="vertical">
 
     <LinearLayout
-        style="@style/Widget.TVBro.PanelRow"
+        style="@style/Widget.SimpleBrowser.PanelRow"
         android:id="@+id/llAdBlock"
         android:nextFocusUp="@+id/llAdBlock"
         android:nextFocusDown="@+id/llPopups"
@@ -140,7 +140,7 @@ In the TV site panel the focus does not leave its rows.
         android:nextFocusRight="@+id/llAdBlock">
 
       <ImageView
-          style="@style/Widget.TVBro.MenuIcon"
+          style="@style/Widget.SimpleBrowser.MenuIcon"
           android:id="@+id/ivAdBlock"
           android:src="@drawable/ic_ad_block" />
 
@@ -153,7 +153,7 @@ In the TV site panel the focus does not leave its rows.
           android:orientation="vertical">
 
         <TextView
-            style="@style/Widget.TVBro.Text.MenuItem"
+            style="@style/Widget.SimpleBrowser.Text.MenuItem"
             android:id="@+id/tvAdBlockTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -161,7 +161,7 @@ In the TV site panel the focus does not leave its rows.
             android:text="@string/ad_blocking" />
 
         <TextView
-            style="@style/Widget.TVBro.Text.MenuCaption"
+            style="@style/Widget.SimpleBrowser.Text.MenuCaption"
             android:id="@+id/tvAdBlockCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -171,7 +171,7 @@ In the TV site panel the focus does not leave its rows.
       </LinearLayout>
 
       <TextView
-          style="@style/Widget.TVBro.Text.MenuItem"
+          style="@style/Widget.SimpleBrowser.Text.MenuItem"
           android:id="@+id/tvAdBlockValue"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -181,10 +181,10 @@ In the TV site panel the focus does not leave its rows.
           tools:text="@string/state_on" />
     </LinearLayout>
 
-    <View style="@style/Widget.TVBro.MenuSeparator" />
+    <View style="@style/Widget.SimpleBrowser.MenuSeparator" />
 
     <LinearLayout
-        style="@style/Widget.TVBro.PanelRow"
+        style="@style/Widget.SimpleBrowser.PanelRow"
         android:id="@+id/llPopups"
         android:nextFocusUp="@+id/llAdBlock"
         android:nextFocusDown="@+id/llSiteView"
@@ -192,7 +192,7 @@ In the TV site panel the focus does not leave its rows.
         android:nextFocusRight="@+id/llPopups">
 
       <ImageView
-          style="@style/Widget.TVBro.MenuIcon"
+          style="@style/Widget.SimpleBrowser.MenuIcon"
           android:id="@+id/ivPopups"
           android:src="@drawable/ic_popups" />
 
@@ -205,7 +205,7 @@ In the TV site panel the focus does not leave its rows.
           android:orientation="vertical">
 
         <TextView
-            style="@style/Widget.TVBro.Text.MenuItem"
+            style="@style/Widget.SimpleBrowser.Text.MenuItem"
             android:id="@+id/tvPopupsTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -213,7 +213,7 @@ In the TV site panel the focus does not leave its rows.
             android:text="@string/popups" />
 
         <TextView
-            style="@style/Widget.TVBro.Text.MenuCaption"
+            style="@style/Widget.SimpleBrowser.Text.MenuCaption"
             android:id="@+id/tvPopupsCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -223,7 +223,7 @@ In the TV site panel the focus does not leave its rows.
       </LinearLayout>
 
       <TextView
-          style="@style/Widget.TVBro.Text.MenuItem"
+          style="@style/Widget.SimpleBrowser.Text.MenuItem"
           android:id="@+id/tvPopupsValue"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -236,18 +236,18 @@ In the TV site panel the focus does not leave its rows.
           tools:text="Block dialogs" />
 
       <ImageView
-          style="@style/Widget.TVBro.MenuIcon"
+          style="@style/Widget.SimpleBrowser.MenuIcon"
           android:id="@+id/ivPopupsChevron"
           android:src="@drawable/ic_chevron_right" />
     </LinearLayout>
 
     <View
-        style="@style/Widget.TVBro.MenuSeparator"
+        style="@style/Widget.SimpleBrowser.MenuSeparator"
         android:id="@+id/vSiteViewSeparator" />
 
     <!-- desktop or mobile; the caption tells whether it is the default or set for this site -->
     <LinearLayout
-        style="@style/Widget.TVBro.PanelRow"
+        style="@style/Widget.SimpleBrowser.PanelRow"
         android:id="@+id/llSiteView"
         android:nextFocusUp="@+id/llPopups"
         android:nextFocusDown="@+id/llClearData"
@@ -255,7 +255,7 @@ In the TV site panel the focus does not leave its rows.
         android:nextFocusRight="@+id/llSiteView">
 
       <ImageView
-          style="@style/Widget.TVBro.MenuIcon"
+          style="@style/Widget.SimpleBrowser.MenuIcon"
           android:id="@+id/ivSiteView"
           android:src="@drawable/ic_site_view" />
 
@@ -268,7 +268,7 @@ In the TV site panel the focus does not leave its rows.
           android:orientation="vertical">
 
         <TextView
-            style="@style/Widget.TVBro.Text.MenuItem"
+            style="@style/Widget.SimpleBrowser.Text.MenuItem"
             android:id="@+id/tvSiteViewTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -276,7 +276,7 @@ In the TV site panel the focus does not leave its rows.
             android:text="@string/site_view" />
 
         <TextView
-            style="@style/Widget.TVBro.Text.MenuCaption"
+            style="@style/Widget.SimpleBrowser.Text.MenuCaption"
             android:id="@+id/tvSiteViewCaption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -286,7 +286,7 @@ In the TV site panel the focus does not leave its rows.
       </LinearLayout>
 
       <TextView
-          style="@style/Widget.TVBro.Text.MenuItem"
+          style="@style/Widget.SimpleBrowser.Text.MenuItem"
           android:id="@+id/tvSiteViewValue"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -299,7 +299,7 @@ In the TV site panel the focus does not leave its rows.
           tools:text="Desktop" />
 
       <ImageView
-          style="@style/Widget.TVBro.MenuIcon"
+          style="@style/Widget.SimpleBrowser.MenuIcon"
           android:id="@+id/ivSiteViewChevron"
           android:src="@drawable/ic_chevron_right" />
     </LinearLayout>
@@ -314,7 +314,7 @@ In the TV site panel the focus does not leave its rows.
       android:background="?attr/tbColorDsLine" />
 
   <LinearLayout
-      style="@style/Widget.TVBro.PanelRow"
+      style="@style/Widget.SimpleBrowser.PanelRow"
       android:id="@+id/llClearData"
       android:nextFocusUp="@+id/llSiteView"
       android:nextFocusDown="@+id/llClearData"
@@ -322,7 +322,7 @@ In the TV site panel the focus does not leave its rows.
       android:nextFocusRight="@+id/llClearData">
 
     <ImageView
-        style="@style/Widget.TVBro.MenuIcon"
+        style="@style/Widget.SimpleBrowser.MenuIcon"
         android:id="@+id/ivClearData"
         android:src="@drawable/ic_delete" />
 
@@ -335,7 +335,7 @@ In the TV site panel the focus does not leave its rows.
         android:orientation="vertical">
 
       <TextView
-          style="@style/Widget.TVBro.Text.MenuItem"
+          style="@style/Widget.SimpleBrowser.Text.MenuItem"
           android:id="@+id/tvClearDataTitle"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -343,7 +343,7 @@ In the TV site panel the focus does not leave its rows.
           android:text="@string/clear_site_data" />
 
       <TextView
-          style="@style/Widget.TVBro.Text.MenuCaption"
+          style="@style/Widget.SimpleBrowser.Text.MenuCaption"
           android:id="@+id/tvClearDataCaption"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"

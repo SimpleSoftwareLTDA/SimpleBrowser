@@ -25,7 +25,7 @@ first), and All downloads in its header. The focus does not leave the panel whil
         android:paddingEnd="@dimen/ds_bookmarks_header_padding">
 
       <TextView
-          style="@style/Widget.TVBro.Text.MenuItem"
+          style="@style/Widget.SimpleBrowser.Text.MenuItem"
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:layout_weight="1"
@@ -36,7 +36,7 @@ first), and All downloads in its header. The focus does not leave the panel whil
           android:text="@string/downloads" />
 
       <TextView
-          style="@style/Widget.TVBro.TextButton.Ds"
+          style="@style/Widget.SimpleBrowser.TextButton.Ds"
           android:id="@+id/btnAll"
           android:layout_height="@dimen/ds_panel_button_size"
           android:paddingEnd="@dimen/ds_bookmarks_header_padding"
@@ -46,10 +46,10 @@ first), and All downloads in its header. The focus does not leave the panel whil
           android:text="@string/all_downloads" />
     </LinearLayout>
 
-    <View style="@style/Widget.TVBro.MenuSeparator" />
+    <View style="@style/Widget.SimpleBrowser.MenuSeparator" />
 
     <TextView
-        style="@style/Widget.TVBro.Text.MenuItem"
+        style="@style/Widget.SimpleBrowser.Text.MenuItem"
         android:id="@+id/tvEmpty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

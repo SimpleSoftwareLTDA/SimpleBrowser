@@ -28,7 +28,7 @@ for a download in progress, else the button of its options.
       android:longClickable="true">
 
     <ImageView
-        style="@style/Widget.TVBro.DownloadIcon.Phone"
+        style="@style/Widget.SimpleBrowser.DownloadIcon.Phone"
         android:id="@+id/ivIcon"
         tools:src="@drawable/ic_app" />
 
@@ -63,24 +63,24 @@ for a download in progress, else the button of its options.
           tools:text="29.1 of 48.2 MB · 8 s left" />
 
       <ProgressBar
-          style="@style/Widget.TVBro.DownloadProgress"
+          style="@style/Widget.SimpleBrowser.DownloadProgress"
           android:id="@+id/pbProgress"
           tools:progress="600" />
     </LinearLayout>
   </LinearLayout>
 
   <ImageButton
-      style="@style/Widget.TVBro.ImageButton.Ds.Phone"
+      style="@style/Widget.SimpleBrowser.ImageButton.Ds.Phone"
       android:id="@+id/ibFirst"
       tools:src="@drawable/ic_pause" />
 
   <ImageButton
-      style="@style/Widget.TVBro.ImageButton.Ds.Phone"
+      style="@style/Widget.SimpleBrowser.ImageButton.Ds.Phone"
       android:id="@+id/ibSecond"
       tools:src="@drawable/ic_close" />
 
   <ImageButton
-      style="@style/Widget.TVBro.ImageButton.Ds.Phone"
+      style="@style/Widget.SimpleBrowser.ImageButton.Ds.Phone"
       android:id="@+id/ibOptions"
       android:layout_marginEnd="@dimen/ds_phone_bar_padding_horizontal"
       android:src="@drawable/ic_more_vert"

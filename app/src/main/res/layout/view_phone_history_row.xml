@@ -68,7 +68,7 @@ selection mode).
   </LinearLayout>
 
   <ImageButton
-      style="@style/Widget.TVBro.ImageButton.Ds.Phone"
+      style="@style/Widget.SimpleBrowser.ImageButton.Ds.Phone"
       android:id="@+id/ibOptions"
       android:layout_marginEnd="@dimen/ds_phone_bar_padding_horizontal"
       android:src="@drawable/ic_more_vert"

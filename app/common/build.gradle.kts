@@ -1,10 +1,10 @@
 plugins {
-    id("tvbro.android.library")
+    id("simplesoftware.android.library")
     alias(libs.plugins.ksp)
 }
 
 android {
-    namespace = "com.phlox.tvwebbrowser.common"
+    namespace = "com.simplesoftware.browser.common"
 }
 
 dependencies {

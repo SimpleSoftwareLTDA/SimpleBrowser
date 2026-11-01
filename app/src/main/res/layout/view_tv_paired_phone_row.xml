@@ -15,7 +15,7 @@
     android:clickable="true">
 
   <ImageView
-      style="@style/Widget.TVBro.MenuIcon"
+      style="@style/Widget.SimpleBrowser.MenuIcon"
       android:layout_width="@dimen/ds_size_icon_toolbar"
       android:layout_height="@dimen/ds_size_icon_toolbar"
       android:src="@drawable/ic_phone" />
@@ -30,7 +30,7 @@
       android:orientation="vertical">
 
     <TextView
-        style="@style/Widget.TVBro.Text.MenuItem"
+        style="@style/Widget.SimpleBrowser.Text.MenuItem"
         android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
         tools:text="Pixel 6a" />
 
     <TextView
-        style="@style/Widget.TVBro.Text.MenuCaption"
+        style="@style/Widget.SimpleBrowser.Text.MenuCaption"
         android:id="@+id/tvCaption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
   </LinearLayout>
 
   <TextView
-      style="@style/Widget.TVBro.Text.MenuCaption"
+      style="@style/Widget.SimpleBrowser.Text.MenuCaption"
       android:id="@+id/tvHint"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"

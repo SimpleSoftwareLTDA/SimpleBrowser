@@ -24,7 +24,7 @@ number chosen, Select all and Delete), then the history by days.
 
       <!-- back, closes the search, or leaves the selection mode -->
       <ImageButton
-          style="@style/Widget.TVBro.ImageButton.Ds.Phone"
+          style="@style/Widget.SimpleBrowser.ImageButton.Ds.Phone"
           android:id="@+id/ibBack"
           android:src="@drawable/ic_back"
           android:contentDescription="@string/back" />
@@ -74,13 +74,13 @@ number chosen, Select all and Delete), then the history by days.
 
         <!-- the mic while the field is empty, Clear when it has text -->
         <ImageButton
-            style="@style/Widget.TVBro.ImageButton.Ds.PhonePill"
+            style="@style/Widget.SimpleBrowser.ImageButton.Ds.PhonePill"
             android:id="@+id/ibVoice"
             android:src="@drawable/ic_voice_search"
             android:contentDescription="@string/search_history_by_voice" />
 
         <ImageButton
-            style="@style/Widget.TVBro.ImageButton.Ds.PhonePill"
+            style="@style/Widget.SimpleBrowser.ImageButton.Ds.PhonePill"
             android:id="@+id/ibClearSearch"
             android:src="@drawable/ic_close"
             android:contentDescription="@string/clear_search"
@@ -88,33 +88,33 @@ number chosen, Select all and Delete), then the history by days.
       </LinearLayout>
 
       <ImageButton
-          style="@style/Widget.TVBro.ImageButton.Ds.Phone"
+          style="@style/Widget.SimpleBrowser.ImageButton.Ds.Phone"
           android:id="@+id/ibSearch"
           android:src="@drawable/ic_search"
           android:contentDescription="@string/search_history" />
 
       <ImageButton
-          style="@style/Widget.TVBro.ImageButton.Ds.Phone"
+          style="@style/Widget.SimpleBrowser.ImageButton.Ds.Phone"
           android:id="@+id/ibMenu"
           android:src="@drawable/ic_more_vert"
           android:contentDescription="@string/more_actions" />
 
       <ImageButton
-          style="@style/Widget.TVBro.ImageButton.Ds.Phone"
+          style="@style/Widget.SimpleBrowser.ImageButton.Ds.Phone"
           android:id="@+id/ibSelectAll"
           android:src="@drawable/ic_check_box"
           android:contentDescription="@string/select_all"
           android:visibility="gone" />
 
       <ImageButton
-          style="@style/Widget.TVBro.ImageButton.Ds.Phone"
+          style="@style/Widget.SimpleBrowser.ImageButton.Ds.Phone"
           android:id="@+id/ibDelete"
           android:src="@drawable/ic_delete"
           android:contentDescription="@string/delete"
           android:visibility="gone" />
     </LinearLayout>
 
-    <View style="@style/Widget.TVBro.MenuSeparator" />
+    <View style="@style/Widget.SimpleBrowser.MenuSeparator" />
 
     <FrameLayout
         android:layout_width="match_parent"

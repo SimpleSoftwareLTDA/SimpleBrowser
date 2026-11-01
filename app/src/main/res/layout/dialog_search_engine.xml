@@ -7,7 +7,7 @@
     android:paddingRight="@dimen/settings_content_padding">
 
     <TextView
-        style="@style/Widget.TVBro.Text.Body"
+        style="@style/Widget.SimpleBrowser.Text.Body"
         android:text="@string/choose_default_search_engine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -25,7 +25,7 @@
         android:id="@+id/llURL">
 
     <TextView
-        style="@style/Widget.TVBro.Text.Body"
+        style="@style/Widget.SimpleBrowser.Text.Body"
         android:text="@string/url"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,4 +1,4 @@
-package com.phlox.tvwebbrowser.debug
+package com.simplesoftware.browser.debug
 
 import android.app.Activity
 import android.os.Bundle
@@ -16,7 +16,7 @@ import kotlin.concurrent.thread
  * (`requests.tsv`) put into `<external files dir>/adblock-bench`, for example:
  * ```
  * adb push easylist.txt easyprivacy.txt requests.tsv /sdcard/Android/data/<package>/files/adblock-bench/
- * adb shell am start -n <package>/com.phlox.tvwebbrowser.debug.AdblockBenchActivity
+ * adb shell am start -n <package>/com.simplesoftware.browser.debug.AdblockBenchActivity
  * ```
  * The results go to logcat (tag AdblockBench), to the screen and to `results-<time>.log` next to the inputs.
  */

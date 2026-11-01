@@ -9,14 +9,14 @@ var searchEngineUrlMap = {
     };
 var recommendationsToDisplay = [];
 
-//GeckoView shows this page as a page of TV Bro's extension, which talks to the app through the extension
-//messaging (WebView adds TVBro to the page itself)
-if (!window.TVBro && typeof browser !== "undefined" && browser.runtime && browser.runtime.connectNative) {
+//GeckoView shows this page as a page of Simple Browser's extension, which talks to the app through the extension
+//messaging (WebView adds SimpleBrowser to the page itself)
+if (!window.SimpleBrowser && typeof browser !== "undefined" && browser.runtime && browser.runtime.connectNative) {
     var appPort = browser.runtime.connectNative("tvbro");
     var postToApp = function (action, data) {
         appPort.postMessage({ action: action, data: data });
     };
-    window.TVBro = {
+    window.SimpleBrowser = {
         startVoiceSearch: function () { postToApp("startVoiceSearch"); },
         setSearchEngine: function (engine, customSearchEngineURL) {
             postToApp("setSearchEngine", { engine: engine, customSearchEngineURL: customSearchEngineURL });
@@ -52,11 +52,11 @@ function onIcoLoadError(element) {
     //icons of links may go away from the sites: the app looks for the current icon of the site, once
     var pageUrl = element.dataset.pageUrl;
     element.dataset.pageUrl = "";
-    if (pageUrl && window.hasOwnProperty( "TVBro" )) {
-        if (TVBro.requestFavicon) {
+    if (pageUrl && window.hasOwnProperty( "SimpleBrowser" )) {
+        if (SimpleBrowser.requestFavicon) {
             //GeckoView: the app sends the icon to onFaviconLoaded
             element.dataset.faviconRequest = pageUrl;
-            TVBro.requestFavicon(pageUrl);
+            SimpleBrowser.requestFavicon(pageUrl);
         } else {
             //WebView
             try {
@@ -73,10 +73,10 @@ function onIcoLoadError(element) {
 
 function onSuggestionClicked(index) {
     var bookmark = null;
-    if (homePageLinksMode === "BOOKMARKS" && window.hasOwnProperty( "TVBro" )) {
+    if (homePageLinksMode === "BOOKMARKS" && window.hasOwnProperty( "SimpleBrowser" )) {
         bookmark = recommendationsToDisplay.find(function (b) { return b.order === index; });
-        if (bookmark && TVBro.hasOwnProperty("markBookmarkRecommendationAsUseful")) {
-            TVBro.markBookmarkRecommendationAsUseful(index);
+        if (bookmark && SimpleBrowser.hasOwnProperty("markBookmarkRecommendationAsUseful")) {
+            SimpleBrowser.markBookmarkRecommendationAsUseful(index);
         }
     } else {
         if (index >= recommendationsToDisplay.length) return;
@@ -111,7 +111,7 @@ function renderLinks(mode, linksArray) {
             var urlStr = c.url;
             try {
                 var url = new URL(urlStr);
-                if (window.hasOwnProperty( "TVBro" ) && !TVBro.requestFavicon) {
+                if (window.hasOwnProperty( "SimpleBrowser" ) && !SimpleBrowser.requestFavicon) {
                     //WebView serves the icon the app has for the site
                     c.favicon = "favicon://" + url.host;
                 } else {
@@ -131,7 +131,7 @@ function renderLinks(mode, linksArray) {
         var suggElement = document.getElementById("sugg" + i);
         if (suggElement) {
             var link;
-            if (homePageLinksMode == "BOOKMARKS" && window.hasOwnProperty( "TVBro" )) {
+            if (homePageLinksMode == "BOOKMARKS" && window.hasOwnProperty( "SimpleBrowser" )) {
                 link = recommendationsToDisplay.find(function(c) { return c.order == i; });
             } else {
                 link = recommendationsToDisplay[i];
@@ -165,12 +165,12 @@ function renderLinks(mode, linksArray) {
             titleElement.classList.toggle("empty", !link);
             descriptionElement.classList.toggle("empty", !link);
 
-            if (homePageLinksMode == "BOOKMARKS" && window.hasOwnProperty( "TVBro" )) {
+            if (homePageLinksMode == "BOOKMARKS" && window.hasOwnProperty( "SimpleBrowser" )) {
                 var moreElement = suggElement.getElementsByClassName("more")[0]; 
                 moreElement.style.display = "block";
                 moreElement.onclick = function(e) {
                     var index = parseInt(e.target.parentElement.id.substring(4));
-                    TVBro.onEditBookmark(index);
+                    SimpleBrowser.onEditBookmark(index);
                     e.stopPropagation();
                 };
             }
@@ -207,8 +207,8 @@ function applySearchEngine(engine, searchEngineUrl, notifyTVBro) {
     }
     document.getElementsByClassName("default_option")[0].style.backgroundImage = "url('" + iconUrl + "')";    
 
-    if (window.hasOwnProperty( "TVBro" ) && notifyTVBro) {
-        TVBro.setSearchEngine(engine, searchEngineUrl ? searchEngineUrl : searchEngineUrlMap[engine]);
+    if (window.hasOwnProperty( "SimpleBrowser" ) && notifyTVBro) {
+        SimpleBrowser.setSearchEngine(engine, searchEngineUrl ? searchEngineUrl : searchEngineUrlMap[engine]);
     }
 }
 
@@ -218,7 +218,7 @@ function performSearch(text) {
     window.open(url, "_self");
 }
 
-//callback called from TVBro/GeckoView
+//callback called from SimpleBrowser/GeckoView
 function onFaviconLoaded(url, data) {
     var icons = document.getElementsByClassName("sugg-ico");
     for (var i = 0; i < icons.length; i++) {
@@ -240,7 +240,7 @@ function hideVoiceSearchUI() {
 var searchEngine = localStorage.getItem('search-engine') ? localStorage.getItem('search-engine') : "google";
 var searchEngineUrl = localStorage.getItem('search-engine-url') ? localStorage.getItem('search-engine-url') : searchEngineUrlMap[searchEngine];
 
-//the page has no inline handlers: TV Bro also shows it as a page of its GeckoView extension,
+//the page has no inline handlers: Simple Browser also shows it as a page of its GeckoView extension,
 //where only scripts from files run
 for (var i = 0; i < 8; i++) {
     (function (index) {
@@ -270,23 +270,23 @@ document.getElementsByClassName("search_action_container")[0].onclick = function
     if (document.getElementsByClassName("mic")[0].style.display == "none") {
         performSearch(document.getElementById("search-input").value);
     } else {
-        if (window.hasOwnProperty( "TVBro" )) {
-            TVBro.startVoiceSearch();
+        if (window.hasOwnProperty( "SimpleBrowser" )) {
+            SimpleBrowser.startVoiceSearch();
         }
     }
 };
 
 //there are three modes this page can run in:
-//1. Running inside ordinary web page - TVBro variable is not installed - no bookmarks, no voice search
-//2. Running inside TVBro WebView - TVBro variable is installed
-//3. Running inside TVBro GeckoView - TVBro variable is installed
+//1. Running inside ordinary web page - SimpleBrowser variable is not installed - no bookmarks, no voice search
+//2. Running inside SimpleBrowser WebView - SimpleBrowser variable is installed
+//3. Running inside SimpleBrowser GeckoView - SimpleBrowser variable is installed
 
-if (window.hasOwnProperty( "TVBro" )) {
-    console.log("Running inside TVBro");
+if (window.hasOwnProperty( "SimpleBrowser" )) {
+    console.log("Running inside SimpleBrowser");
     //the center of the search bar in device pixels of the page view: the browser may put its cursor there
     var searchBar = document.getElementById("search-input").getBoundingClientRect();
     var ratio = window.devicePixelRatio || 1;
-    TVBro.onHomePageLoaded(Math.round((searchBar.left + searchBar.width / 2) * ratio),
+    SimpleBrowser.onHomePageLoaded(Math.round((searchBar.left + searchBar.width / 2) * ratio),
         Math.round((searchBar.top + searchBar.height / 2) * ratio));
 } else {
     hideVoiceSearchUI();

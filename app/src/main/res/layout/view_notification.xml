@@ -19,7 +19,7 @@
         android:importantForAccessibility="no"
         tools:src="@drawable/ic_close"/>
     <TextView android:id="@+id/tvMessage"
-        style="@style/Widget.TVBro.Text.Toast"
+        style="@style/Widget.SimpleBrowser.Text.Toast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/ds_space_icon_text"

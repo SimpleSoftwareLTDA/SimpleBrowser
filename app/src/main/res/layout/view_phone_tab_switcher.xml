@@ -29,7 +29,7 @@ the tabs in two columns, and Close all, New tab and Done.
 
     <!-- selected (activated) in the incognito mode -->
     <ImageButton
-        style="@style/Widget.TVBro.ImageButton.Ds.Phone"
+        style="@style/Widget.SimpleBrowser.ImageButton.Ds.Phone"
         android:id="@+id/ibIncognito"
         android:background="@drawable/ds_quick_button_bg"
         android:src="@drawable/ic_incognito"
@@ -57,7 +57,7 @@ the tabs in two columns, and Close all, New tab and Done.
       android:background="@drawable/ds_phone_bar_bg">
 
     <TextView
-        style="@style/Widget.TVBro.Text.PhoneTextButton"
+        style="@style/Widget.SimpleBrowser.Text.PhoneTextButton"
         android:id="@+id/btnCloseAll"
         android:text="@string/close_all" />
 
@@ -79,7 +79,7 @@ the tabs in two columns, and Close all, New tab and Done.
         android:focusable="true">
 
       <ImageView
-          style="@style/Widget.TVBro.QuickButtonIcon"
+          style="@style/Widget.SimpleBrowser.QuickButtonIcon"
           android:src="@drawable/ic_add" />
 
       <TextView
@@ -98,7 +98,7 @@ the tabs in two columns, and Close all, New tab and Done.
         android:layout_weight="1" />
 
     <TextView
-        style="@style/Widget.TVBro.Text.PhoneTextButton"
+        style="@style/Widget.SimpleBrowser.Text.PhoneTextButton"
         android:id="@+id/btnDone"
         android:fontFamily="sans-serif-medium"
         android:text="@string/done" />

@@ -1,4 +1,4 @@
-package com.phlox.tvwebbrowser
+package com.simplesoftware.browser
 
 import org.junit.Test
 

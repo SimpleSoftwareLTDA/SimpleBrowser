@@ -1,6 +1,6 @@
-package com.phlox.tvwebbrowser.webengine.gecko
+package com.simplesoftware.browser.webengine.gecko
 
-import com.phlox.tvwebbrowser.net.ProxySettings
+import com.simplesoftware.browser.net.ProxySettings
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test

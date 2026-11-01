@@ -14,7 +14,7 @@
     android:clickable="true">
 
   <ImageView
-      style="@style/Widget.TVBro.MenuIcon"
+      style="@style/Widget.SimpleBrowser.MenuIcon"
       android:id="@+id/ivIcon"
       tools:src="@drawable/ic_search" />
 
@@ -31,7 +31,7 @@
       tools:text="Search and home page" />
 
   <TextView
-      style="@style/Widget.TVBro.Text.SettingsTag"
+      style="@style/Widget.SimpleBrowser.Text.SettingsTag"
       android:id="@+id/tvBadge"
       android:layout_marginStart="@dimen/ds_settings_tag_gap"
       android:visibility="gone"

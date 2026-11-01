@@ -20,7 +20,7 @@ of the pairing with how to use it, and the paired phones with Undo of the last c
       android:background="?attr/tbColorDsBgChrome">
 
     <ImageButton
-        style="@style/Widget.TVBro.ImageButton.Ds.Standalone"
+        style="@style/Widget.SimpleBrowser.ImageButton.Ds.Standalone"
         android:id="@+id/ibBack"
         android:src="@drawable/ic_back"
         android:contentDescription="@string/back_to_browser" />
@@ -36,7 +36,7 @@ of the pairing with how to use it, and the paired phones with Undo of the last c
         android:text="@string/sync_connect_phone" />
   </LinearLayout>
 
-  <View style="@style/Widget.TVBro.MenuSeparator" />
+  <View style="@style/Widget.SimpleBrowser.MenuSeparator" />
 
   <LinearLayout
       android:layout_width="match_parent"
@@ -71,7 +71,7 @@ of the pairing with how to use it, and the paired phones with Undo of the last c
       </FrameLayout>
 
       <TextView
-          style="@style/Widget.TVBro.Text.MenuItem"
+          style="@style/Widget.SimpleBrowser.Text.MenuItem"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_marginTop="@dimen/ds_sync_padding"
@@ -81,7 +81,7 @@ of the pairing with how to use it, and the paired phones with Undo of the last c
           android:text="@string/sync_scan_title" />
 
       <TextView
-          style="@style/Widget.TVBro.Text.MenuItem"
+          style="@style/Widget.SimpleBrowser.Text.MenuItem"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_marginTop="@dimen/ds_sync_text_gap"
@@ -89,7 +89,7 @@ of the pairing with how to use it, and the paired phones with Undo of the last c
           android:text="@string/sync_scan_steps" />
 
       <TextView
-          style="@style/Widget.TVBro.Text.MenuCaption"
+          style="@style/Widget.SimpleBrowser.Text.MenuCaption"
           android:id="@+id/tvNetwork"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
@@ -106,7 +106,7 @@ of the pairing with how to use it, and the paired phones with Undo of the last c
         android:orientation="vertical">
 
       <TextView
-          style="@style/Widget.TVBro.Text.MenuItem"
+          style="@style/Widget.SimpleBrowser.Text.MenuItem"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:fontFamily="sans-serif-medium"
@@ -120,14 +120,14 @@ of the pairing with how to use it, and the paired phones with Undo of the last c
           android:layout_weight="1"
           android:layout_marginTop="@dimen/ds_sync_text_gap">
 
-        <com.phlox.tvwebbrowser.widgets.NearestFocusRecyclerView
+        <com.simplesoftware.browser.widgets.NearestFocusRecyclerView
             android:id="@+id/rvPhones"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="vertical" />
 
         <TextView
-            style="@style/Widget.TVBro.Text.MenuItem"
+            style="@style/Widget.SimpleBrowser.Text.MenuItem"
             android:id="@+id/tvNoPhones"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -152,13 +152,13 @@ of the pairing with how to use it, and the paired phones with Undo of the last c
           tools:visibility="visible">
 
         <ImageView
-            style="@style/Widget.TVBro.MenuIcon"
+            style="@style/Widget.SimpleBrowser.MenuIcon"
             android:layout_width="@dimen/ds_size_icon_toolbar"
             android:layout_height="@dimen/ds_size_icon_toolbar"
             android:src="@drawable/ic_favorites" />
 
         <TextView
-            style="@style/Widget.TVBro.Text.MenuItem"
+            style="@style/Widget.SimpleBrowser.Text.MenuItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/ds_downloads_header_icon_text"

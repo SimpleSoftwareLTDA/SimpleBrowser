@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
   <View
-      style="@style/Widget.TVBro.MenuSeparator"
+      style="@style/Widget.SimpleBrowser.MenuSeparator"
       android:id="@+id/vDivider" />
 
   <LinearLayout
@@ -47,7 +47,7 @@
           android:orientation="vertical">
 
         <TextView
-            style="@style/Widget.TVBro.Text.MenuItem"
+            style="@style/Widget.SimpleBrowser.Text.MenuItem"
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
             tools:text="Wikipedia" />
 
         <TextView
-            style="@style/Widget.TVBro.Text.MenuCaption"
+            style="@style/Widget.SimpleBrowser.Text.MenuCaption"
             android:id="@+id/tvCaption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -69,14 +69,14 @@
 
       <!-- a chevron on folders, a check on the folder that is chosen -->
       <ImageView
-          style="@style/Widget.TVBro.MenuIcon"
+          style="@style/Widget.SimpleBrowser.MenuIcon"
           android:id="@+id/ivEnd"
           android:layout_marginStart="@dimen/ds_space_icon_text"
           tools:src="@drawable/ic_chevron_right" />
     </LinearLayout>
 
     <ImageButton
-        style="@style/Widget.TVBro.ImageButton.Ds.Panel"
+        style="@style/Widget.SimpleBrowser.ImageButton.Ds.Panel"
         android:id="@+id/ibOptions"
         android:layout_marginStart="@dimen/ds_bookmark_options_margin"
         android:layout_marginEnd="@dimen/ds_bookmark_options_margin"

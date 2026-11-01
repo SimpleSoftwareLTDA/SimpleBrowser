@@ -21,7 +21,7 @@ file, Open folder with the free space, Clear all), then the downloads in progres
       android:background="?attr/tbColorDsBgChrome">
 
     <ImageButton
-        style="@style/Widget.TVBro.ImageButton.Ds.Standalone"
+        style="@style/Widget.SimpleBrowser.ImageButton.Ds.Standalone"
         android:id="@+id/ibBack"
         android:src="@drawable/ic_back"
         android:contentDescription="@string/back_to_browser" />
@@ -38,7 +38,7 @@ file, Open folder with the free space, Clear all), then the downloads in progres
 
     <!-- All, then the kinds there are files of -->
     <LinearLayout
-        style="@style/Widget.TVBro.ToolbarGroup"
+        style="@style/Widget.SimpleBrowser.ToolbarGroup"
         android:id="@+id/llFilters"
         android:layout_height="@dimen/ds_size_chrome_control"
         android:layout_marginStart="@dimen/ds_space_gutter" />
@@ -62,7 +62,7 @@ file, Open folder with the free space, Clear all), then the downloads in progres
         android:clickable="true">
 
       <ImageView
-          style="@style/Widget.TVBro.MenuIcon"
+          style="@style/Widget.SimpleBrowser.MenuIcon"
           android:layout_width="@dimen/ds_size_icon_toolbar"
           android:layout_height="@dimen/ds_size_icon_toolbar"
           android:src="@drawable/ic_folder" />
@@ -74,7 +74,7 @@ file, Open folder with the free space, Clear all), then the downloads in progres
           android:orientation="vertical">
 
         <TextView
-            style="@style/Widget.TVBro.Text.MenuItem"
+            style="@style/Widget.SimpleBrowser.Text.MenuItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
@@ -82,7 +82,7 @@ file, Open folder with the free space, Clear all), then the downloads in progres
             android:text="@string/open_downloads_folder" />
 
         <TextView
-            style="@style/Widget.TVBro.Text.MenuCaption"
+            style="@style/Widget.SimpleBrowser.Text.MenuCaption"
             android:id="@+id/tvFreeSpace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -105,13 +105,13 @@ file, Open folder with the free space, Clear all), then the downloads in progres
         android:clickable="true">
 
       <ImageView
-          style="@style/Widget.TVBro.MenuIcon"
+          style="@style/Widget.SimpleBrowser.MenuIcon"
           android:layout_width="@dimen/ds_size_icon_toolbar"
           android:layout_height="@dimen/ds_size_icon_toolbar"
           android:src="@drawable/ic_clear_all" />
 
       <TextView
-          style="@style/Widget.TVBro.Text.MenuItem"
+          style="@style/Widget.SimpleBrowser.Text.MenuItem"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_marginStart="@dimen/ds_downloads_header_icon_text"
@@ -121,21 +121,21 @@ file, Open folder with the free space, Clear all), then the downloads in progres
     </LinearLayout>
   </LinearLayout>
 
-  <View style="@style/Widget.TVBro.MenuSeparator" />
+  <View style="@style/Widget.SimpleBrowser.MenuSeparator" />
 
   <FrameLayout
       android:layout_width="match_parent"
       android:layout_height="0dp"
       android:layout_weight="1">
 
-    <com.phlox.tvwebbrowser.widgets.NearestFocusRecyclerView
+    <com.simplesoftware.browser.widgets.NearestFocusRecyclerView
         android:id="@+id/rvItems"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical" />
 
     <TextView
-        style="@style/Widget.TVBro.Text.MenuItem"
+        style="@style/Widget.SimpleBrowser.Text.MenuItem"
         android:id="@+id/tvEmpty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

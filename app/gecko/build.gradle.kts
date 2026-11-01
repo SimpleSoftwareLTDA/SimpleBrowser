@@ -1,7 +1,7 @@
 import java.util.zip.CRC32
 
 plugins {
-    id("tvbro.android.library")
+    id("simplesoftware.android.library")
 }
 
 /** The built-in home page of the app; GeckoView shows it as a page of the extension */
@@ -51,7 +51,7 @@ abstract class CopyHomePageToExtension : DefaultTask() {
 }
 
 android {
-    namespace = "com.phlox.tvwebbrowser.webengine.gecko"
+    namespace = "com.simplesoftware.browser.webengine.gecko"
 
     buildFeatures {
         buildConfig = true

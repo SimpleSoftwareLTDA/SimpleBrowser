@@ -30,7 +30,7 @@ player.
       android:longClickable="true">
 
     <ImageView
-        style="@style/Widget.TVBro.DownloadIcon"
+        style="@style/Widget.SimpleBrowser.DownloadIcon"
         android:id="@+id/ivIcon"
         android:src="@drawable/ic_video" />
 
@@ -44,7 +44,7 @@ player.
         android:orientation="vertical">
 
       <TextView
-          style="@style/Widget.TVBro.Text.MenuItem"
+          style="@style/Widget.SimpleBrowser.Text.MenuItem"
           android:id="@+id/tvTitle"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -55,7 +55,7 @@ player.
           tools:text="Big Buck Bunny" />
 
       <TextView
-          style="@style/Widget.TVBro.Text.MenuCaption"
+          style="@style/Widget.SimpleBrowser.Text.MenuCaption"
           android:id="@+id/tvCaption"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -67,7 +67,7 @@ player.
 
     <!-- the video plays in the page now -->
     <TextView
-        style="@style/Widget.TVBro.Text.MenuCaption"
+        style="@style/Widget.SimpleBrowser.Text.MenuCaption"
         android:id="@+id/tvPlaying"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -83,7 +83,7 @@ player.
   </LinearLayout>
 
   <ImageButton
-      style="@style/Widget.TVBro.ImageButton.Ds.Panel"
+      style="@style/Widget.SimpleBrowser.ImageButton.Ds.Panel"
       android:id="@+id/ibOptions"
       android:layout_marginStart="@dimen/ds_bookmark_options_margin"
       android:layout_marginEnd="@dimen/ds_bookmark_options_margin"

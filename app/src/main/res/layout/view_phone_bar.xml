@@ -10,7 +10,7 @@ Refresh), the tab count and the menu.
     tools:orientation="horizontal">
 
   <ImageButton
-      style="@style/Widget.TVBro.ImageButton.Ds.Phone"
+      style="@style/Widget.SimpleBrowser.ImageButton.Ds.Phone"
       android:id="@+id/ibBack"
       android:src="@drawable/ic_back"
       android:contentDescription="@string/navigate_back" />
@@ -34,13 +34,13 @@ Refresh), the tab count and the menu.
 
       <!-- sliders, or a warning sign on a page without a secure connection -->
       <ImageButton
-          style="@style/Widget.TVBro.ImageButton.Ds.PhonePill"
+          style="@style/Widget.SimpleBrowser.ImageButton.Ds.PhonePill"
           android:id="@+id/ibSite"
           android:src="@drawable/ic_site"
           android:contentDescription="@string/site_settings" />
 
       <TextView
-          style="@style/Widget.TVBro.Text.PhoneAddress"
+          style="@style/Widget.SimpleBrowser.Text.PhoneAddress"
           android:id="@+id/tvHost"
           android:layout_width="0dp"
           android:layout_height="wrap_content"
@@ -52,7 +52,7 @@ Refresh), the tab count and the menu.
           tools:text="wikipedia.org" />
 
       <ImageButton
-          style="@style/Widget.TVBro.ImageButton.Ds.PhonePill"
+          style="@style/Widget.SimpleBrowser.ImageButton.Ds.PhonePill"
           android:id="@+id/ibRefresh"
           android:src="@drawable/ic_refresh"
           android:contentDescription="@string/refresh_page" />
@@ -77,7 +77,7 @@ Refresh), the tab count and the menu.
           android:importantForAccessibility="no" />
 
       <TextView
-          style="@style/Widget.TVBro.Text.PhoneAddress"
+          style="@style/Widget.SimpleBrowser.Text.PhoneAddress"
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:layout_weight="1"
@@ -90,7 +90,7 @@ Refresh), the tab count and the menu.
 
     <!-- the address while it is edited: the full url -->
     <EditText
-        style="@style/Widget.TVBro.Text.PhoneAddress"
+        style="@style/Widget.SimpleBrowser.Text.PhoneAddress"
         android:id="@+id/etUrl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -133,7 +133,7 @@ Refresh), the tab count and the menu.
   </FrameLayout>
 
   <ImageButton
-      style="@style/Widget.TVBro.ImageButton.Ds.Phone"
+      style="@style/Widget.SimpleBrowser.ImageButton.Ds.Phone"
       android:id="@+id/ibMenu"
       android:src="@drawable/ic_more_vert"
       android:contentDescription="@string/menu" />

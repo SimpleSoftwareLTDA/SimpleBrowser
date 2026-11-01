@@ -52,11 +52,11 @@
         android:textColor="?attr/tbColorDsInk"
         android:singleLine="true"
         android:ellipsize="end"
-        tools:text="Google · TV Bro Home" />
+        tools:text="Google · Simple Browser Home" />
   </LinearLayout>
 
   <TextView
-      style="@style/Widget.TVBro.Text.SettingsTag"
+      style="@style/Widget.SimpleBrowser.Text.SettingsTag"
       android:id="@+id/tvBadge"
       android:layout_marginStart="@dimen/ds_settings_tag_gap"
       android:visibility="gone"

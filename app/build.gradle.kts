@@ -1,10 +1,10 @@
 plugins {
-    id("tvbro.android.application")
+    id("simplesoftware.android.application")
     alias(libs.plugins.ksp)
 }
 
 android {
-    namespace = "com.phlox.tvwebbrowser"
+    namespace = "com.simplesoftware.browser"
 
     defaultConfig {
         applicationId = "com.simplesoftware.browser"
@@ -67,20 +67,20 @@ android {
             buildConfigField("Boolean", "BUILT_IN_AUTO_UPDATE", "false")
         }
 
-        // each variant has one web engine, registered by TVBro.initWebEngineStuff()
+        // each variant has one web engine, registered by SimpleBrowser.initWebEngineStuff()
         create("geckoIncluded") {
             dimension = "webengine"
             // a separate app: it can be installed next to the WebView one
             applicationIdSuffix = ".gecko"
             minSdk = 26 // geckoview requires minSdk 26
             buildConfigField("String", "WEB_ENGINE_CLASS",
-                "\"com.phlox.tvwebbrowser.webengine.gecko.GeckoWebEngine\"")
+                "\"com.simplesoftware.browser.webengine.gecko.GeckoWebEngine\"")
         }
         create("geckoExcluded") {
             dimension = "webengine"
             isDefault = true
             buildConfigField("String", "WEB_ENGINE_CLASS",
-                "\"com.phlox.tvwebbrowser.webengine.webview.WebViewWebEngine\"")
+                "\"com.simplesoftware.browser.webengine.webview.WebViewWebEngine\"")
         }
     }
 

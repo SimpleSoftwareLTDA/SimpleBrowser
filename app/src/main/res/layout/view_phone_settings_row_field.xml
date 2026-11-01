@@ -2,7 +2,7 @@
 <!-- A text to type on the phone: the title, the field under it and an optional button (Update of the filter list) -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/Widget.TVBro.SettingsRow.Ds"
+    style="@style/Widget.SimpleBrowser.SettingsRow.Ds"
     android:orientation="vertical"
     android:gravity="start"
     android:paddingTop="@dimen/ds_phone_settings_block_padding"
@@ -14,7 +14,7 @@
       android:layout_height="wrap_content" />
 
   <EditText
-      style="@style/Widget.TVBro.SettingsField"
+      style="@style/Widget.SimpleBrowser.SettingsField"
       android:id="@+id/etValue"
       android:layout_width="match_parent"
       android:layout_marginTop="@dimen/ds_settings_field_gap"
@@ -28,7 +28,7 @@
       android:layout_marginTop="@dimen/ds_settings_field_gap">
 
     <TextView
-        style="@style/Widget.TVBro.SettingsButton"
+        style="@style/Widget.SimpleBrowser.SettingsButton"
         android:id="@+id/btnAction"
         tools:text="Update" />
 

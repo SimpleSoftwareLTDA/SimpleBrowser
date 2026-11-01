@@ -29,13 +29,13 @@ while it is open.
         android:paddingEnd="@dimen/ds_bookmarks_header_padding">
 
       <ImageButton
-          style="@style/Widget.TVBro.ImageButton.Ds.Panel"
+          style="@style/Widget.SimpleBrowser.ImageButton.Ds.Panel"
           android:id="@+id/ibBack"
           android:src="@drawable/ic_back"
           android:contentDescription="@string/back" />
 
       <TextView
-          style="@style/Widget.TVBro.Text.MenuItem"
+          style="@style/Widget.SimpleBrowser.Text.MenuItem"
           android:id="@+id/tvTitle"
           android:layout_width="0dp"
           android:layout_height="wrap_content"
@@ -65,7 +65,7 @@ while it is open.
           android:visibility="gone">
 
         <ImageView
-            style="@style/Widget.TVBro.MenuIcon"
+            style="@style/Widget.SimpleBrowser.MenuIcon"
             android:src="@drawable/ic_search" />
 
         <EditText
@@ -85,7 +85,7 @@ while it is open.
             android:importantForAutofill="no" />
 
         <ImageButton
-            style="@style/Widget.TVBro.ImageButton.Ds.Panel"
+            style="@style/Widget.SimpleBrowser.ImageButton.Ds.Panel"
             android:id="@+id/ibVoice"
             android:layout_marginEnd="@dimen/ds_bookmarks_search_button_margin"
             android:src="@drawable/ic_voice_search"
@@ -93,23 +93,23 @@ while it is open.
       </LinearLayout>
 
       <ImageButton
-          style="@style/Widget.TVBro.ImageButton.Ds.Panel"
+          style="@style/Widget.SimpleBrowser.ImageButton.Ds.Panel"
           android:id="@+id/ibSearch"
           android:src="@drawable/ic_search"
           android:contentDescription="@string/search_bookmarks" />
 
       <ImageButton
-          style="@style/Widget.TVBro.ImageButton.Ds.Panel"
+          style="@style/Widget.SimpleBrowser.ImageButton.Ds.Panel"
           android:id="@+id/ibMenu"
           android:src="@drawable/ic_more_vert"
           android:contentDescription="@string/more_actions" />
     </LinearLayout>
 
-    <View style="@style/Widget.TVBro.MenuSeparator" />
+    <View style="@style/Widget.SimpleBrowser.MenuSeparator" />
 
     <!-- how many bookmarks the search found -->
     <TextView
-        style="@style/Widget.TVBro.Text.MenuCaption"
+        style="@style/Widget.SimpleBrowser.Text.MenuCaption"
         android:id="@+id/tvStatus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -123,11 +123,11 @@ while it is open.
 
     <!-- Add this page, or Edit bookmark for this page -->
     <LinearLayout
-        style="@style/Widget.TVBro.PanelRow"
+        style="@style/Widget.SimpleBrowser.PanelRow"
         android:id="@+id/llThisPage">
 
       <ImageView
-          style="@style/Widget.TVBro.MenuIcon"
+          style="@style/Widget.SimpleBrowser.MenuIcon"
           android:id="@+id/ivThisPage"
           android:src="@drawable/ic_favorites" />
 
@@ -139,7 +139,7 @@ while it is open.
           android:orientation="vertical">
 
         <TextView
-            style="@style/Widget.TVBro.Text.MenuItem"
+            style="@style/Widget.SimpleBrowser.Text.MenuItem"
             android:id="@+id/tvThisPageTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -149,7 +149,7 @@ while it is open.
             tools:text="@string/add_this_page" />
 
         <TextView
-            style="@style/Widget.TVBro.Text.MenuCaption"
+            style="@style/Widget.SimpleBrowser.Text.MenuCaption"
             android:id="@+id/tvThisPageCaption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -161,11 +161,11 @@ while it is open.
     </LinearLayout>
 
     <View
-        style="@style/Widget.TVBro.MenuSeparator"
+        style="@style/Widget.SimpleBrowser.MenuSeparator"
         android:id="@+id/vThisPageSeparator" />
 
     <TextView
-        style="@style/Widget.TVBro.Text.MenuItem"
+        style="@style/Widget.SimpleBrowser.Text.MenuItem"
         android:id="@+id/tvEmpty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -193,32 +193,32 @@ while it is open.
         android:visibility="gone">
 
       <TextView
-          style="@style/Widget.TVBro.Text.FieldLabel"
+          style="@style/Widget.SimpleBrowser.Text.FieldLabel"
           android:labelFor="@+id/etName"
           android:text="@string/name" />
 
       <EditText
-          style="@style/Widget.TVBro.Field.Ds"
+          style="@style/Widget.SimpleBrowser.Field.Ds"
           android:id="@+id/etName"
           android:inputType="text"
           android:imeOptions="actionNext"
           android:importantForAutofill="no" />
 
       <TextView
-          style="@style/Widget.TVBro.Text.FieldLabel"
+          style="@style/Widget.SimpleBrowser.Text.FieldLabel"
           android:id="@+id/tvUrlLabel"
           android:labelFor="@+id/etUrl"
           android:text="@string/url" />
 
       <EditText
-          style="@style/Widget.TVBro.Field.Ds"
+          style="@style/Widget.SimpleBrowser.Field.Ds"
           android:id="@+id/etUrl"
           android:inputType="textUri"
           android:imeOptions="actionDone"
           android:importantForAutofill="no" />
 
       <TextView
-          style="@style/Widget.TVBro.Text.FieldLabel"
+          style="@style/Widget.SimpleBrowser.Text.FieldLabel"
           android:id="@+id/tvFolderLabel"
           android:text="@string/folder" />
 
@@ -235,16 +235,16 @@ while it is open.
           android:clickable="true">
 
         <ImageView
-            style="@style/Widget.TVBro.MenuIcon"
+            style="@style/Widget.SimpleBrowser.MenuIcon"
             android:src="@drawable/ic_folder" />
 
         <TextView
-            style="@style/Widget.TVBro.Text.MenuItem.Row"
+            style="@style/Widget.SimpleBrowser.Text.MenuItem.Row"
             android:id="@+id/tvFolder"
             tools:text="@string/bookmarks" />
 
         <ImageView
-            style="@style/Widget.TVBro.MenuIcon"
+            style="@style/Widget.SimpleBrowser.MenuIcon"
             android:src="@drawable/ic_chevron_right" />
       </LinearLayout>
 
@@ -255,7 +255,7 @@ while it is open.
           android:orientation="horizontal">
 
         <TextView
-            style="@style/Widget.TVBro.TextButton.Ds"
+            style="@style/Widget.SimpleBrowser.TextButton.Ds"
             android:id="@+id/btnDelete"
             android:text="@string/delete" />
 
@@ -265,12 +265,12 @@ while it is open.
             android:layout_weight="1" />
 
         <TextView
-            style="@style/Widget.TVBro.TextButton.Ds"
+            style="@style/Widget.SimpleBrowser.TextButton.Ds"
             android:id="@+id/btnCancel"
             android:text="@string/cancel" />
 
         <TextView
-            style="@style/Widget.TVBro.TextButton.Ds"
+            style="@style/Widget.SimpleBrowser.TextButton.Ds"
             android:id="@+id/btnSave"
             android:layout_marginStart="@dimen/ds_panel_buttons_gap"
             android:fontFamily="sans-serif-medium"

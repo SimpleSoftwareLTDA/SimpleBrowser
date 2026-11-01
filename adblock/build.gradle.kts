@@ -1,11 +1,11 @@
 plugins {
-    id("tvbro.android.library")
+    id("simplesoftware.android.library")
 }
 
 // The ad blocker: filter lists of the Adblock Plus syntax (EasyList), compiled into a compact engine.
 // Plain Kotlin without android.*, so its tests run on the JVM.
 android {
-    namespace = "com.phlox.tvwebbrowser.adblock"
+    namespace = "com.simplesoftware.browser.adblock"
 
     testOptions {
         unitTests.all { test ->

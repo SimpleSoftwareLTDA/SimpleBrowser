@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppTheme" parent="@style/Theme.TVBro" />
+    <style name="AppTheme" parent="@style/Theme.SimpleBrowser" />
 
     <!--
     Widget styles. Layouts set them with style="..." on each view; the theme does not set them as
@@ -9,12 +9,12 @@
     -->
 
     <!-- A text button with the app's button background (its padding comes from the background) -->
-    <style name="Widget.TVBro.Button" parent="Widget.AppCompat.Button">
+    <style name="Widget.SimpleBrowser.Button" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/button_bg_selector</item>
     </style>
 
     <!-- An icon button with the app's button background -->
-    <style name="Widget.TVBro.ImageButton" parent="Widget.AppCompat.ImageButton">
+    <style name="Widget.SimpleBrowser.ImageButton" parent="Widget.AppCompat.ImageButton">
         <item name="android:background">@drawable/button_bg_selector</item>
     </style>
 
@@ -22,7 +22,7 @@
     The browser bar of the redesign. Its buttons have fixed sizes; the paddings fit icons of any
     intrinsic size to the board size, and the icons get the design system icon color.
     -->
-    <style name="Widget.TVBro.ImageButton.Ds" parent="Widget.AppCompat.ImageButton">
+    <style name="Widget.SimpleBrowser.ImageButton.Ds" parent="Widget.AppCompat.ImageButton">
         <item name="android:minWidth">0dp</item>
         <item name="android:minHeight">0dp</item>
         <item name="android:scaleType">fitCenter</item>
@@ -31,7 +31,7 @@
     </style>
 
     <!-- A round button around the cursor in the cursor menu -->
-    <style name="Widget.TVBro.ImageButton.Ds.CursorMenu">
+    <style name="Widget.SimpleBrowser.ImageButton.Ds.CursorMenu">
         <item name="android:layout_width">@dimen/ds_cursor_menu_button</item>
         <item name="android:layout_height">@dimen/ds_cursor_menu_button</item>
         <item name="android:background">@drawable/ds_cursor_menu_button_bg</item>
@@ -40,13 +40,13 @@
     </style>
 
     <!-- The grab button in the middle of the cursor menu -->
-    <style name="Widget.TVBro.ImageButton.Ds.CursorMenu.Center">
+    <style name="Widget.SimpleBrowser.ImageButton.Ds.CursorMenu.Center">
         <item name="android:background">@drawable/ds_cursor_menu_center_bg</item>
         <item name="android:padding">@dimen/ds_cursor_menu_center_icon_padding</item>
     </style>
 
     <!-- A segment of a toolbar group -->
-    <style name="Widget.TVBro.ImageButton.Ds.Segment">
+    <style name="Widget.SimpleBrowser.ImageButton.Ds.Segment">
         <item name="android:layout_width">@dimen/ds_size_toolbar_segment</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@drawable/ds_control_bg</item>
@@ -57,7 +57,7 @@
     </style>
 
     <!-- A button on its own in the bar (the close-app button) -->
-    <style name="Widget.TVBro.ImageButton.Ds.Standalone">
+    <style name="Widget.SimpleBrowser.ImageButton.Ds.Standalone">
         <item name="android:layout_width">@dimen/ds_size_chrome_control</item>
         <item name="android:layout_height">@dimen/ds_size_chrome_control</item>
         <item name="android:background">@drawable/ds_icon_button_bg</item>
@@ -65,7 +65,7 @@
     </style>
 
     <!-- A button inside the address field -->
-    <style name="Widget.TVBro.ImageButton.Ds.Field">
+    <style name="Widget.SimpleBrowser.ImageButton.Ds.Field">
         <item name="android:layout_width">@dimen/ds_size_toolbar_segment</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@drawable/ds_field_button_bg</item>
@@ -76,7 +76,7 @@
     </style>
 
     <!-- A button of the phone bar -->
-    <style name="Widget.TVBro.ImageButton.Ds.Phone">
+    <style name="Widget.SimpleBrowser.ImageButton.Ds.Phone">
         <item name="android:layout_width">@dimen/ds_phone_button_size</item>
         <item name="android:layout_height">@dimen/ds_phone_button_size</item>
         <item name="android:background">@drawable/ds_phone_button_bg</item>
@@ -84,7 +84,7 @@
     </style>
 
     <!-- A button inside the address pill of the phone bar -->
-    <style name="Widget.TVBro.ImageButton.Ds.PhonePill">
+    <style name="Widget.SimpleBrowser.ImageButton.Ds.PhonePill">
         <item name="android:layout_width">@dimen/ds_phone_pill_button_width</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@drawable/ds_phone_button_bg</item>
@@ -92,7 +92,7 @@
     </style>
 
     <!-- A quick button of the phone menu sheet: an icon over a label -->
-    <style name="Widget.TVBro.QuickButton" parent="">
+    <style name="Widget.SimpleBrowser.QuickButton" parent="">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">@dimen/ds_phone_quick_button_height</item>
         <item name="android:layout_weight">1</item>
@@ -103,7 +103,7 @@
         <item name="android:focusable">true</item>
     </style>
 
-    <style name="Widget.TVBro.QuickButtonIcon" parent="">
+    <style name="Widget.SimpleBrowser.QuickButtonIcon" parent="">
         <item name="android:layout_width">@dimen/ds_phone_quick_button_icon</item>
         <item name="android:layout_height">@dimen/ds_phone_quick_button_icon</item>
         <item name="tint">?attr/tbColorDsIcon</item>
@@ -111,7 +111,7 @@
     </style>
 
     <!-- A row of the phone menu sheet: an icon and a label -->
-    <style name="Widget.TVBro.PhoneMenuRow" parent="">
+    <style name="Widget.SimpleBrowser.PhoneMenuRow" parent="">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/ds_phone_menu_row_height</item>
         <item name="android:orientation">horizontal</item>
@@ -123,7 +123,7 @@
         <item name="android:focusable">true</item>
     </style>
 
-    <style name="Widget.TVBro.PhoneMenuIcon" parent="">
+    <style name="Widget.SimpleBrowser.PhoneMenuIcon" parent="">
         <item name="android:layout_width">@dimen/ds_phone_quick_button_icon</item>
         <item name="android:layout_height">@dimen/ds_phone_quick_button_icon</item>
         <item name="tint">?attr/tbColorDsIcon</item>
@@ -131,7 +131,7 @@
     </style>
 
     <!-- A group of toolbar segments; the group clips them to its rounded border (ActionBar sets clipToOutline) -->
-    <style name="Widget.TVBro.ToolbarGroup" parent="">
+    <style name="Widget.SimpleBrowser.ToolbarGroup" parent="">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_marginStart">@dimen/ds_space_gutter</item>
@@ -141,14 +141,14 @@
     </style>
 
     <!-- The separator between toolbar segments -->
-    <style name="Widget.TVBro.ToolbarSeparator" parent="">
+    <style name="Widget.SimpleBrowser.ToolbarSeparator" parent="">
         <item name="android:layout_width">@dimen/ds_border_hairline</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">?attr/tbColorDsLineStrong</item>
     </style>
 
     <!-- A row of a panel: an icon, a title with a second line, a value -->
-    <style name="Widget.TVBro.PanelRow" parent="">
+    <style name="Widget.SimpleBrowser.PanelRow" parent="">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/ds_panel_row_height</item>
         <item name="android:orientation">horizontal</item>
@@ -161,7 +161,7 @@
     </style>
 
     <!-- A row of a menu: an icon and a label -->
-    <style name="Widget.TVBro.MenuRow" parent="">
+    <style name="Widget.SimpleBrowser.MenuRow" parent="">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/ds_size_menu_row</item>
         <item name="android:orientation">horizontal</item>
@@ -174,7 +174,7 @@
     </style>
 
     <!-- The icon of a menu or panel row -->
-    <style name="Widget.TVBro.MenuIcon" parent="">
+    <style name="Widget.SimpleBrowser.MenuIcon" parent="">
         <item name="android:layout_width">@dimen/ds_size_icon_menu</item>
         <item name="android:layout_height">@dimen/ds_size_icon_menu</item>
         <item name="tint">?attr/tbColorDsIcon</item>
@@ -182,7 +182,7 @@
     </style>
 
     <!-- A button with an icon and a label in the header of a TV screen over the window -->
-    <style name="Widget.TVBro.HeaderButton.Ds" parent="">
+    <style name="Widget.SimpleBrowser.HeaderButton.Ds" parent="">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">@dimen/ds_size_chrome_control</item>
         <item name="android:layout_marginStart">@dimen/ds_space_gutter</item>
@@ -196,7 +196,7 @@
     </style>
 
     <!-- The label of a header button -->
-    <style name="Widget.TVBro.Text.HeaderButton" parent="Widget.TVBro.Text.MenuItem">
+    <style name="Widget.SimpleBrowser.Text.HeaderButton" parent="Widget.SimpleBrowser.Text.MenuItem">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginStart">@dimen/ds_downloads_header_icon_text</item>
@@ -206,14 +206,14 @@
     </style>
 
     <!-- A hairline between menu or panel rows -->
-    <style name="Widget.TVBro.MenuSeparator" parent="">
+    <style name="Widget.SimpleBrowser.MenuSeparator" parent="">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/ds_border_hairline</item>
         <item name="android:background">?attr/tbColorDsLine</item>
     </style>
 
     <!-- The progress of a download in a row -->
-    <style name="Widget.TVBro.DownloadProgress" parent="@android:style/Widget.ProgressBar.Horizontal">
+    <style name="Widget.SimpleBrowser.DownloadProgress" parent="@android:style/Widget.ProgressBar.Horizontal">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/ds_download_progress_height</item>
         <item name="android:layout_marginTop">@dimen/ds_download_progress_margin</item>
@@ -223,7 +223,7 @@
     </style>
 
     <!-- The icon of the kind of a downloaded file, in a circle -->
-    <style name="Widget.TVBro.DownloadIcon" parent="">
+    <style name="Widget.SimpleBrowser.DownloadIcon" parent="">
         <item name="android:layout_width">@dimen/ds_download_icon</item>
         <item name="android:layout_height">@dimen/ds_download_icon</item>
         <item name="android:padding">@dimen/ds_download_icon_padding</item>
@@ -233,14 +233,14 @@
     </style>
 
     <!-- The icon of the kind of a downloaded file on the phone -->
-    <style name="Widget.TVBro.DownloadIcon.Phone">
+    <style name="Widget.SimpleBrowser.DownloadIcon.Phone">
         <item name="android:layout_width">@dimen/ds_phone_download_icon</item>
         <item name="android:layout_height">@dimen/ds_phone_download_icon</item>
         <item name="android:padding">@dimen/ds_phone_download_icon_padding</item>
     </style>
 
     <!-- A filter chip of the phone downloads -->
-    <style name="Widget.TVBro.Chip.Ds" parent="">
+    <style name="Widget.SimpleBrowser.Chip.Ds" parent="">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">@dimen/ds_phone_chip_height</item>
         <item name="android:gravity">center</item>
@@ -254,7 +254,7 @@
     </style>
 
     <!-- A text segment of a toolbar group (the filters of the downloads) -->
-    <style name="Widget.TVBro.TextSegment.Ds" parent="">
+    <style name="Widget.SimpleBrowser.TextSegment.Ds" parent="">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:gravity">center</item>
@@ -269,7 +269,7 @@
     </style>
 
     <!-- An icon button of a panel: in its header, the options of a row -->
-    <style name="Widget.TVBro.ImageButton.Ds.Panel">
+    <style name="Widget.SimpleBrowser.ImageButton.Ds.Panel">
         <item name="android:layout_width">@dimen/ds_panel_button_size</item>
         <item name="android:layout_height">@dimen/ds_panel_button_size</item>
         <item name="android:background">@drawable/ds_panel_button_bg</item>
@@ -277,7 +277,7 @@
     </style>
 
     <!-- A text button of a panel form (Save, Cancel) -->
-    <style name="Widget.TVBro.TextButton.Ds" parent="">
+    <style name="Widget.SimpleBrowser.TextButton.Ds" parent="">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">@dimen/ds_panel_text_button_height</item>
         <item name="android:gravity">center</item>
@@ -291,8 +291,8 @@
         <item name="android:singleLine">true</item>
     </style>
 
-    <!-- A button of an alert dialog (set by ThemeOverlay.TVBro.Dialog.Alert): a text button of a panel form -->
-    <style name="Widget.TVBro.DialogButton" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+    <!-- A button of an alert dialog (set by ThemeOverlay.SimpleBrowser.Dialog.Alert): a text button of a panel form -->
+    <style name="Widget.SimpleBrowser.DialogButton" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
         <item name="android:minWidth">0dp</item>
         <item name="android:minHeight">@dimen/ds_panel_text_button_height</item>
         <item name="android:paddingStart">@dimen/ds_panel_text_button_padding</item>
@@ -307,7 +307,7 @@
     </style>
 
     <!-- A text field of a panel form -->
-    <style name="Widget.TVBro.Field.Ds" parent="">
+    <style name="Widget.SimpleBrowser.Field.Ds" parent="">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/ds_panel_field_height</item>
         <item name="android:paddingStart">@dimen/ds_panel_field_padding</item>
@@ -319,13 +319,13 @@
     </style>
 
     <!-- A text field of the phone bookmarks form -->
-    <style name="Widget.TVBro.Field.Ds.Phone">
+    <style name="Widget.SimpleBrowser.Field.Ds.Phone">
         <item name="android:layout_height">@dimen/ds_phone_field_height</item>
         <item name="android:textSize">@dimen/ds_text_phone_menu_item</item>
     </style>
 
     <!-- The label over a field of the phone bookmarks form -->
-    <style name="Widget.TVBro.Text.PhoneFieldLabel" parent="">
+    <style name="Widget.SimpleBrowser.Text.PhoneFieldLabel" parent="">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/ds_phone_form_padding</item>
@@ -335,7 +335,7 @@
     </style>
 
     <!-- The label over a field of a panel form -->
-    <style name="Widget.TVBro.Text.FieldLabel" parent="Widget.TVBro.Text.MenuCaption">
+    <style name="Widget.SimpleBrowser.Text.FieldLabel" parent="Widget.SimpleBrowser.Text.MenuCaption">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/ds_panel_field_gap</item>
@@ -344,7 +344,7 @@
     </style>
 
     <!-- A divider inside the address field -->
-    <style name="Widget.TVBro.FieldDivider" parent="">
+    <style name="Widget.SimpleBrowser.FieldDivider" parent="">
         <item name="android:layout_width">@dimen/ds_border_hairline</item>
         <item name="android:layout_height">@dimen/ds_field_divider_height</item>
         <item name="android:layout_gravity">center_vertical</item>
@@ -355,52 +355,52 @@
     Text sizes. These styles set only the size, so the text keeps the color of the view's default
     appearance (a textAppearance would replace it).
     -->
-    <style name="Widget.TVBro.Text" parent="" />
+    <style name="Widget.SimpleBrowser.Text" parent="" />
 
     <!-- Titles of list items, list section headers, big placeholders -->
-    <style name="Widget.TVBro.Text.Headline">
+    <style name="Widget.SimpleBrowser.Text.Headline">
         <item name="android:textSize">@dimen/text_size_headline</item>
     </style>
 
     <!-- Dialog titles, tab titles, secondary lines of list items, notifications -->
-    <style name="Widget.TVBro.Text.Title">
+    <style name="Widget.SimpleBrowser.Text.Title">
         <item name="android:textSize">@dimen/text_size_title</item>
     </style>
 
     <!-- URLs under titles, rows of the shortcuts list -->
-    <style name="Widget.TVBro.Text.Subtitle">
+    <style name="Widget.SimpleBrowser.Text.Subtitle">
         <item name="android:textSize">@dimen/text_size_subtitle</item>
     </style>
 
     <!-- Labels of settings, bookmark titles -->
-    <style name="Widget.TVBro.Text.Body">
+    <style name="Widget.SimpleBrowser.Text.Body">
         <item name="android:textSize">@dimen/text_size_body</item>
     </style>
 
     <!-- Bookmark URLs, values next to settings -->
-    <style name="Widget.TVBro.Text.Caption">
+    <style name="Widget.SimpleBrowser.Text.Caption">
         <item name="android:textSize">@dimen/text_size_caption</item>
     </style>
 
     <!-- Counters on buttons -->
-    <style name="Widget.TVBro.Text.Badge">
+    <style name="Widget.SimpleBrowser.Text.Badge">
         <item name="android:textSize">@dimen/text_size_badge</item>
     </style>
 
     <!-- Text styles of the redesigned screens (design system type styles) -->
 
     <!-- The url in the address field -->
-    <style name="Widget.TVBro.Text.Address">
+    <style name="Widget.SimpleBrowser.Text.Address">
         <item name="android:textSize">@dimen/ds_text_address</item>
     </style>
 
     <!-- Toast messages -->
-    <style name="Widget.TVBro.Text.Toast">
+    <style name="Widget.SimpleBrowser.Text.Toast">
         <item name="android:textSize">@dimen/ds_text_toast</item>
     </style>
 
     <!-- A key of the remote on a toast (ds_key_cap_bg): its name in an outlined cap -->
-    <style name="Widget.TVBro.KeyCap" parent="">
+    <style name="Widget.SimpleBrowser.KeyCap" parent="">
         <item name="android:textSize">@dimen/ds_text_key_cap</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">?attr/tbColorDsOnToast</item>
@@ -413,18 +413,18 @@
     </style>
 
     <!-- Rows of menus and panels -->
-    <style name="Widget.TVBro.Text.MenuItem">
+    <style name="Widget.SimpleBrowser.Text.MenuItem">
         <item name="android:textSize">@dimen/ds_text_menu_item</item>
     </style>
 
     <!-- Page titles on tabs -->
-    <style name="Widget.TVBro.Text.TabTitle">
+    <style name="Widget.SimpleBrowser.Text.TabTitle">
         <item name="android:textSize">@dimen/ds_text_tab_title</item>
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
     <!-- The label of a menu row -->
-    <style name="Widget.TVBro.Text.MenuItem.Row">
+    <style name="Widget.SimpleBrowser.Text.MenuItem.Row">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
@@ -435,12 +435,12 @@
     </style>
 
     <!-- The address in the phone bar -->
-    <style name="Widget.TVBro.Text.PhoneAddress">
+    <style name="Widget.SimpleBrowser.Text.PhoneAddress">
         <item name="android:textSize">@dimen/ds_text_phone_address</item>
     </style>
 
     <!-- The label of a quick button of the phone menu sheet -->
-    <style name="Widget.TVBro.Text.QuickButton">
+    <style name="Widget.SimpleBrowser.Text.QuickButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/ds_phone_quick_button_icon_text</item>
@@ -451,7 +451,7 @@
     </style>
 
     <!-- The label of a row of the phone menu sheet -->
-    <style name="Widget.TVBro.Text.PhoneMenuItem">
+    <style name="Widget.SimpleBrowser.Text.PhoneMenuItem">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
@@ -463,7 +463,7 @@
     </style>
 
     <!-- A text button of a phone bottom row (Close all, Done) -->
-    <style name="Widget.TVBro.Text.PhoneTextButton">
+    <style name="Widget.SimpleBrowser.Text.PhoneTextButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">@dimen/ds_phone_button_size</item>
         <item name="android:gravity">center</item>
@@ -477,27 +477,27 @@
     </style>
 
     <!-- The second line of a menu or panel row -->
-    <style name="Widget.TVBro.Text.MenuCaption">
+    <style name="Widget.SimpleBrowser.Text.MenuCaption">
         <item name="android:textSize">@dimen/ds_text_menu_caption</item>
     </style>
 
     <!-- The count of active downloads on the Downloads button -->
-    <style name="Widget.TVBro.Text.CountBadge">
+    <style name="Widget.SimpleBrowser.Text.CountBadge">
         <item name="android:textSize">@dimen/ds_text_badge</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <!-- A row of a list (RecyclerView): focusable, highlighted when focused -->
-    <style name="Widget.TVBro.ListItem" parent="">
+    <style name="Widget.SimpleBrowser.ListItem" parent="">
         <item name="android:focusable">true</item>
         <item name="android:background">@drawable/list_item_bg_selector</item>
     </style>
 
     <!--
     The settings screens. Sizes come from the tbSettings theme attributes: the TV values, or the phone ones
-    under ThemeOverlay.TVBro.Settings.Phone.
+    under ThemeOverlay.SimpleBrowser.Settings.Phone.
     -->
-    <style name="Widget.TVBro.SettingsRow.Ds" parent="">
+    <style name="Widget.SimpleBrowser.SettingsRow.Ds" parent="">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginStart">?attr/tbSettingsRowMargin</item>
@@ -513,23 +513,23 @@
     </style>
 
     <!-- A row that acts as a whole (a switch, a menu, a link) -->
-    <style name="Widget.TVBro.SettingsRow.Ds.Clickable">
+    <style name="Widget.SimpleBrowser.SettingsRow.Ds.Clickable">
         <item name="android:focusable">true</item>
         <item name="android:clickable">true</item>
     </style>
 
-    <style name="Widget.TVBro.Text.SettingsTitle" parent="">
+    <style name="Widget.SimpleBrowser.Text.SettingsTitle" parent="">
         <item name="android:textSize">?attr/tbSettingsTitleSize</item>
         <item name="android:textColor">?attr/tbColorDsInk</item>
     </style>
 
-    <style name="Widget.TVBro.Text.SettingsSummary" parent="">
+    <style name="Widget.SimpleBrowser.Text.SettingsSummary" parent="">
         <item name="android:textSize">?attr/tbSettingsSummarySize</item>
         <item name="android:textColor">?attr/tbColorDsInk</item>
     </style>
 
     <!-- The title of a group of rows -->
-    <style name="Widget.TVBro.Text.SettingsGroup" parent="">
+    <style name="Widget.SimpleBrowser.Text.SettingsGroup" parent="">
         <item name="android:textSize">?attr/tbSettingsGroupSize</item>
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textAllCaps">true</item>
@@ -540,7 +540,7 @@
     </style>
 
     <!-- A small marker: After restart, Update -->
-    <style name="Widget.TVBro.Text.SettingsTag" parent="">
+    <style name="Widget.SimpleBrowser.Text.SettingsTag" parent="">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">@dimen/ds_settings_tag_height</item>
         <item name="android:gravity">center</item>
@@ -554,7 +554,7 @@
     </style>
 
     <!-- The group of the segments of a choice; it clips them to its rounded border (set clipToOutline) -->
-    <style name="Widget.TVBro.SettingsSegments" parent="">
+    <style name="Widget.SimpleBrowser.SettingsSegments" parent="">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">?attr/tbSettingsControlHeight</item>
         <item name="android:orientation">horizontal</item>
@@ -562,7 +562,7 @@
         <item name="android:padding">@dimen/ds_border_hairline</item>
     </style>
 
-    <style name="Widget.TVBro.Text.SettingsSegment" parent="">
+    <style name="Widget.SimpleBrowser.Text.SettingsSegment" parent="">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:minWidth">@dimen/ds_settings_segment_min_width</item>
@@ -579,14 +579,14 @@
     </style>
 
     <!-- A button in a row of the settings -->
-    <style name="Widget.TVBro.SettingsButton" parent="Widget.TVBro.TextButton.Ds">
+    <style name="Widget.SimpleBrowser.SettingsButton" parent="Widget.SimpleBrowser.TextButton.Ds">
         <item name="android:layout_height">?attr/tbSettingsControlHeight</item>
         <item name="android:textSize">?attr/tbSettingsTitleSize</item>
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
     <!-- A text field in a row of the settings -->
-    <style name="Widget.TVBro.SettingsField" parent="Widget.TVBro.Field.Ds">
+    <style name="Widget.SimpleBrowser.SettingsField" parent="Widget.SimpleBrowser.Field.Ds">
         <item name="android:layout_height">?attr/tbSettingsControlHeight</item>
         <item name="android:textSize">?attr/tbSettingsTitleSize</item>
         <item name="android:textColorHint">?attr/tbColorDsInkFaint</item>
@@ -596,7 +596,7 @@
     </style>
 
     <!-- The switch of a row: the row toggles it, so it takes no focus or clicks -->
-    <style name="Widget.TVBro.SettingsSwitch" parent="">
+    <style name="Widget.SimpleBrowser.SettingsSwitch" parent="">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:thumb">@drawable/ds_switch_thumb</item>
@@ -614,7 +614,7 @@
         <item name="android:importantForAccessibility">no</item>
     </style>
 
-    <style name="Widget.TVBro.SettingsSlider" parent="">
+    <style name="Widget.SimpleBrowser.SettingsSlider" parent="">
         <item name="android:layout_width">@dimen/ds_settings_slider_width</item>
         <item name="android:layout_height">@dimen/ds_settings_slider_thumb_focus</item>
         <item name="android:progressDrawable">@drawable/ds_slider_progress</item>

@@ -2,10 +2,10 @@
   "manifest_version": 2,
   "name": "tvbro-generic",
   "version": "1.0",
-  "description": "TV Bro Generic Addon",
+  "description": "Simple Browser Generic Addon",
   "browser_specific_settings": {
     "gecko": {
-      "id": "tvbro@mock.com"
+      "id": "simplebrowser@simplesoftware.br"
     }
   },
   "content_scripts": [

@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/ds_panel_field_gap">
 
   <TextView
-      style="@style/Widget.TVBro.Text.Body"
+      style="@style/Widget.SimpleBrowser.Text.Body"
       android:id="@+id/tvMessage"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"

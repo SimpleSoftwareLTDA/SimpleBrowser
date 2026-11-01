@@ -21,7 +21,7 @@ category), the cards of the categories or the rows of the shown category, the st
         android:paddingEnd="@dimen/ds_phone_bar_padding_horizontal">
 
       <ImageButton
-          style="@style/Widget.TVBro.ImageButton.Ds.Phone"
+          style="@style/Widget.SimpleBrowser.ImageButton.Ds.Phone"
           android:id="@+id/ibBack"
           android:src="@drawable/ic_back"
           android:contentDescription="@string/back" />
@@ -61,11 +61,11 @@ category), the cards of the categories or the rows of the shown category, the st
             android:layout_height="wrap_content"
             android:orientation="vertical" />
 
-        <com.phlox.tvwebbrowser.activity.main.view.SettingsRowsView
+        <com.simplesoftware.browser.activity.main.view.SettingsRowsView
             android:id="@+id/vRows"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:theme="@style/ThemeOverlay.TVBro.Settings.Phone"
+            android:theme="@style/ThemeOverlay.SimpleBrowser.Settings.Phone"
             android:visibility="gone" />
       </LinearLayout>
     </androidx.core.widget.NestedScrollView>
@@ -94,7 +94,7 @@ category), the cards of the categories or the rows of the shown category, the st
           android:text="@string/settings_restart_message" />
 
       <TextView
-          style="@style/Widget.TVBro.Text.PhoneTextButton"
+          style="@style/Widget.SimpleBrowser.Text.PhoneTextButton"
           android:id="@+id/btnRestart"
           android:fontFamily="sans-serif-medium"
           android:text="@string/settings_restart_now" />

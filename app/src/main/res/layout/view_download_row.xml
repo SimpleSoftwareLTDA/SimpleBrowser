@@ -34,7 +34,7 @@ two buttons (pause or resume and cancel, or download again) and the button of it
         android:longClickable="true">
 
       <ImageView
-          style="@style/Widget.TVBro.DownloadIcon"
+          style="@style/Widget.SimpleBrowser.DownloadIcon"
           android:id="@+id/ivIcon"
           tools:src="@drawable/ic_app" />
 
@@ -48,7 +48,7 @@ two buttons (pause or resume and cancel, or download again) and the button of it
           android:orientation="vertical">
 
         <TextView
-            style="@style/Widget.TVBro.Text.MenuItem"
+            style="@style/Widget.SimpleBrowser.Text.MenuItem"
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -59,7 +59,7 @@ two buttons (pause or resume and cancel, or download again) and the button of it
             tools:text="tvbro-2.4.0-arm64-v8a.apk" />
 
         <TextView
-            style="@style/Widget.TVBro.Text.MenuCaption"
+            style="@style/Widget.SimpleBrowser.Text.MenuCaption"
             android:id="@+id/tvCaption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -69,14 +69,14 @@ two buttons (pause or resume and cancel, or download again) and the button of it
             tools:text="18.6 MB of 48.2 MB · 2.4 MB/s · 12 s left" />
 
         <ProgressBar
-            style="@style/Widget.TVBro.DownloadProgress"
+            style="@style/Widget.SimpleBrowser.DownloadProgress"
             android:id="@+id/pbProgress"
             tools:progress="390" />
       </LinearLayout>
 
       <!-- what OK does, on the focused row of the screen -->
       <TextView
-          style="@style/Widget.TVBro.Text.MenuItem"
+          style="@style/Widget.SimpleBrowser.Text.MenuItem"
           android:id="@+id/tvHint"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -88,19 +88,19 @@ two buttons (pause or resume and cancel, or download again) and the button of it
     </LinearLayout>
 
     <ImageButton
-        style="@style/Widget.TVBro.ImageButton.Ds.Panel"
+        style="@style/Widget.SimpleBrowser.ImageButton.Ds.Panel"
         android:id="@+id/ibFirst"
         android:layout_marginStart="@dimen/ds_bookmark_options_margin"
         tools:src="@drawable/ic_pause" />
 
     <ImageButton
-        style="@style/Widget.TVBro.ImageButton.Ds.Panel"
+        style="@style/Widget.SimpleBrowser.ImageButton.Ds.Panel"
         android:id="@+id/ibSecond"
         android:layout_marginStart="@dimen/ds_bookmark_options_margin"
         tools:src="@drawable/ic_close" />
 
     <ImageButton
-        style="@style/Widget.TVBro.ImageButton.Ds.Panel"
+        style="@style/Widget.SimpleBrowser.ImageButton.Ds.Panel"
         android:id="@+id/ibOptions"
         android:layout_marginStart="@dimen/ds_bookmark_options_margin"
         android:layout_marginEnd="@dimen/ds_bookmark_options_margin"

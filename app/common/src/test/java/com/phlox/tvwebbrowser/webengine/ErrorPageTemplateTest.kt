@@ -1,4 +1,4 @@
-package com.phlox.tvwebbrowser.webengine
+package com.simplesoftware.browser.webengine
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

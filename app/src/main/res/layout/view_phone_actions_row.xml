@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- A row of a phone sheet of actions: an icon and a label -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/Widget.TVBro.PhoneMenuRow">
+    style="@style/Widget.SimpleBrowser.PhoneMenuRow">
 
   <ImageView
-      style="@style/Widget.TVBro.PhoneMenuIcon"
+      style="@style/Widget.SimpleBrowser.PhoneMenuIcon"
       android:id="@+id/ivIcon" />
 
   <TextView
-      style="@style/Widget.TVBro.Text.PhoneMenuItem"
+      style="@style/Widget.SimpleBrowser.Text.PhoneMenuItem"
       android:id="@+id/tvLabel" />
 </LinearLayout>

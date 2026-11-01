@@ -1,5 +1,5 @@
 <resources>
-    <!-- Text sizes, used through the Widget.TVBro.Text.* styles (and directly by buttons) -->
+    <!-- Text sizes, used through the Widget.SimpleBrowser.Text.* styles (and directly by buttons) -->
     <dimen name="text_size_headline">30sp</dimen>
     <dimen name="text_size_title">20sp</dimen>
     <dimen name="text_size_subtitle">18sp</dimen>

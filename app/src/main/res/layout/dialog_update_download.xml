@@ -18,5 +18,5 @@
 
     <ProgressBar
         android:id="@+id/progressBar"
-        style="@style/Widget.TVBro.DownloadProgress" />
+        style="@style/Widget.SimpleBrowser.DownloadProgress" />
 </LinearLayout>

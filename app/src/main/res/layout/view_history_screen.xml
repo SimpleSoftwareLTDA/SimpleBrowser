@@ -23,7 +23,7 @@ then the history by days.
 
     <!-- back, or leave the selection mode -->
     <ImageButton
-        style="@style/Widget.TVBro.ImageButton.Ds.Standalone"
+        style="@style/Widget.SimpleBrowser.ImageButton.Ds.Standalone"
         android:id="@+id/ibBack"
         android:src="@drawable/ic_back"
         android:contentDescription="@string/back_to_browser" />
@@ -52,7 +52,7 @@ then the history by days.
         android:addStatesFromChildren="true">
 
       <ImageView
-          style="@style/Widget.TVBro.MenuIcon"
+          style="@style/Widget.SimpleBrowser.MenuIcon"
           android:src="@drawable/ic_search" />
 
       <EditText
@@ -72,26 +72,26 @@ then the history by days.
           android:importantForAutofill="no" />
 
       <ImageButton
-          style="@style/Widget.TVBro.ImageButton.Ds.Panel"
+          style="@style/Widget.SimpleBrowser.ImageButton.Ds.Panel"
           android:id="@+id/ibClearSearch"
           android:src="@drawable/ic_close"
           android:contentDescription="@string/clear_search"
           android:visibility="gone" />
 
       <View
-          style="@style/Widget.TVBro.FieldDivider"
+          style="@style/Widget.SimpleBrowser.FieldDivider"
           android:layout_marginStart="@dimen/ds_bookmarks_search_button_margin"
           android:layout_marginEnd="@dimen/ds_bookmarks_search_button_margin" />
 
       <ImageButton
-          style="@style/Widget.TVBro.ImageButton.Ds.Panel"
+          style="@style/Widget.SimpleBrowser.ImageButton.Ds.Panel"
           android:id="@+id/ibVoice"
           android:src="@drawable/ic_voice_search"
           android:contentDescription="@string/search_history_by_voice" />
     </LinearLayout>
 
     <TextView
-        style="@style/Widget.TVBro.Text.MenuItem"
+        style="@style/Widget.SimpleBrowser.Text.MenuItem"
         android:id="@+id/tvFound"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -109,67 +109,67 @@ then the history by days.
 
     <LinearLayout
         android:id="@+id/llSelectAll"
-        style="@style/Widget.TVBro.HeaderButton.Ds"
+        style="@style/Widget.SimpleBrowser.HeaderButton.Ds"
         android:visibility="gone">
 
       <ImageView
-          style="@style/Widget.TVBro.MenuIcon"
+          style="@style/Widget.SimpleBrowser.MenuIcon"
           android:layout_width="@dimen/ds_size_icon_toolbar"
           android:layout_height="@dimen/ds_size_icon_toolbar"
           android:src="@drawable/ic_check_box" />
 
       <TextView
-          style="@style/Widget.TVBro.Text.HeaderButton"
+          style="@style/Widget.SimpleBrowser.Text.HeaderButton"
           android:text="@string/select_all" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/llDelete"
-        style="@style/Widget.TVBro.HeaderButton.Ds"
+        style="@style/Widget.SimpleBrowser.HeaderButton.Ds"
         android:visibility="gone">
 
       <ImageView
-          style="@style/Widget.TVBro.MenuIcon"
+          style="@style/Widget.SimpleBrowser.MenuIcon"
           android:layout_width="@dimen/ds_size_icon_toolbar"
           android:layout_height="@dimen/ds_size_icon_toolbar"
           android:src="@drawable/ic_delete" />
 
       <TextView
-          style="@style/Widget.TVBro.Text.HeaderButton"
+          style="@style/Widget.SimpleBrowser.Text.HeaderButton"
           android:text="@string/delete" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/llClearAll"
-        style="@style/Widget.TVBro.HeaderButton.Ds">
+        style="@style/Widget.SimpleBrowser.HeaderButton.Ds">
 
       <ImageView
-          style="@style/Widget.TVBro.MenuIcon"
+          style="@style/Widget.SimpleBrowser.MenuIcon"
           android:layout_width="@dimen/ds_size_icon_toolbar"
           android:layout_height="@dimen/ds_size_icon_toolbar"
           android:src="@drawable/ic_clear_all" />
 
       <TextView
-          style="@style/Widget.TVBro.Text.HeaderButton"
+          style="@style/Widget.SimpleBrowser.Text.HeaderButton"
           android:text="@string/clear_all" />
     </LinearLayout>
   </LinearLayout>
 
-  <View style="@style/Widget.TVBro.MenuSeparator" />
+  <View style="@style/Widget.SimpleBrowser.MenuSeparator" />
 
   <FrameLayout
       android:layout_width="match_parent"
       android:layout_height="0dp"
       android:layout_weight="1">
 
-    <com.phlox.tvwebbrowser.widgets.NearestFocusRecyclerView
+    <com.simplesoftware.browser.widgets.NearestFocusRecyclerView
         android:id="@+id/rvItems"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical" />
 
     <TextView
-        style="@style/Widget.TVBro.Text.MenuItem"
+        style="@style/Widget.SimpleBrowser.Text.MenuItem"
         android:id="@+id/tvEmpty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

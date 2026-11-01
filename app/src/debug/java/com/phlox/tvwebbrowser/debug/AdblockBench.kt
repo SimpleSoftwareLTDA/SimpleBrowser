@@ -1,4 +1,4 @@
-package com.phlox.tvwebbrowser.debug
+package com.simplesoftware.browser.debug
 
 import android.net.Uri
 import android.os.Debug

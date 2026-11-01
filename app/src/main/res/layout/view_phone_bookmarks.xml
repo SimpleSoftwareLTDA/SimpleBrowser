@@ -24,7 +24,7 @@ the choice of a folder, or the search (the header turns into its field).
         android:background="?attr/tbColorDsBgChrome">
 
       <ImageButton
-          style="@style/Widget.TVBro.ImageButton.Ds.Phone"
+          style="@style/Widget.SimpleBrowser.ImageButton.Ds.Phone"
           android:id="@+id/ibBack"
           android:src="@drawable/ic_back"
           android:contentDescription="@string/back" />
@@ -74,13 +74,13 @@ the choice of a folder, or the search (the header turns into its field).
 
         <!-- the mic while the field is empty, Clear when it has text -->
         <ImageButton
-            style="@style/Widget.TVBro.ImageButton.Ds.PhonePill"
+            style="@style/Widget.SimpleBrowser.ImageButton.Ds.PhonePill"
             android:id="@+id/ibVoice"
             android:src="@drawable/ic_voice_search"
             android:contentDescription="@string/search_bookmarks_by_voice" />
 
         <ImageButton
-            style="@style/Widget.TVBro.ImageButton.Ds.PhonePill"
+            style="@style/Widget.SimpleBrowser.ImageButton.Ds.PhonePill"
             android:id="@+id/ibClear"
             android:src="@drawable/ic_close"
             android:contentDescription="@string/clear_search"
@@ -88,7 +88,7 @@ the choice of a folder, or the search (the header turns into its field).
       </LinearLayout>
 
       <TextView
-          style="@style/Widget.TVBro.Text.PhoneTextButton"
+          style="@style/Widget.SimpleBrowser.Text.PhoneTextButton"
           android:id="@+id/btnSave"
           android:layout_height="@dimen/ds_phone_save_button_height"
           android:layout_marginEnd="@dimen/ds_phone_bar_padding_horizontal"
@@ -100,19 +100,19 @@ the choice of a folder, or the search (the header turns into its field).
           android:visibility="gone" />
 
       <ImageButton
-          style="@style/Widget.TVBro.ImageButton.Ds.Phone"
+          style="@style/Widget.SimpleBrowser.ImageButton.Ds.Phone"
           android:id="@+id/ibSearch"
           android:src="@drawable/ic_search"
           android:contentDescription="@string/search_bookmarks" />
 
       <ImageButton
-          style="@style/Widget.TVBro.ImageButton.Ds.Phone"
+          style="@style/Widget.SimpleBrowser.ImageButton.Ds.Phone"
           android:id="@+id/ibMenu"
           android:src="@drawable/ic_more_vert"
           android:contentDescription="@string/more_actions" />
     </LinearLayout>
 
-    <View style="@style/Widget.TVBro.MenuSeparator" />
+    <View style="@style/Widget.SimpleBrowser.MenuSeparator" />
 
     <!-- how many bookmarks the search found -->
     <TextView
@@ -153,7 +153,7 @@ the choice of a folder, or the search (the header turns into its field).
           android:focusable="true">
 
         <ImageView
-            style="@style/Widget.TVBro.PhoneMenuIcon"
+            style="@style/Widget.SimpleBrowser.PhoneMenuIcon"
             android:id="@+id/ivThisPage"
             android:src="@drawable/ic_favorites" />
 
@@ -189,7 +189,7 @@ the choice of a folder, or the search (the header turns into its field).
     </FrameLayout>
 
     <View
-        style="@style/Widget.TVBro.MenuSeparator"
+        style="@style/Widget.SimpleBrowser.MenuSeparator"
         android:id="@+id/vThisPageSeparator" />
 
     <TextView
@@ -231,32 +231,32 @@ the choice of a folder, or the search (the header turns into its field).
           android:paddingBottom="@dimen/ds_phone_form_padding">
 
         <TextView
-            style="@style/Widget.TVBro.Text.PhoneFieldLabel"
+            style="@style/Widget.SimpleBrowser.Text.PhoneFieldLabel"
             android:labelFor="@+id/etName"
             android:text="@string/name" />
 
         <EditText
-            style="@style/Widget.TVBro.Field.Ds.Phone"
+            style="@style/Widget.SimpleBrowser.Field.Ds.Phone"
             android:id="@+id/etName"
             android:inputType="text"
             android:imeOptions="actionNext"
             android:importantForAutofill="no" />
 
         <TextView
-            style="@style/Widget.TVBro.Text.PhoneFieldLabel"
+            style="@style/Widget.SimpleBrowser.Text.PhoneFieldLabel"
             android:id="@+id/tvUrlLabel"
             android:labelFor="@+id/etUrl"
             android:text="@string/url" />
 
         <EditText
-            style="@style/Widget.TVBro.Field.Ds.Phone"
+            style="@style/Widget.SimpleBrowser.Field.Ds.Phone"
             android:id="@+id/etUrl"
             android:inputType="textUri"
             android:imeOptions="actionDone"
             android:importantForAutofill="no" />
 
         <TextView
-            style="@style/Widget.TVBro.Text.PhoneFieldLabel"
+            style="@style/Widget.SimpleBrowser.Text.PhoneFieldLabel"
             android:id="@+id/tvFolderLabel"
             android:text="@string/folder" />
 
@@ -273,16 +273,16 @@ the choice of a folder, or the search (the header turns into its field).
             android:focusable="true">
 
           <ImageView
-              style="@style/Widget.TVBro.PhoneMenuIcon"
+              style="@style/Widget.SimpleBrowser.PhoneMenuIcon"
               android:src="@drawable/ic_folder" />
 
           <TextView
-              style="@style/Widget.TVBro.Text.PhoneMenuItem"
+              style="@style/Widget.SimpleBrowser.Text.PhoneMenuItem"
               android:id="@+id/tvFolder"
               tools:text="@string/bookmarks" />
 
           <ImageView
-              style="@style/Widget.TVBro.PhoneMenuIcon"
+              style="@style/Widget.SimpleBrowser.PhoneMenuIcon"
               android:src="@drawable/ic_chevron_right" />
         </LinearLayout>
 
@@ -300,7 +300,7 @@ the choice of a folder, or the search (the header turns into its field).
             android:focusable="true">
 
           <ImageView
-              style="@style/Widget.TVBro.PhoneMenuIcon"
+              style="@style/Widget.SimpleBrowser.PhoneMenuIcon"
               android:src="@drawable/ic_delete" />
 
           <TextView

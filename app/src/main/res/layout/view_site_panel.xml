@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:parentTag="android.widget.FrameLayout">
 
-  <com.phlox.tvwebbrowser.activity.main.view.SiteSettingsView
+  <com.simplesoftware.browser.activity.main.view.SiteSettingsView
       android:id="@+id/vSiteSettings"
       android:layout_width="@dimen/ds_site_panel_width"
       android:layout_height="wrap_content"

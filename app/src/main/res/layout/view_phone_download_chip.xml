@@ -2,5 +2,5 @@
 <!-- A filter of the phone downloads: selected when chosen -->
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/Widget.TVBro.Chip.Ds"
+    style="@style/Widget.SimpleBrowser.Chip.Ds"
     tools:text="@string/filter_all" />

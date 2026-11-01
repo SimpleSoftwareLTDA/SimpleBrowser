@@ -9,7 +9,7 @@
     android:background="?attr/tbColorDsBgChrome">
 
   <TextView
-      style="@style/Widget.TVBro.Text.MenuCaption"
+      style="@style/Widget.SimpleBrowser.Text.MenuCaption"
       android:id="@+id/tvTitle"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"

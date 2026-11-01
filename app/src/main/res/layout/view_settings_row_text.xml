@@ -15,7 +15,7 @@
       android:gravity="center_vertical">
 
     <TextView
-        style="@style/Widget.TVBro.Text.SettingsTitle"
+        style="@style/Widget.SimpleBrowser.Text.SettingsTitle"
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
         tools:text="Theme" />
 
     <TextView
-        style="@style/Widget.TVBro.Text.SettingsTag"
+        style="@style/Widget.SimpleBrowser.Text.SettingsTag"
         android:id="@+id/tvTag"
         android:layout_marginStart="@dimen/ds_settings_tag_gap"
         android:text="@string/settings_after_restart"
@@ -32,7 +32,7 @@
   </LinearLayout>
 
   <TextView
-      style="@style/Widget.TVBro.Text.SettingsSummary"
+      style="@style/Widget.SimpleBrowser.Text.SettingsSummary"
       android:id="@+id/tvSummary"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"

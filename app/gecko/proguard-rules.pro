@@ -20,7 +20,7 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keep class com.phlox.tvwebbrowser.webengine.gecko.GeckoWebEngine { *; }
+-keep class com.simplesoftware.browser.webengine.gecko.GeckoWebEngine { *; }
 -keepclassmembers class org.mozilla.geckoview.** {
     *** mDisplay;
 }

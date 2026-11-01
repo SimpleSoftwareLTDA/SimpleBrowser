@@ -9,17 +9,17 @@
 
 # Add any project specific keep options here:
 
--keep class com.phlox.tvwebbrowser.webengine.webview.WebViewWebEngine { *; }
+-keep class com.simplesoftware.browser.webengine.webview.WebViewWebEngine { *; }
 
--keepclassmembers class com.phlox.tvwebbrowser.model.** {
+-keepclassmembers class com.simplesoftware.browser.model.** {
    public *;
 }
--keepclassmembers class com.phlox.tvwebbrowser.webengine.webview.AndroidJSInterface {
+-keepclassmembers class com.simplesoftware.browser.webengine.webview.AndroidJSInterface {
    public *;
    private *;
 }
 
 
-#-keepclasseswithmembers class com.phlox.tvwebbrowser.model.** {
+#-keepclasseswithmembers class com.simplesoftware.browser.model.** {
 #    <fields>;
 #}

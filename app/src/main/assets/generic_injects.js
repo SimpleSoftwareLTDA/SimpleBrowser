@@ -14,7 +14,7 @@ if (!window.tvBroClicksListener) {
                     reader.readAsDataURL(blob);
                     reader.onloadend = function() {
                         base64data = reader.result;
-                        TVBro.takeBlobDownloadData(base64data, fileName, url, blob.type);
+                        SimpleBrowser.takeBlobDownloadData(base64data, fileName, url, blob.type);
                     }
                 }
             };

@@ -31,7 +31,7 @@ inside the outline of the card (the padding keeps the picture off the stroke)
         tools:src="@mipmap/ic_launcher" />
 
     <TextView
-        style="@style/Widget.TVBro.Text.TabTitle"
+        style="@style/Widget.SimpleBrowser.Text.TabTitle"
         android:id="@+id/tvTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

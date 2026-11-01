@@ -2,18 +2,18 @@
 <!-- A value on a slider: the slider takes the focus (left and right change it), the row shows it -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/Widget.TVBro.SettingsRow.Ds"
+    style="@style/Widget.SimpleBrowser.SettingsRow.Ds"
     android:addStatesFromChildren="true">
 
   <include layout="@layout/view_settings_row_text" />
 
   <SeekBar
-      style="@style/Widget.TVBro.SettingsSlider"
+      style="@style/Widget.SimpleBrowser.SettingsSlider"
       android:id="@+id/sbValue"
       android:layout_marginStart="@dimen/ds_settings_row_gap" />
 
   <TextView
-      style="@style/Widget.TVBro.Text.SettingsTitle"
+      style="@style/Widget.SimpleBrowser.Text.SettingsTitle"
       android:id="@+id/tvValue"
       android:layout_width="@dimen/ds_settings_slider_value_width"
       android:layout_height="wrap_content"

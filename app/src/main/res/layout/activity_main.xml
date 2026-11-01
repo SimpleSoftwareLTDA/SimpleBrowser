@@ -36,7 +36,7 @@
         android:clipChildren="false"
         android:clipToPadding="false">
 
-        <com.phlox.tvwebbrowser.activity.main.view.ActionBar
+        <com.simplesoftware.browser.activity.main.view.ActionBar
             android:id="@+id/vActionBar"
             android:layout_width="match_parent"
             android:layout_height="@dimen/ds_size_chrome_control"
@@ -51,7 +51,7 @@
             android:layout_alignBottom="@+id/vTabs"
             android:background="?attr/tbColorDsLine" />
 
-        <com.phlox.tvwebbrowser.activity.main.view.tabs.TabsView
+        <com.simplesoftware.browser.activity.main.view.tabs.TabsView
             android:id="@+id/vTabs"
             android:layout_width="match_parent"
             android:layout_height="@dimen/ds_size_tab_height"
@@ -89,7 +89,7 @@
             android:layout_marginEnd="20dp"
             tools:ignore="ContentDescription" />
         <TextView
-            style="@style/Widget.TVBro.Text.Headline"
+            style="@style/Widget.SimpleBrowser.Text.Headline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/open_a_new_tab_here" />
@@ -116,7 +116,7 @@
             app:tint="?attr/tbColorDsIcon"
             tools:ignore="ContentDescription" />
         <TextView
-            style="@style/Widget.TVBro.Text.TabTitle"
+            style="@style/Widget.SimpleBrowser.Text.TabTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/ds_tab_hint_icon_text"
@@ -126,7 +126,7 @@
     </LinearLayout>
 
     <!-- the hint about a found video that plays in the page: at the top end, where the Videos button of the bar is -->
-    <com.phlox.tvwebbrowser.activity.main.view.PageVideoHintView
+    <com.simplesoftware.browser.activity.main.view.PageVideoHintView
         android:id="@+id/vPageVideoHint"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/ds_size_toast_height"
@@ -137,21 +137,21 @@
         android:elevation="6dp" />
 
     <!-- above the bar (their elevation is higher) -->
-    <com.phlox.tvwebbrowser.activity.main.view.TabMenuView
+    <com.simplesoftware.browser.activity.main.view.TabMenuView
         android:id="@+id/vTabMenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:elevation="7dp"
         android:outlineProvider="none" />
 
-    <com.phlox.tvwebbrowser.activity.main.view.SitePanelView
+    <com.simplesoftware.browser.activity.main.view.SitePanelView
         android:id="@+id/vSitePanel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:elevation="7dp"
         android:outlineProvider="none" />
 
-    <com.phlox.tvwebbrowser.activity.main.view.BookmarksPanelView
+    <com.simplesoftware.browser.activity.main.view.BookmarksPanelView
         android:id="@+id/vBookmarksPanel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -159,7 +159,7 @@
         android:outlineProvider="none" />
 
     <!-- all downloads, over the whole window and the bar; its menus and the downloads panel go above it -->
-    <com.phlox.tvwebbrowser.activity.main.view.DownloadsScreenView
+    <com.simplesoftware.browser.activity.main.view.DownloadsScreenView
         android:id="@+id/vDownloadsScreen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -167,7 +167,7 @@
         android:outlineProvider="none" />
 
     <!-- the history, over the whole window and the bar; its menus go above it -->
-    <com.phlox.tvwebbrowser.activity.main.view.HistoryScreenView
+    <com.simplesoftware.browser.activity.main.view.HistoryScreenView
         android:id="@+id/vHistoryScreen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -175,7 +175,7 @@
         android:outlineProvider="none" />
 
     <!-- the settings, over the whole window and the bar -->
-    <com.phlox.tvwebbrowser.activity.main.view.SettingsScreenView
+    <com.simplesoftware.browser.activity.main.view.SettingsScreenView
         android:id="@+id/vSettingsScreen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -183,14 +183,14 @@
         android:outlineProvider="none" />
 
     <!-- pairing of phones, over the whole window and the bar -->
-    <com.phlox.tvwebbrowser.activity.main.view.TvSyncScreenView
+    <com.simplesoftware.browser.activity.main.view.TvSyncScreenView
         android:id="@+id/vSyncScreen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:elevation="7dp"
         android:outlineProvider="none" />
 
-    <com.phlox.tvwebbrowser.activity.main.view.DownloadsPanelView
+    <com.simplesoftware.browser.activity.main.view.DownloadsPanelView
         android:id="@+id/vDownloadsPanel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -198,7 +198,7 @@
         android:outlineProvider="none" />
 
     <!-- the videos of the page other apps can play, under the Videos button of the bar -->
-    <com.phlox.tvwebbrowser.activity.main.view.VideosPanelView
+    <com.simplesoftware.browser.activity.main.view.VideosPanelView
         android:id="@+id/vVideosPanel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -206,7 +206,7 @@
         android:outlineProvider="none" />
 
     <!-- the built-in player, over the whole window and the bar -->
-    <com.phlox.tvwebbrowser.activity.main.view.PlayerScreenView
+    <com.simplesoftware.browser.activity.main.view.PlayerScreenView
         android:id="@+id/vPlayerScreen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -214,14 +214,14 @@
         android:outlineProvider="none" />
 
     <!-- the menus of the bookmarks and downloads panels, above them -->
-    <com.phlox.tvwebbrowser.activity.main.view.PopupMenuView
+    <com.simplesoftware.browser.activity.main.view.PopupMenuView
         android:id="@+id/vPopupMenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:elevation="8dp"
         android:outlineProvider="none" />
 
-    <com.phlox.tvwebbrowser.activity.main.view.CursorMenuView
+    <com.simplesoftware.browser.activity.main.view.CursorMenuView
         android:id="@+id/vCursorMenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -231,7 +231,7 @@
         />
 
     <!-- the seek bar of the video mode, over the fullscreen video -->
-    <com.phlox.tvwebbrowser.activity.main.view.VideoOsdView
+    <com.simplesoftware.browser.activity.main.view.VideoOsdView
         android:id="@+id/vVideoOsd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

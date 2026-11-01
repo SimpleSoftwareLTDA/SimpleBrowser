@@ -17,7 +17,7 @@ where the Videos button of the bar is, with the key that opens the videos. It ta
         app:tint="?attr/tbColorDsOnToast" />
 
     <TextView
-        style="@style/Widget.TVBro.Text.Toast"
+        style="@style/Widget.SimpleBrowser.Text.Toast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/ds_space_icon_text"
@@ -26,7 +26,7 @@ where the Videos button of the bar is, with the key that opens the videos. It ta
         android:text="@string/page_video_hint" />
 
     <TextView
-        style="@style/Widget.TVBro.KeyCap"
+        style="@style/Widget.SimpleBrowser.KeyCap"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/ds_key_cap_height"
         android:layout_marginStart="@dimen/ds_space_icon_text"

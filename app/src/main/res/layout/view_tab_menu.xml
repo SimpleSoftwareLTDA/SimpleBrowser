@@ -14,66 +14,66 @@
       android:clickable="true">
 
     <LinearLayout
-        style="@style/Widget.TVBro.MenuRow"
+        style="@style/Widget.SimpleBrowser.MenuRow"
         android:id="@+id/llCloseTab"
         android:nextFocusUp="@+id/llCloseTab"
         android:nextFocusDown="@+id/llCloseOtherTabs"
         android:nextFocusLeft="@+id/llCloseTab"
         android:nextFocusRight="@+id/llCloseTab">
-      <ImageView style="@style/Widget.TVBro.MenuIcon" android:src="@drawable/ic_close" />
-      <TextView style="@style/Widget.TVBro.Text.MenuItem.Row" android:text="@string/close_tab" />
+      <ImageView style="@style/Widget.SimpleBrowser.MenuIcon" android:src="@drawable/ic_close" />
+      <TextView style="@style/Widget.SimpleBrowser.Text.MenuItem.Row" android:text="@string/close_tab" />
     </LinearLayout>
 
-    <View style="@style/Widget.TVBro.MenuSeparator" />
+    <View style="@style/Widget.SimpleBrowser.MenuSeparator" />
 
     <LinearLayout
-        style="@style/Widget.TVBro.MenuRow"
+        style="@style/Widget.SimpleBrowser.MenuRow"
         android:id="@+id/llCloseOtherTabs"
         android:nextFocusUp="@+id/llCloseTab"
         android:nextFocusDown="@+id/llNewTabToTheRight"
         android:nextFocusLeft="@+id/llCloseOtherTabs"
         android:nextFocusRight="@+id/llCloseOtherTabs">
-      <ImageView style="@style/Widget.TVBro.MenuIcon" android:src="@drawable/ic_close_other_tabs" />
-      <TextView style="@style/Widget.TVBro.Text.MenuItem.Row" android:text="@string/close_other_tabs" />
+      <ImageView style="@style/Widget.SimpleBrowser.MenuIcon" android:src="@drawable/ic_close_other_tabs" />
+      <TextView style="@style/Widget.SimpleBrowser.Text.MenuItem.Row" android:text="@string/close_other_tabs" />
     </LinearLayout>
 
-    <View style="@style/Widget.TVBro.MenuSeparator" />
+    <View style="@style/Widget.SimpleBrowser.MenuSeparator" />
 
     <LinearLayout
-        style="@style/Widget.TVBro.MenuRow"
+        style="@style/Widget.SimpleBrowser.MenuRow"
         android:id="@+id/llNewTabToTheRight"
         android:nextFocusUp="@+id/llCloseOtherTabs"
         android:nextFocusDown="@+id/llMoveLeft"
         android:nextFocusLeft="@+id/llNewTabToTheRight"
         android:nextFocusRight="@+id/llNewTabToTheRight">
-      <ImageView style="@style/Widget.TVBro.MenuIcon" android:src="@drawable/ic_new_tab_right" />
-      <TextView style="@style/Widget.TVBro.Text.MenuItem.Row" android:text="@string/new_tab_to_the_right" />
+      <ImageView style="@style/Widget.SimpleBrowser.MenuIcon" android:src="@drawable/ic_new_tab_right" />
+      <TextView style="@style/Widget.SimpleBrowser.Text.MenuItem.Row" android:text="@string/new_tab_to_the_right" />
     </LinearLayout>
 
-    <View style="@style/Widget.TVBro.MenuSeparator" />
+    <View style="@style/Widget.SimpleBrowser.MenuSeparator" />
 
     <LinearLayout
-        style="@style/Widget.TVBro.MenuRow"
+        style="@style/Widget.SimpleBrowser.MenuRow"
         android:id="@+id/llMoveLeft"
         android:nextFocusUp="@+id/llNewTabToTheRight"
         android:nextFocusDown="@+id/llMoveRight"
         android:nextFocusLeft="@+id/llMoveLeft"
         android:nextFocusRight="@+id/llMoveLeft">
-      <ImageView style="@style/Widget.TVBro.MenuIcon" android:src="@drawable/ic_back" />
-      <TextView style="@style/Widget.TVBro.Text.MenuItem.Row" android:text="@string/move_left" />
+      <ImageView style="@style/Widget.SimpleBrowser.MenuIcon" android:src="@drawable/ic_back" />
+      <TextView style="@style/Widget.SimpleBrowser.Text.MenuItem.Row" android:text="@string/move_left" />
     </LinearLayout>
 
-    <View style="@style/Widget.TVBro.MenuSeparator" />
+    <View style="@style/Widget.SimpleBrowser.MenuSeparator" />
 
     <LinearLayout
-        style="@style/Widget.TVBro.MenuRow"
+        style="@style/Widget.SimpleBrowser.MenuRow"
         android:id="@+id/llMoveRight"
         android:nextFocusUp="@+id/llMoveLeft"
         android:nextFocusDown="@+id/llMoveRight"
         android:nextFocusLeft="@+id/llMoveRight"
         android:nextFocusRight="@+id/llMoveRight">
-      <ImageView style="@style/Widget.TVBro.MenuIcon" android:src="@drawable/ic_forward" />
-      <TextView style="@style/Widget.TVBro.Text.MenuItem.Row" android:text="@string/move_right" />
+      <ImageView style="@style/Widget.SimpleBrowser.MenuIcon" android:src="@drawable/ic_forward" />
+      <TextView style="@style/Widget.SimpleBrowser.Text.MenuItem.Row" android:text="@string/move_right" />
     </LinearLayout>
   </LinearLayout>
 </merge>

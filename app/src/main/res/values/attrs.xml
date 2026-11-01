@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Color tokens of the app theme (Theme.TVBro); use them as ?attr/... in layouts and drawables -->
+    <!-- Color tokens of the app theme (Theme.SimpleBrowser); use them as ?attr/... in layouts and drawables -->
     <!-- Background of screens and list items -->
     <attr name="tbColorSurface" format="color" />
     <!-- Top bar, tabs bar and other bars -->
@@ -53,7 +53,7 @@
     <attr name="tbColorBadgeStroke" format="color" />
 
     <!--
-    Tokens of the design system (tokens.json of the "TV Bro" design system, with the same names).
+    Tokens of the design system (tokens.json of the "Simple Browser" design system, with the same names).
     The redesigned screens use them; the tokens above are the palette of the screens not redesigned yet.
     -->
     <!-- Home page background, behind the logo, search bar and tiles -->
@@ -103,8 +103,8 @@
     <!-- Behind sheets (32% black) -->
     <attr name="tbColorDsScrim" format="color" />
     <!--
-    Sizes of the rows of the settings screens: the TV values are in Theme.TVBro, the phone ones in
-    ThemeOverlay.TVBro.Settings.Phone, which the phone page lays over its rows
+    Sizes of the rows of the settings screens: the TV values are in Theme.SimpleBrowser, the phone ones in
+    ThemeOverlay.SimpleBrowser.Settings.Phone, which the phone page lays over its rows
     -->
     <attr name="tbSettingsRowMinHeight" format="dimension" />
     <attr name="tbSettingsRowPadding" format="dimension" />

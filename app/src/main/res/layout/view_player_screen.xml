@@ -35,7 +35,7 @@ the tracks (under the anchor at the top end).
       tools:visibility="visible">
 
     <TextView
-        style="@style/Widget.TVBro.Text.Toast"
+        style="@style/Widget.SimpleBrowser.Text.Toast"
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,7 +46,7 @@ the tracks (under the anchor at the top end).
         tools:text="Big Buck Bunny" />
 
     <TextView
-        style="@style/Widget.TVBro.Text.Caption"
+        style="@style/Widget.SimpleBrowser.Text.Caption"
         android:id="@+id/tvCaption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -64,7 +64,7 @@ the tracks (under the anchor at the top end).
       android:layout_gravity="center"
       android:visibility="gone" />
 
-  <com.phlox.tvwebbrowser.activity.main.view.VideoOsdView
+  <com.simplesoftware.browser.activity.main.view.VideoOsdView
       android:id="@+id/vOsd"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
@@ -87,7 +87,7 @@ the tracks (under the anchor at the top end).
       tools:visibility="visible">
 
     <TextView
-        style="@style/Widget.TVBro.Text.MenuItem"
+        style="@style/Widget.SimpleBrowser.Text.MenuItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
@@ -95,7 +95,7 @@ the tracks (under the anchor at the top end).
         android:text="@string/player_error" />
 
     <TextView
-        style="@style/Widget.TVBro.Text.MenuCaption"
+        style="@style/Widget.SimpleBrowser.Text.MenuCaption"
         android:id="@+id/tvError"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -110,12 +110,12 @@ the tracks (under the anchor at the top end).
         android:orientation="horizontal">
 
       <TextView
-          style="@style/Widget.TVBro.TextButton.Ds"
+          style="@style/Widget.SimpleBrowser.TextButton.Ds"
           android:id="@+id/btnOtherApp"
           android:text="@string/open_in_external_application" />
 
       <TextView
-          style="@style/Widget.TVBro.TextButton.Ds"
+          style="@style/Widget.SimpleBrowser.TextButton.Ds"
           android:id="@+id/btnBack"
           android:layout_marginStart="@dimen/ds_space_icon_text"
           android:text="@string/player_back_to_page" />
@@ -131,7 +131,7 @@ the tracks (under the anchor at the top end).
       android:layout_marginTop="@dimen/player_title_margin_top"
       android:layout_marginEnd="@dimen/video_osd_margin_x" />
 
-  <com.phlox.tvwebbrowser.activity.main.view.PopupMenuView
+  <com.simplesoftware.browser.activity.main.view.PopupMenuView
       android:id="@+id/vMenu"
       android:layout_width="match_parent"
       android:layout_height="match_parent" />
