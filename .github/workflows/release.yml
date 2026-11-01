@@ -46,7 +46,7 @@ jobs:
         run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > keystore_ge.jks
 
       - name: Build (WebView only)
-        run: ./gradlew assembleGenericGeckoExcludedRelease
+        run: ./gradlew assembleGenericRelease
         env:
           KEYSTORE_PATH: ${{ github.workspace }}/keystore_ge.jks
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
