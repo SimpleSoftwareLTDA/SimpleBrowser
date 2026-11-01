@@ -49,6 +49,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.graphics.createBitmap
 import androidx.core.net.toUri
 import androidx.webkit.WebSettingsCompat
+import androidx.webkit.WebViewCompat
 import androidx.webkit.WebViewFeature
 import com.simplesoftware.browser.AppContext
 import com.simplesoftware.browser.net.AppProxy
@@ -105,6 +106,7 @@ open class WebViewEx(context: Context, val callback: Callback, val jsInterface: 
     private val uiHandler = Handler(Looper.getMainLooper())
     private val config = AppContext.provideConfig()
     private val desktopView = DesktopView(this)
+    private val documentStart = WebViewFeature.isFeatureSupported(WebViewFeature.DOCUMENT_START_SCRIPT)
     private val mediaControls = WebViewMediaControls(this, { callback.onMediaStateChanged(it) },
         { callback.onPageVideosChanged(it) }, { callback.onMediaVideoChanged(it) })
     private val elementHiding = WebViewElementHiding(this) { requestPageUrl ?: currentOriginalUrl }
@@ -444,7 +446,9 @@ open class WebViewEx(context: Context, val callback: Callback, val jsInterface: 
                     if (errorPage.url == url) showErrorPage(errorPage)
                 }
                 callback.onPageFinished(url)
-                evaluateJavascript(getGenericJSInjects(), null)
+                if (!documentStart) {
+                    evaluateJavascript(getGenericJSInjects(), null)
+                }
                 mediaControls.onPageFinished()
                 elementHiding.onPageFinished()
             }
@@ -572,6 +576,9 @@ open class WebViewEx(context: Context, val callback: Callback, val jsInterface: 
         }
 
         addJavascriptInterface(jsInterface, "SimpleBrowser")
+        if (WebViewFeature.isFeatureSupported(WebViewFeature.DOCUMENT_START_SCRIPT)) {
+            WebViewCompat.addDocumentStartJavaScript(this, getGenericJSInjects(), setOf("*"))
+        }
     }
 
     override fun restoreState(inState: Bundle): WebBackForwardList? {

@@ -29,13 +29,36 @@ class CursorLayout @JvmOverloads constructor(context: Context, attrs: AttributeS
             setWillNotDraw(!value)
         }
     lateinit var cursorDrawerDelegate: CursorDrawerDelegate
+    private var isSoftInputRequested = false
+
+    fun notifySoftInputRequested() {
+        isSoftInputRequested = true
+    }
+
+    fun notifySoftInputBlurred() {
+        isSoftInputRequested = false
+    }
+
+    private fun isSoftwareKeyboardVisible(): Boolean {
+        val insets = ViewCompat.getRootWindowInsets(rootView)
+        if (insets != null && insets.isVisible(WindowInsetsCompat.Type.ime())) {
+            return true
+        }
+        val rect = android.graphics.Rect()
+        rootView.getWindowVisibleDisplayFrame(rect)
+        val screenHeight = rootView.resources.displayMetrics.heightPixels
+        val heightDiff = screenHeight - rect.bottom
+        if (heightDiff > screenHeight * 0.15f) {
+            return true
+        }
+        return isSoftInputRequested
+    }
+
     private val inputEventsAdapter = DPADNavigationEventsAdapter(
         onDirection = { x, y -> cursorDrawerDelegate.setDirection(x, y) },
         onKeyEvent = { keyEvent -> cursorDrawerDelegate.dispatchKeyEvent(keyEvent) },
         analogStickNavigationEnabled = { !AppContext.provideConfig().disableMotionAxesDpadNavigation },
-        isSoftwareKeyboardVisible = {
-            ViewCompat.getRootWindowInsets(rootView)?.isVisible(WindowInsetsCompat.Type.ime()) == true
-        },
+        isSoftwareKeyboardVisible = { isSoftwareKeyboardVisible() },
     )
 
     init {
@@ -66,6 +89,10 @@ class CursorLayout @JvmOverloads constructor(context: Context, attrs: AttributeS
 
     override fun dispatchKeyEvent(event: KeyEvent): Boolean {
         Log.d("CursorLayout", "dispatchKeyEvent: $event")
+
+        if (event.keyCode == KeyEvent.KEYCODE_BACK) {
+            isSoftInputRequested = false
+        }
 
         if (willNotDraw()) return super.dispatchKeyEvent(event)
 

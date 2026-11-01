@@ -1,11 +1,14 @@
 package com.simplesoftware.browser.webengine.webview
 
+import android.content.Context
+import android.view.inputmethod.InputMethodManager
 import android.webkit.JavascriptInterface
 import com.simplesoftware.browser.AppContext
 import com.simplesoftware.browser.Config
 import com.simplesoftware.browser.SimpleBrowser
 import com.simplesoftware.browser.utils.DownloadUtils
 import com.simplesoftware.browser.webengine.DownloadRequest
+import com.simplesoftware.browser.widgets.cursor.CursorLayout
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -91,6 +94,34 @@ class AndroidJSInterface(private val webEngine: WebViewWebEngine) {
         if (!isHomePage()) return
         val callback = webEngine.callback ?: return
         callback.getActivity().runOnUiThread { callback.markBookmarkRecommendationAsUseful(bookmarkOrder) }
+    }
+
+    @JavascriptInterface
+    fun requestSoftInput() {
+        val callback = webEngine.callback ?: return
+        val activity = callback.getActivity()
+        activity.runOnUiThread {
+            val view = webEngine.getView()
+            val webView = (view as? CursorLayout)?.let {
+                it.notifySoftInputRequested()
+                (0 until it.childCount).map { i -> it.getChildAt(i) }.filterIsInstance<WebViewEx>().firstOrNull()
+            } ?: view as? WebViewEx
+            webView?.requestFocus()
+            val imm = activity.getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
+            if (webView != null) {
+                imm?.showSoftInput(webView, 0)
+            }
+        }
+    }
+
+    @JavascriptInterface
+    fun onInputBlurred() {
+        val callback = webEngine.callback ?: return
+        val activity = callback.getActivity()
+        activity.runOnUiThread {
+            val view = webEngine.getView()
+            (view as? CursorLayout)?.notifySoftInputBlurred()
+        }
     }
 
     private fun isHomePage(): Boolean {
