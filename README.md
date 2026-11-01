@@ -1,6 +1,9 @@
-# TV Bro
+# Simple Browser
 
-Simple web browser optimized to use with TV remote
+Simple web browser optimized to use with TV remote (fork de TV Bro).
+
+Este projeto é um fork de [TV Bro](https://github.com/truefedex/tv-bro)
+(c) 2019 Fedir Tsapana, sob a licença do projeto original.
 
 Features:
 - working with TV remote

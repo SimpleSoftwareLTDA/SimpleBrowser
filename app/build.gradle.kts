@@ -7,7 +7,7 @@ android {
     namespace = "com.phlox.tvwebbrowser"
 
     defaultConfig {
-        applicationId = "com.phlox.tvwebbrowser"
+        applicationId = "com.simplesoftware.browser"
         versionCode = 80
         versionName = "3.0.2"
     }
