@@ -2,25 +2,25 @@
   "channels": [
     {
       "name": "release",
-      "latestVersionCode": 1,
-      "latestVersionName": "1.0.0",
+      "latestVersionCode": 2,
+      "latestVersionName": "1.0.1",
       "variants": {
         "geckoExcluded": {
           "minAPI": 24,
-          "url": "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.0/simple-browser-1.0.0-arm64-v8a.apk",
+          "url": "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.1/simple-browser-1.0.1-arm64-v8a.apk",
           "urls": [
-            "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.0/simple-browser-1.0.0-arm64-v8a.apk",
-            "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.0/simple-browser-1.0.0-armeabi-v7a.apk",
-            "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.0/simple-browser-1.0.0-x86_64.apk"
+            "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.1/simple-browser-1.0.1-arm64-v8a.apk",
+            "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.1/simple-browser-1.0.1-armeabi-v7a.apk",
+            "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.1/simple-browser-1.0.1-x86_64.apk"
           ]
         },
         "geckoIncluded": {
           "minAPI": 26,
-          "url": "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.0/simple-browser-1.0.0-arm64-v8a.apk",
+          "url": "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.1/simple-browser-1.0.1-arm64-v8a.apk",
           "urls": [
-            "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.0/simple-browser-1.0.0-arm64-v8a.apk",
-            "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.0/simple-browser-1.0.0-armeabi-v7a.apk",
-            "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.0/simple-browser-1.0.0-x86_64.apk"
+            "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.1/simple-browser-1.0.1-arm64-v8a.apk",
+            "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.1/simple-browser-1.0.1-armeabi-v7a.apk",
+            "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.0.1/simple-browser-1.0.1-x86_64.apk"
           ]
         }
       }
@@ -28,9 +28,9 @@
   ],
   "changelog": [
     {
-      "versionCode": 1,
-      "versionName": "1.0.0",
-      "changes": "Primeira versão do fork Simple Browser (base: Simple Browser 3.0.2)."
+      "versionCode": 2,
+      "versionName": "1.0.1",
+      "changes": "Simple Browser 1.0.1."
     }
   ]
 }
