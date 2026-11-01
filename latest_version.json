@@ -12,7 +12,7 @@
     {
       "versionCode": 3,
       "versionName": "1.1.0",
-      "changes": "Foco em WebView: remoção da variante GeckoView; distribuição via WebView do sistema."
+      "changes": "Simple Browser 1.1.0."
     }
   ]
 }
