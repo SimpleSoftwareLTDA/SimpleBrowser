@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- the fragment of the link holds the secret of the pairing: it is read here only, never sent anywhere -->
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<title>Connect a phone - Simple Browser</title>
+<style>
+  :root {
+    --bg: #f4f6f9;
+    --surface: #ffffff;
+    --ink: #1f2933;
+    --ink-faint: #5f6b7a;
+    --accent: #2f7de1;
+    --on-accent: #ffffff;
+    --line: #dde3ea;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15181c;
+      --surface: #1f2328;
+      --ink: #e8ecf1;
+      --ink-faint: #9aa5b1;
+      --accent: #5b9cf0;
+      --on-accent: #0b1220;
+      --line: #333a42;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 24px 16px;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+  }
+  .logo { width: 56px; height: 56px; }
+  h1 { font-size: 22px; margin: 16px 0 8px; }
+  p { margin: 8px 0; }
+  .faint { color: var(--ink-faint); font-size: 14px; }
+  .button {
+    display: block;
+    margin: 24px 0 8px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    background: var(--accent);
+    color: var(--on-accent);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+  }
+  .stores { margin: 8px 0 0; padding: 0; list-style: none; }
+  .stores li { padding: 10px 0; border-top: 1px solid var(--line); }
+  .stores a { color: var(--accent); text-decoration: none; }
+  [hidden] { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <svg class="logo" viewBox="0 0 24 24" aria-hidden="true">
+    <path fill="currentColor" d="M21,3H3c-1.1,0 -2,0.9 -2,2v12c0,1.1 0.9,2 2,2h5v2h8v-2h5c1.1,0 1.99,-0.9 1.99,-2L23,5c0,-1.1 -0.9,-2 -2,-2zM21,17H3V5h18v12z"/>
+  </svg>
+
+  <!-- a link of a QR code -->
+  <section id="pair" hidden>
+    <h1>Connect this phone to <span id="tvName">your TV</span></h1>
+    <p>This link pairs the phone with Simple Browser on the TV. Then you can send tabs and bookmarks from the phone to the TV.</p>
+    <a class="button" id="open" href="#">Open in Simple Browser</a>
+    <p class="faint">The phone must be on the same network as the TV, and the code must still be on the TV screen.</p>
+    <p class="faint">Nothing happens? Install Simple Browser on this phone, then scan the code on the TV again:</p>
+  </section>
+
+  <!-- no link: the page was opened by itself -->
+  <section id="howto" hidden>
+    <h1>Connect a phone to Simple Browser</h1>
+    <p>On the TV, open Simple Browser, choose the phone button of its bar and scan the code it shows with the camera of your phone.</p>
+    <p class="faint">Simple Browser has to be installed on the phone too:</p>
+  </section>
+
+  <ul class="stores">
+    <li><a href="https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/latest">GitHub releases</a></li>
+  </ul>
+</main>
+<script>
+  (function () {
+    var fragment = location.hash;
+    var params = {};
+    fragment.replace(/^#/, "").split("&").forEach(function (part) {
+      var at = part.indexOf("=");
+      if (at <= 0) return;
+      try {
+        params[part.substring(0, at)] = decodeURIComponent(part.substring(at + 1).replace(/\+/g, " "));
+      } catch (e) {
+      }
+    });
+    var isPairing = params.v && params.k && params.p && params.a;
+    document.getElementById(isPairing ? "pair" : "howto").hidden = false;
+    if (!isPairing) return;
+    if (params.n) document.getElementById("tvName").textContent = params.n;
+    //the app opens simplebrowser://sync links too; the fragment stays on the phone
+    document.getElementById("open").href = "simplebrowser://sync" + fragment;
+  })();
+</script>
+</body>
+</html>

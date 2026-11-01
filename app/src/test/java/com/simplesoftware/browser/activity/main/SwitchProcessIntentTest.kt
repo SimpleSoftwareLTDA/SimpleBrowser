@@ -41,7 +41,7 @@ class SwitchProcessIntentTest {
     /** The sync link of a TV (an App Link with its secret in the fragment) keeps all of it */
     @Test
     fun syncLinkGoesToTheNormalActivity() {
-        val url = "https://tvbro.phlox.dev/sync#v=1&a=192.168.1.2&p=8000&s=secret"
+        val url = "https://sb.robsoncassiano.software/sync#v=1&a=192.168.1.2&p=8000&s=secret"
 
         val intent = MainActivity.switchProcessIntent(context, false, viewIntent(url), 1234)
 

@@ -248,14 +248,14 @@ class SyncChannelTest {
     fun linkGoesThroughItsUrl() {
         val link = SyncLink(listOf("192.168.0.120", "10.0.0.2"), 41873, key, "tv-id", "Living room TV & more")
         val url = link.toUrl()
-        assertTrue(url.startsWith("https://tvbro.phlox.dev/sync#"))
+        assertTrue(url.startsWith("https://sb.robsoncassiano.software/sync#"))
         assertEquals(link, SyncLink.parse(url))
         assertTrue(SyncLink.isSyncUrl(url))
-        assertTrue(SyncLink.isSyncUrl("https://tvbro.phlox.dev/sync/"))
-        assertFalse(SyncLink.isSyncUrl("https://tvbro.phlox.dev/synchronize"))
+        assertTrue(SyncLink.isSyncUrl("https://sb.robsoncassiano.software/sync/"))
+        assertFalse(SyncLink.isSyncUrl("https://sb.robsoncassiano.software/synchronize"))
         //the page of the site opens it in the app with its own scheme
         assertEquals(link, SyncLink.parse(url.replace(SyncLink.URL_PREFIX, SyncLink.APP_URL_PREFIX)))
-        assertFalse(SyncLink.isSyncUrl("tvbro://other#v=1"))
+        assertFalse(SyncLink.isSyncUrl("simplebrowser://other#v=1"))
     }
 
     @Test
@@ -264,7 +264,7 @@ class SyncChannelTest {
         assertNull(SyncLink.parse(url.replace("v=1", "v=2")))
         assertNull(SyncLink.parse(url.replace("p=41873", "p=70000")))
         assertNull(SyncLink.parse(url.substringBefore('#')))
-        assertNull(SyncLink.parse(url.replace("https://tvbro.phlox.dev/sync", "https://example.com/sync")))
+        assertNull(SyncLink.parse(url.replace("https://sb.robsoncassiano.software/sync", "https://example.com/sync")))
         assertNull(SyncLink.parse(url.replace(Regex("k=[^&]+"), "k=short")))
     }
 

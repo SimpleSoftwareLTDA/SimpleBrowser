@@ -8,8 +8,8 @@ android {
 
     defaultConfig {
         applicationId = "com.simplesoftware.browser"
-        versionCode = 3
-        versionName = "1.1.0"
+        versionCode = 4
+        versionName = "1.1.1"
         buildConfigField("String", "WEB_ENGINE_CLASS",
             "\"com.simplesoftware.browser.webengine.webview.WebViewWebEngine\"")
     }

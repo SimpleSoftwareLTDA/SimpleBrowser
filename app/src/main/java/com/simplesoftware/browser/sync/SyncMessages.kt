@@ -196,11 +196,11 @@ object SyncRequests {
 }
 
 /**
- * The link of the QR code a TV shows: `https://tvbro.phlox.dev/sync#v=1&a=…&p=…&k=…&i=…&n=…`. The fragment
+ * The link of the QR code a TV shows: `https://sb.robsoncassiano.software/sync#v=1&a=…&p=…&k=…&i=…&n=…`. The fragment
  * holds the addresses and the port of the TV, the secret of the pairing, the id and the name of the TV;
  * it never goes to the site (browsers do not send the fragment), so the secret stays between the devices.
  * Where the app does not open the link itself, the page of the site at that address opens it as
- * `tvbro://sync#…` (the same fragment).
+ * `simplebrowser://sync#…` (the same fragment).
  */
 data class SyncLink(
     val addresses: List<String>,
@@ -227,9 +227,9 @@ data class SyncLink(
     override fun hashCode(): Int = toUrl().hashCode()
 
     companion object {
-        const val URL_PREFIX = "https://tvbro.phlox.dev/sync"
+        const val URL_PREFIX = "https://sb.robsoncassiano.software/sync"
         /** The page of the site gives the link to the app with this scheme */
-        const val APP_URL_PREFIX = "tvbro://sync"
+        const val APP_URL_PREFIX = "simplebrowser://sync"
 
         /** @return null if the url is not a link of a pairing (or of another version of the protocol) */
         fun parse(url: String): SyncLink? {

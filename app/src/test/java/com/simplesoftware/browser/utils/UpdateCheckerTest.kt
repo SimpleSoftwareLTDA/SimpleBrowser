@@ -18,14 +18,14 @@ class UpdateCheckerTest {
               "latestVersionName": "v3.0.0",
               "latestVersionCode": 80,
               "minAPI": 24,
-              "url": "https://example.com/tvbro-3.0.0-generic-geckoExcluded.apk",
+              "url": "https://example.com/simple-browser-3.0.0-generic-geckoExcluded.apk",
               "variants": {
                 "geckoIncluded": {
                   "minAPI": 26,
-                  "url": "https://example.com/tvbro-3.0.0-generic-geckoIncluded-armeabi-v7a.apk",
+                  "url": "https://example.com/simple-browser-3.0.0-generic-geckoIncluded-armeabi-v7a.apk",
                   "urls": [
-                    "https://example.com/tvbro-3.0.0-generic-geckoIncluded-arm64-v8a.apk",
-                    "https://example.com/tvbro-3.0.0-generic-geckoIncluded-x86_64.apk"
+                    "https://example.com/simple-browser-3.0.0-generic-geckoIncluded-arm64-v8a.apk",
+                    "https://example.com/simple-browser-3.0.0-generic-geckoIncluded-x86_64.apk"
                   ]
                 }
               }
@@ -35,7 +35,7 @@ class UpdateCheckerTest {
               "latestVersionName": "v3.1.0",
               "latestVersionCode": 81,
               "minAPI": 24,
-              "url": "https://example.com/tvbro-3.1.0-generic-geckoExcluded.apk"
+              "url": "https://example.com/simple-browser-3.1.0-generic-geckoExcluded.apk"
             }
           ],
           "changelog": [
@@ -51,14 +51,14 @@ class UpdateCheckerTest {
     fun webViewVariantGetsTheApkOfTheChannel() {
         val result = parse("geckoExcluded", "release")
         assertEquals(80, result.latestVersionCode)
-        assertEquals("https://example.com/tvbro-3.0.0-generic-geckoExcluded.apk", result.url)
+        assertEquals("https://example.com/simple-browser-3.0.0-generic-geckoExcluded.apk", result.url)
     }
 
     @Test
     fun geckoVariantGetsItsOwnApkForTheAbi() {
         val result = parse("geckoIncluded", "release")
         assertEquals(80, result.latestVersionCode)
-        assertEquals("https://example.com/tvbro-3.0.0-generic-geckoIncluded-arm64-v8a.apk", result.url)
+        assertEquals("https://example.com/simple-browser-3.0.0-generic-geckoIncluded-arm64-v8a.apk", result.url)
     }
 
     @Test
