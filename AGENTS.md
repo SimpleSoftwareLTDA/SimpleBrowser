@@ -10,6 +10,8 @@ Guidance for AI coding agents working in this repository.
 
 Simple Browser is an Android web browser for TV remotes (D-pad navigation, virtual cursor, tabs, bookmarks, voice search, downloads, history), with a touch interface for phones in the same APK. It renders pages with the system WebView (`com.simplesoftware.browser`). The GeckoView variant was removed in v1.1.0.
 
+The official language of the project is English (code, comments, commit messages, documentation, and default UI strings).
+
 ## Build & test
 
 Gradle (Kotlin DSL) with JDK 21. On Windows use `gradlew.bat` / `.\gradlew`.

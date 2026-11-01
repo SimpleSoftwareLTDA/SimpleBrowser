@@ -83,6 +83,20 @@ class BackNavigationEventsAdapterTest {
     }
 
     @Test
+    fun systemBackAfterSlowBackCallbackIsStillTheSameBack() {
+        var slowBacks = 0
+        val slowAdapter = BackNavigationEventsAdapter(onEmulatedBackEvent = {
+            slowBacks++
+            shadowOf(Looper.getMainLooper()).idleFor(Duration.ofSeconds(2))
+        })
+        val downTime = SystemClock.uptimeMillis()
+        slowAdapter.dispatchKeyEvent(key(KeyEvent.ACTION_DOWN, time = downTime))
+        slowAdapter.dispatchKeyEvent(key(KeyEvent.ACTION_UP, time = downTime))
+        slowAdapter.dispatchSystemBackNavigationEvent()
+        assertEquals(1, slowBacks)
+    }
+
+    @Test
     fun systemBackLaterIsAnotherBack() {
         adapter.dispatchKeyEvent(key(KeyEvent.ACTION_DOWN, time = SystemClock.uptimeMillis()))
         adapter.dispatchKeyEvent(key(KeyEvent.ACTION_UP, time = SystemClock.uptimeMillis()))

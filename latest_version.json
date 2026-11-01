@@ -2,17 +2,17 @@
   "channels": [
     {
       "name": "release",
-      "latestVersionCode": 4,
-      "latestVersionName": "1.1.1",
+      "latestVersionCode": 5,
+      "latestVersionName": "1.1.2",
       "minAPI": 24,
-      "url": "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.1.1/simple-browser-1.1.1-generic.apk"
+      "url": "https://github.com/SimpleSoftwareLTDA/SimpleBrowser/releases/download/v1.1.2/simple-browser-1.1.2-generic.apk"
     }
   ],
   "changelog": [
     {
-      "versionCode": 4,
-      "versionName": "1.1.1",
-      "changes": "Simple Browser 1.1.1."
+      "versionCode": 5,
+      "versionName": "1.1.2",
+      "changes": "Simple Browser 1.1.2."
     }
   ]
 }

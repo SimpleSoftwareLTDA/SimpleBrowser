@@ -1008,21 +1008,17 @@ class TvShell(private val host: BrowserShell.Host) : BrowserShell, ActionBar.Cal
 
     /**
      * Opens the bar; [onShown] is called when it is in place (a panel opened under its button measures it there),
-     * instead of giving the focus to the address
+     * instead of giving the focus to the address. The current tab stays live under the bar; ivMiniatures
+     * only covers it when the user previews another tab in the strip.
      */
     private fun showMenuOverlay(onShown: (() -> Unit)? = null) {
-        vb.ivMiniatures.visibility = View.VISIBLE
-        vb.flWebViewContainer.visibility = View.INVISIBLE
-        val currentTab = controller.currentTab.value
-        if (currentTab != null) {
-            lifecycleScope.launch {
-                currentTab.webEngine.renderThumbnail(currentTab.thumbnail)?.let { currentTab.updateThumbnail(it) }
-                displayThumbnail(currentTab)
-            }
-        }
+        vb.ivMiniatures.visibility = View.INVISIBLE
+        vb.llMiniaturePlaceholder.visibility = View.INVISIBLE
+        vb.flWebViewContainer.visibility = View.VISIBLE
 
         vb.vActionBar.cancelEditing()
 
+        vb.rlActionBar.animate().cancel()
         vb.rlActionBar.visibility = View.VISIBLE
         vb.rlActionBar.translationY = -vb.rlActionBar.height.toFloat()
         vb.rlActionBar.alpha = 0f
@@ -1032,23 +1028,30 @@ class TvShell(private val host: BrowserShell.Host) : BrowserShell, ActionBar.Cal
                 .setDuration(300)
                 .setInterpolator(DecelerateInterpolator())
                 .withEndAction {
+                    fitThumbnailUnderMenu()
                     if (onShown != null) onShown() else vb.vActionBar.catchFocus()
                 }
                 .start()
 
         vb.ivMiniatures.layoutParams = vb.ivMiniatures.layoutParams.apply { this.height = vb.flWebViewContainer.height }
-        vb.ivMiniatures.translationY = 0f
-        vb.ivMiniatures.animate()
-                .translationY(vb.rlActionBar.height.toFloat())
-                .setDuration(300)
-                .setInterpolator(DecelerateInterpolator())
-                .start()
+        vb.ivMiniatures.translationY = vb.rlActionBar.height.toFloat()
     }
 
     private suspend fun displayThumbnail(currentTab: BrowserTab?) {
+        if (!vb.rlActionBar.isVisible) return
         if (currentTab != null) {
             if (tabByTitleIndex(vb.vTabs.current) != currentTab) return
+            if (currentTab == controller.currentTab.value) {
+                vb.llMiniaturePlaceholder.visibility = View.INVISIBLE
+                vb.ivMiniatures.setImageResource(0)
+                vb.ivMiniatures.visibility = View.INVISIBLE
+                vb.flWebViewContainer.visibility = View.VISIBLE
+                return
+            }
             vb.llMiniaturePlaceholder.visibility = View.INVISIBLE
+            vb.flWebViewContainer.visibility = View.INVISIBLE
+            vb.ivMiniatures.layoutParams = vb.ivMiniatures.layoutParams.apply { this.height = vb.flWebViewContainer.height }
+            vb.ivMiniatures.translationY = vb.rlActionBar.height.toFloat()
             vb.ivMiniatures.visibility = View.VISIBLE
             val thumbnail = controller.loadThumbnail(currentTab)
             if (thumbnail != null) {
@@ -1057,6 +1060,7 @@ class TvShell(private val host: BrowserShell.Host) : BrowserShell, ActionBar.Cal
                 vb.ivMiniatures.setImageResource(0)
             }
         } else {
+            vb.flWebViewContainer.visibility = View.INVISIBLE
             vb.llMiniaturePlaceholder.visibility = View.VISIBLE
             vb.ivMiniatures.setImageResource(0)
             vb.ivMiniatures.visibility = View.INVISIBLE
@@ -1067,6 +1071,7 @@ class TvShell(private val host: BrowserShell.Host) : BrowserShell, ActionBar.Cal
         if (vb.rlActionBar.visibility == View.INVISIBLE) {
             return
         }
+        uiHandler.removeCallbacks(displayThumbnailRunnable)
         vb.vSitePanel.hide()
         vb.vTabMenu.hide()
         vb.vPopupMenu.hide()
@@ -1075,7 +1080,14 @@ class TvShell(private val host: BrowserShell.Host) : BrowserShell, ActionBar.Cal
         vb.vVideosPanel.hide()
         tabOptionsHintAnchor = null
         vb.llTabOptionsHint.visibility = View.GONE
+        vb.llMiniaturePlaceholder.visibility = View.INVISIBLE
+        vb.ivMiniatures.visibility = View.INVISIBLE
+        vb.ivMiniatures.setImageResource(0)
+        returnToCurrentTab()
+        vb.flWebViewContainer.visibility = View.VISIBLE
+        controller.currentTab.value?.webEngine?.getView()?.requestFocus()
 
+        vb.rlActionBar.animate().cancel()
         vb.rlActionBar.animate()
                 .translationY(-vb.rlActionBar.height.toFloat())
                 .alpha(0f)
@@ -1083,26 +1095,6 @@ class TvShell(private val host: BrowserShell.Host) : BrowserShell, ActionBar.Cal
                 .setInterpolator(DecelerateInterpolator())
                 .withEndAction {
                     vb.rlActionBar.visibility = View.INVISIBLE
-                }
-                .start()
-
-        if (vb.llMiniaturePlaceholder.visibility == View.VISIBLE) {
-            vb.llMiniaturePlaceholder.visibility = View.INVISIBLE
-            vb.ivMiniatures.visibility = View.VISIBLE
-        }
-
-        vb.ivMiniatures.translationY = vb.rlActionBar.height.toFloat()
-        vb.ivMiniatures.animate()
-                .translationY(0f)
-                .setDuration(300)
-                .setInterpolator(DecelerateInterpolator())
-                .withEndAction {
-                    vb.ivMiniatures.visibility = View.INVISIBLE
-                    vb.rlActionBar.visibility = View.INVISIBLE
-                    vb.ivMiniatures.setImageResource(0)
-                    returnToCurrentTab()
-                    vb.flWebViewContainer.visibility = View.VISIBLE
-                    controller.currentTab.value?.webEngine?.getView()?.requestFocus()
                 }
                 .start()
     }

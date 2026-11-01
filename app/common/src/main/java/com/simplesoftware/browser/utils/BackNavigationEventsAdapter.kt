@@ -128,6 +128,10 @@ class BackNavigationEventsAdapter(
             onEmulatedBackEvent()
         } catch (t: Throwable) {
             Log.e(TAG, "onEmulatedBackEvent failed", t)
+        } finally {
+            if (lastChannel != null) {
+                lastChannelTime = maxOf(lastChannelTime, SystemClock.uptimeMillis())
+            }
         }
     }
 

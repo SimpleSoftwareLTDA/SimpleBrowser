@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.2 (2026-11-01)
+
+- Fixed adaptive launcher icon (`AdaptiveIconDrawable`) rendering as a vertical yellow bar in the Android app drawer by converting the foreground layer to a native `108dp` vector drawable.
+- Fixed TV soft keyboard navigation when editing web page inputs.
+- Fixed Back button freeze and failure to open the address bar on TV when a hardware-decoded video is playing on the page.
+
 ## 1.1.1 (2026-11-01)
 
 - Alinhado o domínio e o esquema de pareamento entre TV e celular (`https://sb.robsoncassiano.software/sync` e `simplebrowser://sync`).
