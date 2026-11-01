@@ -10,7 +10,7 @@ Simple Browser started as a fork of [TV Bro](https://github.com/truefedex/tv-bro
 
 A TV means a big screen, a limited remote, and the expectation of instant response. Simple Browser delivers exactly that, asking for nothing but an install.
 
-**Curiosity without friction.** Open any site and move with the remote's arrow keys. No mouse, no typing, no menu maze. Spatial cursor plus D-pad navigation let you explore the way you do on a phone, only from the couch.
+**Curiosity without friction.** Move through any site with the remote's arrow keys, a spatial cursor, and D-pad navigation built for the sofa. Exploration works the way it does on a phone, only from the couch.
 
 **Security that lets you know what you touch.** Private mode, Safe Browsing always on, built-in ad blocking, and per-site permission control. You decide what the browser may access.
 
