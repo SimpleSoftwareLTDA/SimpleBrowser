@@ -12,7 +12,7 @@
     {
       "versionCode": 6,
       "versionName": "1.1.3",
-      "changes": "Simple Browser 1.1.3."
+      "changes": "- Aligned virtual cursor updates with display VSYNC (`postOnAnimation`) and cached cursor speed and acceleration settings in memory.\n- Released native `WebView` resources (`WebView.destroy()`) immediately when closing or trimming inactive tabs.\n- Scaled down tab thumbnail bitmaps (`960x540` max) and skipped synchronous thumbnail capture while a video is playing on the page.\n- Eliminated per-frame object allocations in `TvShell` pre-draw listeners, closed `MediaDrm` instances in `WebViewEx`, and optimized favicon filename hex encoding and batch tab file removal."
     }
   ]
 }

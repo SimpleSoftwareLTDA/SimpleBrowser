@@ -1,14 +1,4 @@
-* Major redesign
-* GeckoView based version extracted to separate app variant
-* Phone companion app and phone browser version
-* Cursor behavior improvements
-* Mobile/Desktop view for pages
-* New ad blocker optimized for TV
-* Resumable downloads possibilities, custom downloads folder
-* Export and import bookmarks, bookmark folders
-* Embedded optimized video player
-* Support for HTTP proxy
-* New languages support
-* Updated dependencies
-* Target latest Android versions
-* Bugfixes and optimizations
+- Aligned virtual cursor updates with display VSYNC (`postOnAnimation`) and cached cursor speed and acceleration settings in memory.
+- Released native `WebView` resources (`WebView.destroy()`) immediately when closing or trimming inactive tabs.
+- Scaled down tab thumbnail bitmaps (`960x540` max) and skipped synchronous thumbnail capture while a video is playing on the page.
+- Eliminated per-frame object allocations in `TvShell` pre-draw listeners, closed `MediaDrm` instances in `WebViewEx`, and optimized favicon filename hex encoding and batch tab file removal.

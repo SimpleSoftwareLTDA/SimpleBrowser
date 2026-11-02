@@ -60,6 +60,20 @@ jobs:
             mv "$f" "${new/-release.apk/.apk}"
           done
 
+      - name: Extract release notes from CHANGELOG.md
+        shell: bash
+        run: |
+          python3 - "${{ inputs.version }}" <<'EOF'
+          import pathlib, re, sys
+          ver = sys.argv[1]
+          text = pathlib.Path("CHANGELOG.md").read_text(encoding="utf-8")
+          pattern = rf"^##\s+{re.escape(ver)}(?:\s+\([^\n]*\))?\s*\n(.*?)(?=^##\s+|\Z)"
+          m = re.search(pattern, text, flags=re.MULTILINE | re.DOTALL)
+          notes = m.group(1).strip() if m else ""
+          if notes:
+              pathlib.Path("RELEASE_NOTES.md").write_text(notes + "\n", encoding="utf-8")
+          EOF
+
       - name: Create release
         uses: softprops/action-gh-release@v2
         with:
@@ -76,8 +90,10 @@ jobs:
           VERSION_CODE=$(grep -oP 'versionCode = \K[0-9]+' app/build.gradle.kts)
           VERSION_NAME=$(grep -oP 'versionName = "\K[^"]+' app/build.gradle.kts)
           python3 - "$VERSION_CODE" "$VERSION_NAME" "${{ inputs.version }}" <<'EOF'
-          import json, sys
+          import json, pathlib, sys
           code, name, ver = sys.argv[1], sys.argv[2], sys.argv[3]
+          notes_path = pathlib.Path("RELEASE_NOTES.md")
+          notes = notes_path.read_text(encoding="utf-8").strip() if notes_path.is_file() else ""
           data = {
               "channels": [{
                   "name": "release",
@@ -89,14 +105,14 @@ jobs:
               "changelog": [{
                   "versionCode": int(code),
                   "versionName": name,
-                  "changes": f"Simple Browser {name}.",
+                  "changes": notes or f"Simple Browser {name}.",
               }],
           }
           with open("latest_version.json", "w") as f:
               json.dump(data, f, indent=2, ensure_ascii=False)
               f.write("\n")
           EOF
-          git add latest_version.json
+          git add latest_version.json RELEASE_NOTES.md
           if ! git diff --cached --quiet; then
             git -c user.name="Simple Software" -c user.email="dev@simplesoftware.br" commit -q -m "Update latest_version.json for v${{ inputs.version }}"
             git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
