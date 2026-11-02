@@ -22,14 +22,16 @@ class AppEngineAdBlocker(
     override fun shouldBlock(url: Uri, type: String?, acceptHeader: String?, isMainFrame: Boolean, documentUrl: Uri?,
                              topUrl: Uri?): Boolean {
         val engine = service.engine ?: return false
-        if (!isEnabledOn(if (isMainFrame) url else topUrl ?: documentUrl)) return false
+        val sitePage = if (isMainFrame) url else topUrl ?: documentUrl
+        if (!isEnabledOn(sitePage)) return false
         val host = url.host ?: return false
         val urlString = url.toString()
         val types = if (type != null) ResourceType.fromWebExtension(type) else
             ResourceType.guessFromAccept(acceptHeader, urlString, isMainFrame)
         //a page is first-party to itself
         val page = if (isMainFrame) url else pageOf(documentUrl, topUrl)
-        return engine.match(urlString, host, page?.toString(), page?.host, types) == MatchResult.BLOCK
+        val pageString = if (page === sitePage) sitePage.toString() else page?.toString()
+        return engine.match(urlString, host, pageString, page?.host, types) == MatchResult.BLOCK
     }
 
     /**

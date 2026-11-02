@@ -21,9 +21,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.net.CookieHandler
 import java.net.CookieManager
-import java.util.concurrent.ArrayBlockingQueue
-import java.util.concurrent.ThreadPoolExecutor
-import java.util.concurrent.TimeUnit
 import kotlin.system.exitProcess
 
 /**
@@ -51,9 +48,6 @@ class SimpleBrowser : Application(), Application.ActivityLifecycleCallbacks {
         const val MAIN_PREFS_NAME = "main.xml"
         val TAG = SimpleBrowser::class.simpleName
     }
-
-    lateinit var threadPool: ThreadPoolExecutor
-        private set
 
     lateinit var container: AppContainer
         private set
@@ -91,10 +85,6 @@ class SimpleBrowser : Application(), Application.ActivityLifecycleCallbacks {
             initNotificationChannels()
             return
         }
-
-        val maxThreadsInOfflineJobsPool = Runtime.getRuntime().availableProcessors()
-        threadPool = ThreadPoolExecutor(0, maxThreadsInOfflineJobsPool, 20,
-                TimeUnit.SECONDS, ArrayBlockingQueue(maxThreadsInOfflineJobsPool))
 
         initWebEngineStuff()
         initAdBlocking()

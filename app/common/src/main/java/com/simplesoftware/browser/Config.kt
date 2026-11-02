@@ -148,26 +148,30 @@ class Config(val prefs: SharedPreferences, private val credentialsPrefs: SharedP
             prefs.edit().putBoolean(DISABLE_MOTION_AXES_DPAD_NAVIGATION_KEY, value).apply()
         }
 
+    @Volatile
+    private var cachedCursorMaxSpeedPercent: Int = prefs.getInt(CURSOR_MAX_SPEED_PERCENT_KEY, 100)
+        .coerceIn(CURSOR_PHYSICS_PERCENT_MIN, CURSOR_PHYSICS_PERCENT_MAX)
+
     /** Virtual cursor max speed as a percent of the default (screen-width–based) cap. */
     var cursorMaxSpeedPercent: Int
-        get() = prefs.getInt(CURSOR_MAX_SPEED_PERCENT_KEY, 100)
-            .coerceIn(CURSOR_PHYSICS_PERCENT_MIN, CURSOR_PHYSICS_PERCENT_MAX)
+        get() = cachedCursorMaxSpeedPercent
         set(value) {
-            prefs.edit().putInt(
-                CURSOR_MAX_SPEED_PERCENT_KEY,
-                value.coerceIn(CURSOR_PHYSICS_PERCENT_MIN, CURSOR_PHYSICS_PERCENT_MAX)
-            ).apply()
+            val coerced = value.coerceIn(CURSOR_PHYSICS_PERCENT_MIN, CURSOR_PHYSICS_PERCENT_MAX)
+            cachedCursorMaxSpeedPercent = coerced
+            prefs.edit().putInt(CURSOR_MAX_SPEED_PERCENT_KEY, coerced).apply()
         }
+
+    @Volatile
+    private var cachedCursorAccelerationPercent: Int = prefs.getInt(CURSOR_ACCELERATION_PERCENT_KEY, 100)
+        .coerceIn(CURSOR_PHYSICS_PERCENT_MIN, CURSOR_PHYSICS_PERCENT_MAX)
 
     /** Virtual cursor acceleration as a percent of the default ramp-up per frame. */
     var cursorAccelerationPercent: Int
-        get() = prefs.getInt(CURSOR_ACCELERATION_PERCENT_KEY, 100)
-            .coerceIn(CURSOR_PHYSICS_PERCENT_MIN, CURSOR_PHYSICS_PERCENT_MAX)
+        get() = cachedCursorAccelerationPercent
         set(value) {
-            prefs.edit().putInt(
-                CURSOR_ACCELERATION_PERCENT_KEY,
-                value.coerceIn(CURSOR_PHYSICS_PERCENT_MIN, CURSOR_PHYSICS_PERCENT_MAX)
-            ).apply()
+            val coerced = value.coerceIn(CURSOR_PHYSICS_PERCENT_MIN, CURSOR_PHYSICS_PERCENT_MAX)
+            cachedCursorAccelerationPercent = coerced
+            prefs.edit().putInt(CURSOR_ACCELERATION_PERCENT_KEY, coerced).apply()
         }
 
     var theme = object : ObservableValue<Theme>(Theme.SYSTEM) {

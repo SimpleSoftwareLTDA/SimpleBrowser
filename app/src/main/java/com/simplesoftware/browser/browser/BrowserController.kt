@@ -30,6 +30,7 @@ import com.simplesoftware.browser.webengine.TabEngineEvents
 import com.simplesoftware.browser.webengine.WebEngine
 import com.simplesoftware.browser.webengine.WebEngineCallbacks
 import com.simplesoftware.browser.webengine.WebEngineFactory
+import com.simplesoftware.browser.webengine.mediaPlayback
 import com.simplesoftware.browser.webengine.siteView
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -212,14 +213,20 @@ class BrowserController : ActiveModel() {
         }
         tabsStates.removeAll(tabs.toSet())
         writes.enqueue {
+            val filesToRemove = ArrayList<Pair<String?, String?>>(tabs.size)
             for (tab in tabs) {
                 //the id and the file names are final here: earlier writes of the tab are done
-                val stateFile = tab.wvStateFileName
-                val thumbnailName = tab.thumbnailHash
+                filesToRemove.add(tab.wvStateFileName to tab.thumbnailHash)
                 if (tab.id != 0L) {
                     data.tabs.delete(tab.id)
                 }
-                withContext(Dispatchers.IO) { tabFiles.removeFiles(stateFile, thumbnailName) }
+            }
+            if (filesToRemove.isNotEmpty()) {
+                withContext(Dispatchers.IO) {
+                    for ((stateFile, thumbnailName) in filesToRemove) {
+                        tabFiles.removeFiles(stateFile, thumbnailName)
+                    }
+                }
             }
         }
     }
@@ -829,13 +836,16 @@ class BrowserController : ActiveModel() {
             updateUrl(url)
             publishState()
 
-            //keep only the thumbnail of this tab in memory
+            //keep only the thumbnail of this tab in memory; skip synchronous software readback while video is playing
             tabsStates.onEach { if (it != tab) it.thumbnail = null }
-            modelScope.launch {
-                val newThumbnail = tab.webEngine.renderThumbnail(tab.thumbnail)
-                if (newThumbnail != null) {
-                    tab.updateThumbnail(newThumbnail)
-                    sendUiEvent(BrowserUiEvent.ThumbnailUpdated(tab))
+            val playingVideo = tab.webEngine.mediaPlayback?.mediaState?.value?.playing == true
+            if (!playingVideo) {
+                modelScope.launch {
+                    val newThumbnail = tab.webEngine.renderThumbnail(tab.thumbnail)
+                    if (newThumbnail != null) {
+                        tab.updateThumbnail(newThumbnail)
+                        sendUiEvent(BrowserUiEvent.ThumbnailUpdated(tab))
+                    }
                 }
             }
         }

@@ -263,10 +263,22 @@ object FaviconsPool {
         return faviconFileName
     }
 
+    private val HEX_CHARS = "0123456789abcdef".toCharArray()
+
     /** A stable name of the host's file (hashCode() of different hosts can be the same) */
     private fun fileNameOf(host: String): String {
         val digest = MessageDigest.getInstance("SHA-1").digest(host.toByteArray())
-        return digest.take(8).joinToString("") { "%02x".format(it) } + ".png"
+        val chars = CharArray(20)
+        for (i in 0 until 8) {
+            val v = digest[i].toInt() and 0xFF
+            chars[i * 2] = HEX_CHARS[v ushr 4]
+            chars[i * 2 + 1] = HEX_CHARS[v and 0x0F]
+        }
+        chars[16] = '.'
+        chars[17] = 'p'
+        chars[18] = 'n'
+        chars[19] = 'g'
+        return String(chars)
     }
 
     /** Tries the icons of the page from the most fitting one and gives the biggest of those it got */

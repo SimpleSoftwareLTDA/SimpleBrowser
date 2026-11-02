@@ -79,6 +79,9 @@ open class WebViewEx(context: Context, val callback: Callback, val jsInterface: 
         const val INTERNAL_SCHEME_WARNING_DOMAIN = "warning"
         const val INTERNAL_SCHEME_WARNING_DOMAIN_TYPE_CERT = "certificate"
         val WIDEVINE_UUID = UUID(-0x121074568629b532L,-0x5c37d8232ae2de13L)
+        private val EMPTY_BYTES = ByteArray(0)
+        private const val MAX_THUMBNAIL_WIDTH = 960
+        private const val MAX_THUMBNAIL_HEIGHT = 540
     }
 
     private var virtualCursorMode: Boolean = true
@@ -280,9 +283,22 @@ open class WebViewEx(context: Context, val callback: Callback, val jsInterface: 
                     PermissionRequest.RESOURCE_PROTECTED_MEDIA_ID == request.resources[0]) {
                     //fast path for grant/deny RESOURCE_PROTECTED_MEDIA_ID
                     if (MediaDrm.isCryptoSchemeSupported(WIDEVINE_UUID)) {
-                        val widevineKeyDrm = MediaDrm(WIDEVINE_UUID)
-                        val version = widevineKeyDrm.getPropertyString(MediaDrm.PROPERTY_VERSION)
-                        Log.i(TAG, "DRM widevine version = " + version)
+                        try {
+                            val widevineKeyDrm = MediaDrm(WIDEVINE_UUID)
+                            try {
+                                val version = widevineKeyDrm.getPropertyString(MediaDrm.PROPERTY_VERSION)
+                                Log.i(TAG, "DRM widevine version = " + version)
+                            } finally {
+                                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                                    widevineKeyDrm.close()
+                                } else {
+                                    @Suppress("DEPRECATION")
+                                    widevineKeyDrm.release()
+                                }
+                            }
+                        } catch (e: Exception) {
+                            Log.w(TAG, "Failed to query Widevine MediaDrm version", e)
+                        }
                         request.grant(request.resources)
                     } else {
                         request.deny()
@@ -420,7 +436,7 @@ open class WebViewEx(context: Context, val callback: Callback, val jsInterface: 
                 val ad = blocker.shouldBlock(request.url, null, request.requestHeaders["Accept"], isMainFrame, page, page)
                 return if (ad) {
                     uiHandler.post { callback.onBlockedAd(request.url) }
-                    val response = WebResourceResponse("text/plain", "utf-8", "".byteInputStream())
+                    val response = WebResourceResponse("text/plain", "utf-8", java.io.ByteArrayInputStream(EMPTY_BYTES))
                     response.setStatusCodeAndReasonPhrase(403, "Blocked")
                     response
                 } else super.shouldInterceptRequest(view, request)
@@ -709,10 +725,13 @@ open class WebViewEx(context: Context, val callback: Callback, val jsInterface: 
 
     fun renderThumbnail(bitmap: Bitmap?): Bitmap? {
         if (width == 0 || height == 0) return null
+        val scale = minOf(1f, MAX_THUMBNAIL_WIDTH.toFloat() / width, MAX_THUMBNAIL_HEIGHT.toFloat() / height)
+        val targetWidth = (width * scale).toInt().coerceAtLeast(1)
+        val targetHeight = (height * scale).toInt().coerceAtLeast(1)
         var thumbnail = bitmap
-        if (thumbnail == null) {
+        if (thumbnail == null || thumbnail.width != targetWidth || thumbnail.height != targetHeight) {
             try {
-                thumbnail = createBitmap(width, height, Bitmap.Config.RGB_565)
+                thumbnail = createBitmap(targetWidth, targetHeight, Bitmap.Config.RGB_565)
             } catch (e: Throwable) {
                 e.printStackTrace()
             }

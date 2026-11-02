@@ -300,13 +300,20 @@ class WebViewWebEngine(val tab: BrowserTab) : WebEngine, VirtualCursorSupport, S
     }
 
     /** Forgets the view and its cursor surface (taking them out of the window); a new one is created when needed */
-    private fun dropView() {
-        cursorLayout?.let { (it.parent as? ViewGroup)?.removeView(it) }
+    private fun dropView(destroyView: Boolean = true) {
+        val oldWebView = webView
+        cursorLayout?.let {
+            (it.parent as? ViewGroup)?.removeView(it)
+            it.removeAllViews()
+        }
         webView = null
         cursorLayout = null
         _mediaState.value = null
         _pageVideos.value = emptyList()
         _mediaVideo.value = null
+        if (destroyView) {
+            oldWebView?.destroy()
+        }
     }
 
     override fun onLongPress(x: Int, y: Int) {
@@ -385,8 +392,7 @@ class WebViewWebEngine(val tab: BrowserTab) : WebEngine, VirtualCursorSupport, S
                 fullScreenView = null
                 callback?.onExitFullscreen()
             }
-            dropView()
-            webView.destroy()
+            dropView(destroyView = true)
             //a background tab gets a new view, restored from its saved state, when it is shown;
             //the current one shows the page of the crash in a new view now
             val callback = callback ?: return

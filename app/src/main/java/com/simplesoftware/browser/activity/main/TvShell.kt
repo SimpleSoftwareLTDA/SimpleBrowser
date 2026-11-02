@@ -201,6 +201,10 @@ class TvShell(private val host: BrowserShell.Host) : BrowserShell, ActionBar.Cal
 
     /** The focused tab of the strip that the "Tab options" hint is under (Down opens its menu) */
     private var tabOptionsHintAnchor: View? = null
+    private val tmpTabPosition = IntArray(2)
+    private val tmpRootPosition = IntArray(2)
+    private val tabHintOffsetX = activity.resources.getDimensionPixelSize(R.dimen.ds_tab_hint_offset_x)
+    private val tabHintOffsetY = activity.resources.getDimensionPixelSize(R.dimen.ds_tab_hint_offset_y)
 
     private val tabOptionsHintFocusListener = ViewTreeObserver.OnGlobalFocusChangeListener { _, newFocus ->
         val showHint = newFocus != null && newFocus.tag is BrowserTab && !vb.vTabMenu.isOpen && vb.rlActionBar.isVisible
@@ -222,11 +226,10 @@ class TvShell(private val host: BrowserShell.Host) : BrowserShell, ActionBar.Cal
             hint.visibility = View.GONE
             return
         }
-        val tabPosition = IntArray(2).also { anchor.getLocationInWindow(it) }
-        val rootPosition = IntArray(2).also { vb.rlRoot.getLocationInWindow(it) }
-        val x = (tabPosition[0] - rootPosition[0] + activity.resources.getDimensionPixelSize(R.dimen.ds_tab_hint_offset_x)).toFloat()
-        val y = (tabPosition[1] - rootPosition[1] + anchor.height +
-                activity.resources.getDimensionPixelSize(R.dimen.ds_tab_hint_offset_y)).toFloat()
+        anchor.getLocationInWindow(tmpTabPosition)
+        vb.rlRoot.getLocationInWindow(tmpRootPosition)
+        val x = (tmpTabPosition[0] - tmpRootPosition[0] + tabHintOffsetX).toFloat()
+        val y = (tmpTabPosition[1] - tmpRootPosition[1] + anchor.height + tabHintOffsetY).toFloat()
         if (hint.translationX != x) hint.translationX = x
         if (hint.translationY != y) hint.translationY = y
         hint.visibility = View.VISIBLE
@@ -541,12 +544,22 @@ class TvShell(private val host: BrowserShell.Host) : BrowserShell, ActionBar.Cal
         }
     })
 
+    private val coveringOverlays = arrayOf<View>(
+        vb.vSitePanel, vb.vTabMenu, vb.vPopupMenu, vb.vBookmarksPanel, vb.vDownloadsPanel, vb.vVideosPanel,
+        vb.vDownloadsScreen, vb.vHistoryScreen, vb.vSyncScreen, vb.vSettingsScreen, vb.vPlayerScreen,
+        vb.vCursorMenu, vb.progressBarGeneric
+    )
+
     /** Something covers the page (the hint waits): the bar, a panel, menu or screen, the player, fullscreen */
-    private fun isPageCovered(): Boolean = fullscreen || vb.rlActionBar.isVisible ||
-            !activity.lifecycle.currentState.isAtLeast(Lifecycle.State.RESUMED) ||
-            listOf(vb.vSitePanel, vb.vTabMenu, vb.vPopupMenu, vb.vBookmarksPanel, vb.vDownloadsPanel, vb.vVideosPanel,
-                vb.vDownloadsScreen, vb.vHistoryScreen, vb.vSyncScreen, vb.vSettingsScreen, vb.vPlayerScreen,
-                vb.vCursorMenu, vb.progressBarGeneric).any { it.isVisible }
+    private fun isPageCovered(): Boolean {
+        if (fullscreen || vb.rlActionBar.isVisible || !activity.lifecycle.currentState.isAtLeast(Lifecycle.State.RESUMED)) {
+            return true
+        }
+        for (i in coveringOverlays.indices) {
+            if (coveringOverlays[i].isVisible) return true
+        }
+        return false
+    }
 
     private fun updatePageCovered() = pageVideoHint.setBlocked(isPageCovered())
 

@@ -237,7 +237,7 @@ class CursorDrawerDelegate(val context: Context, val surface: View, private val 
             // acceleration of a frame comes from the time since the previous one
             lastCursorUpdate = SystemClock.uptimeMillis()
             surface.removeCallbacks(cursorUpdateRunnable)
-            surface.post(cursorUpdateRunnable)
+            surface.postOnAnimation(cursorUpdateRunnable)
         }
     }
 
@@ -390,7 +390,7 @@ class CursorDrawerDelegate(val context: Context, val surface: View, private val 
             }
 
             surface.invalidate()
-            surface.post(this)
+            surface.postOnAnimation(this)
         }
     }
 
